@@ -1,0 +1,16 @@
+{
+  "name": "Abstract",
+  "description": "Abstract Resources.",
+  "version": "0.0.1",
+  "url": "http://usabilitydynamics.com/",
+  "logo": false,
+  "options": {
+    "norecurse": false,
+    "no-code": false,
+    "extension": ".js",
+    "tabtospace": 2,
+    "paths": [
+      "./lib"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "abstract",
+  "description": "Abstraction of things.",
+  "main": "./lib/abstract",
+  "author": {
+    "name": "Andy Potanin"
+  },
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/usabilitydynamics/abstract.git"
+  },
+  "bugs": {
+    "url": "https://github.com/usabilitydynamics/abstract/issues"
+  },
+  "dependencies": {
+    "eventemitter2": "*",
+    "lodash": "*",
+    "async": "*",
+    "request": "*"
+  },
+  "devDependencies": {
+    "Faker": "*",
+    "colors": "*",
+    "mocha": "*",
+    "should": "*"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "readmeFilename": "Readme.md"
+}
