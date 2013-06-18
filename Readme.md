@@ -1,9 +1,54 @@
 # Abstract.js
 Create JavaScript objects by incorporating methods and properties from abstract resources.
 
+  - creating virtualized objects
+  - easily wrap methods with EventEmitter events for handling callbacks
+  - attach listener functions to multiple events
+  
 ## Basic Usage
 
-## Advanced Usage
+        // Require Module
+        Abstract = require( 'abstract' );
+        
+        // Our Custom Context
+        var context = {
+          logger: console        
+        };
+        
+        // Create Instance with custom context
+        Abstract.create( context, function() {
+          
+          this.data = {
+            pid: this.Query( process, 'eng.pid' ),
+            id: this.Query( module, 'parent.id' )
+          }
+          
+          // Wrap "async.auto" into Event Emitter tags
+          this.auto = this.Eventify( require( 'async' ).auto );
+          
+          // Wrap all "request" methods into Event Emitter tags            
+          this.request = this.Evenity( require( 'request' ) )
+        
+        });
+        
+        // Trigger requests
+        context.emit( 'request:get', 'http://google.com' ).on( 'success', console.log );
+        context.emit( 'request:get', 'http://yahoo.com' ).on( 'success', console.log );
+        
+        // Create async.auto() method, wrapped with EE events
+        context.auto({
+          'step1': function() {},
+          'step2': [ 'step1', function() {}
+        }).on( 'error', console.error ).on( 'success', console.log );
+        
+        // Bind to any request 
+        context.on( 'request:*:complete', function() {
+          console.log( 'Request complete', this.event );
+        });
+        
+        // Monitor all errors
+        context.on( '**:error', console.error );
+
 
 ## License
 
