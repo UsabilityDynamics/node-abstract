@@ -2,13 +2,14 @@
   "name": "Abstract",
   "description": "Abstract Resources.",
   "version": "0.0.1",
-  "url": "http://usabilitydynamics.com/",
+  "url": "https://github.com/usabilitydynamics/abstract/",
   "logo": false,
   "options": {
     "norecurse": false,
     "no-code": false,
     "extension": ".js",
     "tabtospace": 2,
+    "outdir": "./docs",
     "paths": [
       "./lib"
     ]

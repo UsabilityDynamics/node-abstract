@@ -1,0 +1,211 @@
+{
+    "project": {
+        "name": "Abstract",
+        "description": "Abstract Resources.",
+        "version": "0.0.1",
+        "url": "https://github.com/usabilitydynamics/abstract/",
+        "logo": false
+    },
+    "files": {
+        "lib/abstract.js": {
+            "name": "lib/abstract.js",
+            "modules": {},
+            "classes": {
+                "Abstract": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "Abstract": {
+            "name": "Abstract",
+            "shortname": "Abstract",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "lib/abstract.js",
+            "line": 1,
+            "description": "Create custom objects and methods by aggregating and abstracting esources.",
+            "version": "0.0.1",
+            "constractor": ""
+        }
+    },
+    "classitems": [
+        {
+            "file": "lib/abstract.js",
+            "line": 41,
+            "description": "Prototypal Properties",
+            "class": "Abstract"
+        },
+        {
+            "file": "lib/abstract.js",
+            "line": 47,
+            "params": [
+                {
+                    "name": "target",
+                    "description": ""
+                },
+                {
+                    "name": "path",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "*"
+            },
+            "class": "Abstract"
+        },
+        {
+            "file": "lib/abstract.js",
+            "line": 62,
+            "params": [
+                {
+                    "name": "string",
+                    "description": ""
+                },
+                {
+                    "name": "value",
+                    "description": ""
+                },
+                {
+                    "name": "hash",
+                    "description": ""
+                },
+                {
+                    "name": "seperator",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "*"
+            },
+            "class": "Abstract"
+        },
+        {
+            "file": "lib/abstract.js",
+            "line": 93,
+            "description": "Callback Fallback",
+            "itemtype": "method",
+            "name": "callback",
+            "return": {
+                "description": "this",
+                "type": "Object"
+            },
+            "chainable": 1,
+            "class": "Abstract"
+        },
+        {
+            "file": "lib/abstract.js",
+            "line": 107,
+            "description": "Constructor Properties",
+            "class": "Abstract"
+        },
+        {
+            "file": "lib/abstract.js",
+            "line": 113,
+            "description": "Create new Instance",
+            "class": "Abstract"
+        },
+        {
+            "file": "lib/abstract.js",
+            "line": 121,
+            "description": "Define Logger",
+            "class": "Abstract"
+        },
+        {
+            "file": "lib/abstract.js",
+            "line": 150,
+            "description": "Absorb all Properties into Context Object",
+            "itemtype": "method",
+            "name": "merge",
+            "chainable": 1,
+            "class": "Abstract"
+        },
+        {
+            "file": "lib/abstract.js",
+            "line": 170,
+            "description": "Add Event Handlers to an Object",
+            "itemtype": "method",
+            "name": "eventify",
+            "chainable": 1,
+            "class": "Abstract"
+        },
+        {
+            "file": "lib/abstract.js",
+            "line": 195,
+            "description": "Output variables to console log.\n\nSettings can be configured like so:\n   abstract.log.config.depth = 2;\n   abstract.log.config.colors = true;",
+            "params": [
+                {
+                    "name": "data",
+                    "description": "A config object",
+                    "type": "Object|String"
+                }
+            ],
+            "example": [
+                "\n     Abstract.log( data )\n\nmethod log"
+            ],
+            "return": {
+                "description": "Abstract constructor.",
+                "type": "Object"
+            },
+            "chainable": 1,
+            "class": "Abstract"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "unknown tag: version",
+            "line": " lib/abstract.js:1"
+        },
+        {
+            "message": "unknown tag: constractor",
+            "line": " lib/abstract.js:1"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " lib/abstract.js:47"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " lib/abstract.js:62"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " lib/abstract.js:93"
+        },
+        {
+            "message": "Missing item type\nPrototypal Properties",
+            "line": " lib/abstract.js:41"
+        },
+        {
+            "message": "Missing item type",
+            "line": " lib/abstract.js:47"
+        },
+        {
+            "message": "Missing item type",
+            "line": " lib/abstract.js:62"
+        },
+        {
+            "message": "Missing item type\nConstructor Properties",
+            "line": " lib/abstract.js:107"
+        },
+        {
+            "message": "Missing item type\nCreate new Instance",
+            "line": " lib/abstract.js:113"
+        },
+        {
+            "message": "Missing item type\nDefine Logger",
+            "line": " lib/abstract.js:121"
+        },
+        {
+            "message": "Missing item type\nOutput variables to console log.\n\nSettings can be configured like so:\n   abstract.log.config.depth = 2;\n   abstract.log.config.colors = true;",
+            "line": " lib/abstract.js:195"
+        }
+    ]
+}

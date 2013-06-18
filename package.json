@@ -5,6 +5,13 @@
   "author": {
     "name": "Andy Potanin"
   },
+  "keywords": [
+    "async",
+    "emitter",
+    "request",
+    "api",
+    "aws"
+  ],
   "version": "0.0.1",
   "repository": {
     "type": "git",
@@ -14,6 +21,7 @@
     "url": "https://github.com/usabilitydynamics/abstract/issues"
   },
   "dependencies": {
+    "debug": "*",
     "eventemitter2": "*",
     "lodash": "*",
     "async": "*",
