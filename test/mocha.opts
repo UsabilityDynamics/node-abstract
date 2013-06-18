@@ -1,2 +1,3 @@
---ui exports
+--require should
 --reporter list
+--ui exports
