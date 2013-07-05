@@ -1,18 +1,32 @@
 {
   "name": "abstract",
-  "description": "Abstraction of things.",
+  "description": "Abstraction of JavaScript Objects.",
+  "version": "0.0.1",
   "main": "./lib/abstract",
   "author": {
-    "name": "Andy Potanin"
+    "name": "Usability Dynamics",
+    "email": "info@usabilitydynamics.com",
+    "url": "http://usabilitydynamics.com"
   },
-  "keywords": [
-    "async",
-    "emitter",
-    "request",
-    "api",
-    "aws"
+  "contributors": [
+    {
+      "name": "Andy Potanin",
+      "email": "andy.potanin@usabilitydynamics.com",
+      "url": "http://usabilitydynamics.com"
+    },
+    {
+      "name": "Ivan McCarthy",
+      "email": "ivan.mccarthy@usabilitydynamics.com",
+      "url": "http://usabilitydynamics.com"
+    }
   ],
-  "version": "0.0.1",
+  "keywords": [
+    "object",
+    "module",
+    "class",
+    "prototype",
+    "events"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/usabilitydynamics/abstract.git"
@@ -22,12 +36,11 @@
   },
   "dependencies": {
     "debug": "*",
-    "eventemitter2": "*",
     "lodash": "*",
-    "async": "*",
-    "request": "*"
+    "async": "*"
   },
   "devDependencies": {
+    "eventemitter2": "*",
     "Faker": "*",
     "colors": "*",
     "mocha": "*",

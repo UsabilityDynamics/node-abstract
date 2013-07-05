@@ -1,54 +1,39 @@
 # Abstract.js
-Create JavaScript objects by incorporating methods and properties from abstract resources.
+Simplify and abstract Module and Model creation.
 
-  - creating virtualized objects
-  - easily wrap methods with EventEmitter events for handling callbacks
-  - attach listener functions to multiple events
-  
+## Constructor Methods
+
+    - Abstract.create( proto, propertiesObject ) adds helper methods: extend, include, destroy
+    - Abstract.defineProperty( obj, prop, descriptor )
+    - Abstract.defineProperties( obj, props )
+
+## Descriptor Properties
+The following properties are available when defining a property.
+All the native Object properties perform as before, functionality is only extended.
+If "constructor" property exists in the description and is a function, it will be called when a module is initialized.
+
+    - value
+    - configurable
+    - enumerable
+    - writable
+    - properties
+    - description
+    - inheritable
+    - watch
+    - super
+
+An Object's __proto__ property may be defined via defineProperty() / defineProperties()
+
+## Namespaces
+Each Module and Instance must have a unique name which will be used to establish namespace and path. Name will be generated from constructor's name if not specified.
+
+## Schema
+A __schema__ property is added for all Objects; the schema contains extra settings such as description.
+
 ## Basic Usage
 
-        // Require Module
-        Abstract = require( 'abstract' );
-        
-        // Our Custom Context
-        var context = {
-          logger: console        
-        };
-        
-        // Create Instance with custom context
-        Abstract.create( context, function() {
-          
-          this.data = {
-            pid: this.Query( process, 'eng.pid' ),
-            id: this.Query( module, 'parent.id' )
-          }
-          
-          // Wrap "async.auto" into Event Emitter tags
-          this.auto = this.Eventify( require( 'async' ).auto );
-          
-          // Wrap all "request" methods into Event Emitter tags            
-          this.request = this.Evenity( require( 'request' ) )
-        
-        });
-        
-        // Trigger requests
-        context.emit( 'request:get', 'http://google.com' ).on( 'success', console.log );
-        context.emit( 'request:get', 'http://yahoo.com' ).on( 'success', console.log );
-        
-        // Create async.auto() method, wrapped with EE events
-        context.auto({
-          'step1': function() {},
-          'step2': [ 'step1', function() {}
-        }).on( 'error', console.error ).on( 'success', console.log );
-        
-        // Bind to any request 
-        context.on( 'request:*:complete', function() {
-          console.log( 'Request complete', this.event );
-        });
-        
-        // Monitor all errors
-        context.on( '**:error', console.error );
-
+    // Require Module
+    Abstract = require( 'abstract' );
 
 ## License
 
