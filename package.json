@@ -36,7 +36,6 @@
   },
   "dependencies": {
     "debug": "*",
-    "redefine": "*",
     "lodash": "*",
     "async": "*"
   },
