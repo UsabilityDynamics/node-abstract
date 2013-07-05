@@ -35,12 +35,12 @@
     "url": "https://github.com/usabilitydynamics/abstract/issues"
   },
   "dependencies": {
+    "observe.io": "*",
+    "object-settings": "*",
     "debug": "*",
-    "lodash": "*",
-    "async": "*"
+    "lodash": "*"
   },
   "devDependencies": {
-    "eventemitter2": "*",
     "Faker": "*",
     "colors": "*",
     "mocha": "*",

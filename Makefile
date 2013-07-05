@@ -1,16 +1,33 @@
-MOCHA_OPTS= --check-leaks
-REPORTER = dot
-UI = exports
+REPORTER = list
+LIB_COV = static/lib-cov
+JSON_FILE = static/all.json
+HTML_FILE = static/coverage.html
+
+test-all: clean document lib-cov test-code
 
 document:
 	yuidoc
 
-test:
-	@NODE_ENV=test ./node_modules/.bin/mocha \
-		--recursive \
-		--reporter $(REPORTER) \
-		--ui $(UI) \
-		$(MOCHA_OPTS)
+test-code:
+	@NODE_ENV=test mocha \
+  --timeout 200 \
+  --ui exports \
+  --reporter $(REPORTER) \
+  test/*.js
 
+test-cov: lib-cov
+	@APP_COVERAGE=1 $(MAKE) test \
+	REPORTER=html-cov > $(HTML_FILE)
 
-.PHONY: test document
+lib-cov:
+	jscoverage lib $(LIB_COV)
+
+clean:
+	rm -fr static/lib-cov/*
+	rm -fr static/assets/*
+	rm -fr static/classes/*
+	rm -fr static/files/*
+	rm -fr static/modules/*
+	rm -f static/api.js
+	rm -f static/data.json
+	rm -f static/index.html
