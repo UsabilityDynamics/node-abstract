@@ -114,6 +114,57 @@ module.exports = {
         }]
       });
 
+    },
+
+    /**
+     * - Checks creation without a proto parameter.
+     *
+     */
+    "handles 'properties' setting": function() {
+      var Abstract = module.exports.Abstract;
+
+      // Create dummy user
+      var User = Abstract.create( require( 'Faker' ).Helpers.createCard() );
+
+      // Add analyze constructor with constructor properties
+      Abstract.defineProperty( User, 'analyze', {
+        value: function Analyze() { this.email.should.equal( User.email ); },
+        description: 'Analyze the user profile.',
+        properties: {
+          reduce: function reduce() {
+            //console.log( 'reduce', this );
+          },
+          invoke: function invoke() {}
+        }
+      })
+
+      //User.analyze();
+      User.analyze.reduce();
+      User.should.have.property( 'analyze' );
+      User.analyze.should.have.property( 'invoke' );
+      User.analyze.should.have.property( 'reduce' );
+
+    },
+
+    "can make babies.": function() {
+      var Abstract = module.exports.Abstract;
+
+      // Create dummy user
+      var User = Abstract.create( require( 'Faker' ).Helpers.createCard() );
+
+      var Andy = User.create( 'Andy', {
+        phone: '1-800-mixalot',
+        status: 'created!'
+      });
+
+      // Check inherited
+      Andy.should.have.property( 'email', User.email );
+      Andy.should.have.property( 'username', User.username );
+
+      // Check instance-specific
+      Andy.should.have.property( 'status', 'created!' );
+      Andy.should.have.property( 'phone', '1-800-mixalot' );
+
     }
 
   }

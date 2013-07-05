@@ -3,7 +3,7 @@ Simplify and abstract Module and Model creation.
 
 ## Constructor Methods
 
-    - Abstract.create( proto, propertiesObject ) adds helper methods: extend, include, destroy
+    - Abstract.create( proto, properties ) adds helper methods: extend, include, destroy
     - Abstract.defineProperty( obj, prop, descriptor )
     - Abstract.defineProperties( obj, props )
 
@@ -26,8 +26,12 @@ An Object's __proto__ property may be defined via defineProperty() / definePrope
 ## Namespaces
 Each Module and Instance must have a unique name which will be used to establish namespace and path. Name will be generated from constructor's name if not specified.
 
-## Schema
-A __schema__ property is added for all Objects; the schema contains extra settings such as description.
+## Instance Meta
+Meta information regarding the instance is stored within the _meta property.
+
+    - _id - A random hash is generated.
+    - _type - Should be declared, otherwise will attempt to determine based on constructors.
+    - schema - Generates from description properties.
 
 ## Basic Usage
 
