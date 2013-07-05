@@ -20,7 +20,6 @@ If "constructor" property exists in the description and is a function, it will b
     - description
     - inheritable
     - watch
-    - super
 
 An Object's __proto__ property may be defined via defineProperty() / defineProperties()
 
