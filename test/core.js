@@ -169,8 +169,13 @@ module.exports = {
 
     "can use() all sorts of things": function() {
 
+      //this.use( require( 'async' ) );
       //this.use( require( 'auto' ) );
       //this.use( require( 'Faker' ) );
+      //this.use( require( 'eventemitter2' ) );
+      //this.use( require( 'axon' ) );
+      //this.use( require( 'express' ) );
+
       //console.log( this.Helpers.userCard() );
 
       // Set Contex Instances

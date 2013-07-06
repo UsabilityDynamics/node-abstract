@@ -15,38 +15,20 @@ module.exports = {
 
       var Abstract = require( '../' );
       
-      var Vehicle = Abstract.context( function Vehicle() {
-
-        // Predefine Default property descriptions
-        this.meta.set( 'defaults', {
-          configurable: true,
-          enumerable: true
-        });
-
-        // Define Constructor Properties
-        this.properties({ cache: {} });
+      var Vehicle = Abstract.Model( function Vehicle() {
 
         // Define Prototypal Properties
         this.properties( this.prototype, {
+          sell: function sell() {},
+          stop: function stop() {},
           enable: function enable() {},
           disable: function disable() {}
         });
 
-        this.Model( function BMW() {
-          console.log( this.name, 'constructor' );
-        });
-
-        this.Model( function Chevy() {
-          console.log( this.name, 'constructor' );
-        });
-
       });
 
+      new Vehicle();
       // console.log( Vehicle );
-
-      new Vehicle.BMW( function() {
-        // console.log( this.name, 'Instantiated' );
-      });
 
     }
 
