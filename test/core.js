@@ -72,8 +72,8 @@ module.exports = {
       var User = Abstract.create( null, require( 'Faker' ).Helpers.createCard() );
 
       // Add Async and EventEmitter2
-      User.injectPrototype( require( 'async' ) );
-      User.injectPrototype( require( 'eventemitter2' ).EventEmitter2.prototype );
+      User.inject( require( 'async' ) );
+      User.inject( require( 'eventemitter2' ).EventEmitter2.prototype );
 
       // Set some EE Options
       User.listenerTree = {};
@@ -164,6 +164,21 @@ module.exports = {
       // Check instance-specific
       Andy.should.have.property( 'status', 'created!' );
       Andy.should.have.property( 'phone', '1-800-mixalot' );
+
+    },
+
+    "can use() all sorts of things": function() {
+
+      //this.use( require( 'auto' ) );
+      //this.use( require( 'Faker' ) );
+      //console.log( this.Helpers.userCard() );
+
+      // Set Contex Instances
+//      this.instance( function SubSetting() {
+//        console.log( 'SubSetting', this.identity.path );
+//        this.instance( function SubSubSetting() { console.log( 'SubSubSetting', this.identity.path ); });
+//        this.instance( function SubSubSetting2() { console.log( 'SubSubSetting2', this.identity.path ); });
+//      });
 
     }
 

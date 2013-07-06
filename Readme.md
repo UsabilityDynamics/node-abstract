@@ -3,9 +3,24 @@ Simplify and abstract Module and Model creation.
 
 ## Constructor Methods
 
-    - Abstract.create( proto, properties ) adds helper methods: extend, include, destroy
-    - Abstract.defineProperty( obj, prop, descriptor )
-    - Abstract.defineProperties( obj, props )
+    - Abstract.context( function() { ... } ) Creates a context for modularity and scope.
+    - Abstract.create( prototype, properties ) adds helper methods: extend, include, destroy
+    - Abstract.defineProperty( object, property, descriptor ) Add single property.
+    - Abstract.defineProperties( object, properties ) Add multiple properties.
+    - Abstract.addPrototype( to, from ) Insert prototype into chain.
+
+
+## Context Properties
+
+    - is_module( module ) - Bind the context to the module object.
+    - create()
+    - destroy()
+    - read()
+    - update()
+    - use() - Inject external functionality into the context. Uses Abstract.addPrototype within context.
+    - implement()
+    - extend()
+    - include()
 
 ## Descriptor Properties
 The following properties are available when defining a property.
@@ -19,6 +34,7 @@ If "constructor" property exists in the description and is a function, it will b
     - properties
     - description
     - inheritable
+    - prototypal
     - watch
 
 An Object's __proto__ property may be defined via defineProperty() / defineProperties()
