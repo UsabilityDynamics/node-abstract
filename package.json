@@ -29,10 +29,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/usabilitydynamics/abstract.git"
+    "url": "https://github.com/UsabilityDynamics/abstract.git"
   },
   "bugs": {
-    "url": "https://github.com/usabilitydynamics/abstract/issues"
+    "url": "https://github.com/UsabilityDynamics/abstract/issues"
   },
   "dependencies": {
     "observe.io": "*",
