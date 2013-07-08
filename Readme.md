@@ -1,6 +1,8 @@
 # Abstract.js
 Simplify and abstract Module and Model creation.
 
+Abstract essentially creates self-executing methods that build a custom context for each constructor.
+
 ## Constructor Methods
 
     - Abstract.context( function() { ... } ) Creates a context for modularity and scope.
@@ -9,10 +11,10 @@ Simplify and abstract Module and Model creation.
     - Abstract.defineProperties( object, properties ) Add multiple properties.
     - Abstract.addPrototype( to, from ) Insert prototype into chain.
 
-
 ## Context Properties
+The following methods are available for use within the Constructor method
 
-    - is_module( module ) - Bind the context to the module object.
+    - module( module ) - Bind the context to the module object.
     - create()
     - destroy()
     - read()

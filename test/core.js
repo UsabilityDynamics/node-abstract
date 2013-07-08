@@ -17,13 +17,14 @@ module.exports = {
     "can set and store default settings": function() {
       var Abstract = module.exports.Abstract;
 
+      return;
       // Set Module Defaults
-      Abstract.defaults({
+      Abstract.meta.set( 'defaults', {
         enumerable: true,
         inheritable: true,
         writable: true,
         configurable: true,
-        watched: false,       // User.age is watched.
+        watched: false,
         delayed: false
       });
 
@@ -35,7 +36,7 @@ module.exports = {
       var Abstract = module.exports.Abstract;
 
       // Create New Object
-      var User = Abstract.create( null, {
+      var UserModel = Abstract.create( null, {
         name: {
           value: 'User',
           description: 'Model for generating Users.',
@@ -55,11 +56,9 @@ module.exports = {
         }
       });
 
-      User.should.have.property( '_meta' );
-      User.should.have.property( '_id' );
-      User.should.have.property( '_type' );
-      User.should.have.property( '_path' );
-      User.should.have.property( 'identify' );
+      UserModel.should.have.property( '_meta' );
+
+      console.log( UserModel );
 
       //User.identify( 'prefix' ).toString().should.equal([ 'prefix', 'User', 'Abstract', 'Abstract' ].toString());
 
@@ -72,8 +71,8 @@ module.exports = {
       var User = Abstract.create( null, require( 'Faker' ).Helpers.createCard() );
 
       // Add Async and EventEmitter2
-      User.inject( require( 'async' ) );
-      User.inject( require( 'eventemitter2' ).EventEmitter2.prototype );
+      User.plugin( 'async', require( 'async' ) );
+      User.plugin( 'eventemitter2', require( 'eventemitter2' ).EventEmitter2.prototype );
 
       // Set some EE Options
       User.listenerTree = {};
@@ -116,10 +115,6 @@ module.exports = {
 
     },
 
-    /**
-     * - Checks creation without a proto parameter.
-     *
-     */
     "handles 'properties' setting": function() {
       var Abstract = module.exports.Abstract;
 
@@ -146,40 +141,10 @@ module.exports = {
 
     },
 
-    "can make babies.": function() {
-      var Abstract = module.exports.Abstract;
-
-      // Create dummy user
-      var User = Abstract.create( require( 'Faker' ).Helpers.createCard() );
-
-      var Andy = User.create( 'Andy', {
-        phone: '1-800-mixalot',
-        status: 'created!'
-      });
-
-      // Check inherited
-      Andy.should.have.property( 'email', User.email );
-      Andy.should.have.property( 'username', User.username );
-
-      // Check instance-specific
-      Andy.should.have.property( 'status', 'created!' );
-      Andy.should.have.property( 'phone', '1-800-mixalot' );
-
-    },
-
     "can use() all sorts of things": function() {
-
       //this.use( require( 'auto' ) );
       //this.use( require( 'Faker' ) );
       //console.log( this.Helpers.userCard() );
-
-      // Set Contex Instances
-//      this.instance( function SubSetting() {
-//        console.log( 'SubSetting', this.identity.path );
-//        this.instance( function SubSubSetting() { console.log( 'SubSubSetting', this.identity.path ); });
-//        this.instance( function SubSubSetting2() { console.log( 'SubSubSetting2', this.identity.path ); });
-//      });
-
     }
 
   }

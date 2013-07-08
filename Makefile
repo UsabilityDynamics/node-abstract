@@ -13,7 +13,8 @@ test-code:
   --timeout 200 \
   --ui exports \
   --reporter $(REPORTER) \
-  test/*.js
+  test/*.js \
+  examples/test/*.js
 
 test-cov: lib-cov
 	@APP_COVERAGE=1 $(MAKE) test \
