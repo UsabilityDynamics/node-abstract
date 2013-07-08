@@ -8,18 +8,176 @@
 module.exports = {
 
   "before": function() {
-    module.exports.Abstract = require( 'abstract' );
+    module.Abstract = require( '../' );
     require( 'should' );
   },
 
   "Abstract": {
 
-    "can set and store default settings": function() {
-      var Abstract = module.exports.Abstract;
+    "set() and get() can be used at": {
+      
+      "module level.": function() {
+        module.Abstract.set( 'test', 'value' );
+        module.Abstract.get( 'test' ).should.equal( 'value' );
+      },
 
-      return;
+      "model level.": function() {
+
+        var TestModel = require( '../' ).createModel( function TestModel() {
+          this.set( 'module.test', 'module.value' );
+          this.get( 'module.test' ).should.equal( 'module.value' );
+        });
+
+        TestModel.get( 'module.test' ).should.equal( 'module.value' );
+
+      },
+
+      "instance level.": function() {
+
+        var Instance = require( '../' ).createModel( function TestModel() {
+
+          this.set( 'module.test', 'module.value' );
+          this.get( 'module.test' ).should.equal( 'module.value' );
+
+          this.defineInstance( function() {
+            this.set( 'instance.test', 'instance.value' );
+            this.get( 'instance.test' ).should.equal( 'instance.value' );
+          });
+
+        }).create();
+
+        Instance.set( 'instance2.test', 'instance2.value' );
+        Instance.get( 'instance.test' ).should.equal( 'instance.value' );
+        Instance.get( 'instance2.test' ).should.equal( 'instance2.value' );
+
+      },
+
+    },
+
+    "extendPrototype()": {
+
+      "can create combined object from multiple prototypes": function() {
+
+        //console.log( require( 'async' ) );
+        var test = require( '../' ).extendPrototype(
+          require( 'eventemitter2' ).EventEmitter2.prototype,
+          require( 'async' ),
+          require( 'net' )
+        );
+
+        // EventEmitter Methods
+        test.should.have.property( 'emit' );
+        test.should.have.property( 'on' );
+        test.should.have.property( 'onAny' );
+
+        // Async Methods
+        test.should.have.property( 'auto' );
+        test.should.have.property( 'series' );
+        test.should.have.property( 'queue' );
+
+        // Net Methods
+        test.should.have.property( 'Socket' );
+        test.should.have.property( 'Stream' );
+        test.should.have.property( 'Server' );
+
+      }
+
+    },
+
+    "createModel()": {
+
+      "has expected methods in the builder": function() {
+
+        module.TestModel = require( '../' ).createModel( function TestModel() {
+          this.should.have.property( 'use' );
+          this.should.have.property( 'get' );
+          this.should.have.property( 'set' );
+          this.should.have.property( 'module' );
+          this.should.have.property( 'defineInstance' );
+          this.should.have.property( 'defineProperties' );
+          this.should.have.property( 'defineProperty' );
+          this.custom_constructor_method = function MyMethod() {};
+          this.custom_constructor_property = true;
+          this.prototype.instance_method = function instance_method() {};
+          Object.defineProperty( this, 'hidden_custom', { value: true, enumerable: false });
+        });
+
+      },
+
+      // console.log( require( 'util' ).inspect( module.TestModel, { showHidden: true, colors: true } ) );
+      "returns a constructor function with expected methods.": function() {
+        module.TestModel.should.be.a( 'function' );
+        module.TestModel.should.have.property( 'create' );
+        module.TestModel.should.have.property( 'custom_constructor_property', true );
+        module.TestModel.should.have.property( 'use' );
+        module.TestModel.should.have.property( 'get' );
+        module.TestModel.should.have.property( 'set' );
+      },
+
+      "will expose non-enumerable model properties outside of the context": function() {
+        module.TestModel.should.have.property( 'hidden_custom' );
+      },
+
+      //console.log( require( 'util' ).inspect( Instance1, { showHidden: true, colors: true } ) );
+      "can be initialized via new Model and returns expected methods": function() {
+        var Instance1 = module.TestModel.create();
+        Instance1.should.be.a( 'object' );
+        Instance1.should.have.property( 'instance_method' );
+        Instance1.instance_method.should.have.property( 'name', 'instance_method'  );
+        Instance1.should.have.property( 'constructor' );
+        Instance1.should.have.property( 'properties' );
+        Instance1.should.have.property( 'module' );
+        Instance1.should.have.property( 'get' );
+        Instance1.should.have.property( 'set' );
+        Instance1.should.have.property( 'use' );
+      },
+
+      "can inherit functionality via use().": function( done ) {
+
+        var TestModel = require( '../' ).createModel( function TestModel() {
+          this.use( require( 'net' ) );
+          this.use( require( 'async' ) );
+          this.use( require( 'events' ).EventEmitter.prototype );
+          this.should.have.property( 'auto' );
+          this.should.have.property( 'queue' );
+          this.should.have.property( 'on' );
+          this.should.have.property( 'emit' );
+        }).once( 'done', done );
+
+        TestModel.should.have.property( 'auto' );
+        TestModel.should.have.property( 'queue' );
+        TestModel.should.have.property( 'on' );
+        TestModel.should.have.property( 'emit' );
+
+        TestModel.emit( 'done', null );
+
+      },
+
+      "can define instances with this.defineInstance()": function() {
+
+        var TestModel = require( '../' ).createModel( function TestModel() {
+          this.use( require( 'async' ) );
+          this.use( require( 'events' ).EventEmitter.prototype );
+
+          this.defineInstance( function() {
+            //console.log( this );
+          });
+
+        });
+
+        //console.log( TestModel.defineInstance );
+
+        var Instance0 = TestModel.create();
+
+      }
+
+    },
+
+    "can set and store default settings": function() {
+      var Abstract = module.Abstract;
+
       // Set Module Defaults
-      Abstract.meta.set( 'defaults', {
+      Abstract.set( 'defaults', {
         enumerable: true,
         inheritable: true,
         writable: true,
@@ -28,12 +186,12 @@ module.exports = {
         delayed: false
       });
 
-      Abstract.defaults().should.have.property( 'configurable', true );
+      //Abstract._meta.should.have.property( 'configurable', true );
 
     },
 
     "can create() new Objects": function() {
-      var Abstract = module.exports.Abstract;
+      var Abstract = module.Abstract;
 
       // Create New Object
       var UserModel = Abstract.create( null, {
@@ -56,23 +214,19 @@ module.exports = {
         }
       });
 
-      UserModel.should.have.property( '_meta' );
-
-      console.log( UserModel );
-
       //User.identify( 'prefix' ).toString().should.equal([ 'prefix', 'User', 'Abstract', 'Abstract' ].toString());
 
     },
 
     "can create() new Objects and inject multiple prototypes into chain.": function( done ) {
-      var Abstract = module.exports.Abstract;
+      var Abstract = module.Abstract;
 
       // Create New Object,
       var User = Abstract.create( null, require( 'Faker' ).Helpers.createCard() );
 
       // Add Async and EventEmitter2
-      User.plugin( 'async', require( 'async' ) );
-      User.plugin( 'eventemitter2', require( 'eventemitter2' ).EventEmitter2.prototype );
+      User.use( require( 'async' ) );
+      User.use( require( 'events' ).EventEmitter.prototype );
 
       // Set some EE Options
       User.listenerTree = {};
@@ -116,7 +270,7 @@ module.exports = {
     },
 
     "handles 'properties' setting": function() {
-      var Abstract = module.exports.Abstract;
+      var Abstract = module.Abstract;
 
       // Create dummy user
       var User = Abstract.create( require( 'Faker' ).Helpers.createCard() );
@@ -139,23 +293,8 @@ module.exports = {
       User.analyze.should.have.property( 'invoke' );
       User.analyze.should.have.property( 'reduce' );
 
-    },
-
-    "can use() all sorts of things": function() {
-<<<<<<< HEAD
-=======
-
-      //this.use( require( 'async' ) );
->>>>>>> ed08c132005b26495a122d8bb24687796f041396
-      //this.use( require( 'auto' ) );
-      //this.use( require( 'Faker' ) );
-      //this.use( require( 'eventemitter2' ) );
-      //this.use( require( 'axon' ) );
-      //this.use( require( 'express' ) );
-
-      //console.log( this.Helpers.userCard() );
     }
 
-  }
+}
 
-};
+}

@@ -42,6 +42,7 @@
   },
   "devDependencies": {
     "axon": "*",
+    "eventemitter2": "*",
     "express": "*",
     "request": "*",
     "Faker": "*",

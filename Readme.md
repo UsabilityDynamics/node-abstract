@@ -1,60 +1,75 @@
-# Abstract.js
-Simplify and abstract Module and Model creation.
+Abstract.js
+-----------
+-WIP-
 
-Abstract essentially creates self-executing methods that build a custom context for each constructor.
+Basic Usage
+===========
 
-## Constructor Methods
+    // Require Module
+    var TCP_Proxy = require( 'abstract' ).createModel( TCP_Proxy( self ) {
 
-    - Abstract.context( function() { ... } ) Creates a context for modularity and scope.
+
+    });
+
+    new TCP_Proxy( 7000, 8000, function( data ) {
+      console.log( data );
+    });
+
+    new TCP_Proxy( 7000, 8000, function( data ) {
+      console.log( data );
+    });
+
+Module Methods
+==============
+
+    - Abstract.createModel( [fn] ):
     - Abstract.create( prototype, properties ) adds helper methods: extend, include, destroy
-    - Abstract.defineProperty( object, property, descriptor ) Add single property.
-    - Abstract.defineProperties( object, properties ) Add multiple properties.
-    - Abstract.addPrototype( to, from ) Insert prototype into chain.
+    - Abstract.defineProperty( target, property, descriptor ) Add single property.
+    - Abstract.defineProperties( target, properties ) Add multiple properties.
+    - Abstract.addPrototype( target, prototype ) Insert prototype into chain.
 
-## Context Properties
+Model Factory Methods
+=====================
+
+    - this.set( key, value ): Set Model setting, can be used to configure defaults since Model settings are inherited by Instances.
+    - this.get( key ): Get a model setting.
+    - this.defineInstance( [fn] ):
+
+Instance Factory Methods
+========================
 The following methods are available for use within the Constructor method
 
-    - module( module ) - Bind the context to the module object.
-    - create()
-    - destroy()
-    - read()
-    - update()
-    - use() - Inject external functionality into the context. Uses Abstract.addPrototype within context.
-    - implement()
-    - extend()
-    - include()
+    - this.set( key, value ):
+    - this.get( key ):
+    - this.module( module ): Bind the context to the module object.
+    - this.use( prototype ): Inject external functionality into the context. Uses Abstract.addPrototype within context.
+    - this.extend( some_object ): Extend some object into current context.
 
-## Descriptor Properties
+Property Descriptor Options
+===========================
 The following properties are available when defining a property.
 All the native Object properties perform as before, functionality is only extended.
 If "constructor" property exists in the description and is a function, it will be called when a module is initialized.
 
-    - value
-    - configurable
-    - enumerable
-    - writable
-    - properties
-    - description
-    - inheritable
-    - prototypal
-    - watch
+    - value:
+    - get:
+    - set:
+    - configurable:
+    - enumerable:
+    - writable:
 
-An Object's __proto__ property may be defined via defineProperty() / defineProperties()
-
-## Namespaces
-Each Module and Instance must have a unique name which will be used to establish namespace and path. Name will be generated from constructor's name if not specified.
+    - properties:
+    - description:
+    - inheritable:
+    - watch:
 
 ## Instance Meta
 Meta information regarding the instance is stored within the _meta property.
 
-    - _id - A random hash is generated.
-    - _type - Should be declared, otherwise will attempt to determine based on constructors.
-    - schema - Generates from description properties.
-
-## Basic Usage
-
-    // Require Module
-    Abstract = require( 'abstract' );
+    - id: A random hash is generated.
+    - model: Should be declared, otherwise will attempt to determine based on constructors.
+    - path:
+    - schema: Generates from description properties.
 
 ## License
 
