@@ -37,11 +37,9 @@
   "dependencies": {
     "observe.io": "*",
     "object-settings": "*",
-    "debug": "*",
     "lodash": "*"
   },
   "devDependencies": {
-    "axon": "*",
     "eventemitter2": "*",
     "express": "*",
     "request": "*",
