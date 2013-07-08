@@ -3,6 +3,8 @@
  *
  * mocha core --reporter list --ui exports --watch
  *
+ * console.log( require( 'util' ).inspect( Instance1, { showHidden: true, colors: true } ) );
+ *
  * @type {*}
  */
 module.exports = {
@@ -115,7 +117,6 @@ module.exports = {
 
       },
 
-      // console.log( require( 'util' ).inspect( module.TestModel, { showHidden: true, colors: true } ) );
       "returns a constructor function with expected methods.": function() {
         module.TestModel.should.be.a( 'function' );
         module.TestModel.should.have.property( 'create' );
@@ -129,7 +130,6 @@ module.exports = {
         module.TestModel.should.have.property( 'hidden_custom' );
       },
 
-      //console.log( require( 'util' ).inspect( Instance1, { showHidden: true, colors: true } ) );
       "can be initialized via new Model and returns expected methods": function() {
         var Instance1 = module.TestModel.create();
         Instance1.should.be.a( 'object' );
@@ -167,10 +167,21 @@ module.exports = {
 
         var TestModel = require( '../' ).createModel( function TestModel() {
           this.use( require( 'async' ) );
-          this.use( require( 'events' ).EventEmitter.prototype );
+          this.use( require( 'express' ) );
+
+          // Test Async and Express methods in model context
+          this.should.have.property( 'auto' );
+          this.should.have.property( 'createServer' );
 
           this.defineInstance( function() {
-            //console.log( this );
+            this.use( require( 'events' ).EventEmitter.prototype );
+
+            // Test Async, Express and now Emitter methods in Instance Constructor
+            this.should.have.property( 'auto' );
+            this.should.have.property( 'emit' );
+            this.should.have.property( 'on' );
+            this.should.have.property( 'createServer' );
+
           });
 
         });
@@ -178,6 +189,8 @@ module.exports = {
         //console.log( TestModel.defineInstance );
 
         var Instance0 = TestModel.create();
+
+        //console.log( Instance0 );
 
       }
 

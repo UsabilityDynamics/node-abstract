@@ -18,7 +18,6 @@ var Express = require( 'abstract' ).createModel( function Express() {
 
   this.defineInstance( function() {
 
-    // <-- This is the Instance constructor
   });
 
 });
