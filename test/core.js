@@ -92,7 +92,6 @@ module.exports = {
           this.should.have.property( 'use' );
           this.should.have.property( 'get' );
           this.should.have.property( 'set' );
-          this.should.have.property( 'module' );
           this.should.have.property( 'defineInstance' );
           this.should.have.property( 'defineProperties' );
           this.should.have.property( 'defineProperty' );
@@ -126,7 +125,6 @@ module.exports = {
         Instance1.instance_method.should.have.property( 'name', 'instance_method'  );
         Instance1.should.have.property( 'constructor' );
         Instance1.should.have.property( 'properties' );
-        Instance1.should.have.property( 'module' );
         Instance1.should.have.property( 'get' );
         Instance1.should.have.property( 'set' );
         Instance1.should.have.property( 'use' );
@@ -215,57 +213,6 @@ module.exports = {
       });
 
       //User.identify( 'prefix' ).toString().should.equal([ 'prefix', 'User', 'Abstract', 'Abstract' ].toString());
-
-    },
-
-    "can create() new Objects and inject multiple prototypes into chain.": function( done ) {
-      var Abstract = module.Abstract;
-
-      // Create New Object,
-      var User = Abstract.create( null, require( 'Faker' ).Helpers.createCard() );
-
-      // Add Async and EventEmitter2
-      User.use( require( 'async' ) );
-      User.use( require( 'events' ).EventEmitter.prototype );
-
-      // Set some EE Options
-      User.listenerTree = {};
-      User.delimiter = ':';
-      User.wildcard = true;
-
-      //User.onAny( function( data ) { console.log( this.event, data ? data : '' ); });
-      //User.on( 'acquire:*', function( data ) { console.log( 'AQUISITION!', this.event ); });
-
-      User.on( 'acquire:sugar', function() {
-        setTimeout( function() { User.emit( 'have:sugar', null, true ); }, 120 );
-      });
-
-      User.on( 'acquire:milk', function() {
-        setTimeout( function() { User.emit( 'have:milk', null, true ); }, 50 );
-      });
-
-      User.on( 'walk:to_car', function() {
-        setTimeout( function() { User.emit( 'in:car', null, true ); }, 100 );
-      });
-
-      User.auto({
-        milk: function( next ) {
-          User.emit( 'acquire:milk' );
-          User.once( 'have:milk', next );
-        },
-        sugar: function( next ) {
-          User.emit( 'acquire:sugar' );
-          User.once( 'have:sugar', next );
-        },
-        verify_groceries: [ 'milk', 'sugar', function( next ) {
-          User.emit( 'walk:to_car' );
-          User.once( 'in:car', next );
-        }],
-        done_shopping: [ 'verify_groceries', function( next ) {
-          User.emit( 'shopping:complete' );
-          done();
-        }]
-      });
 
     },
 
