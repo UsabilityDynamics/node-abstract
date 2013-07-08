@@ -142,8 +142,17 @@ module.exports = {
     },
 
     "can use() all sorts of things": function() {
+<<<<<<< HEAD
+=======
+
+      //this.use( require( 'async' ) );
+>>>>>>> ed08c132005b26495a122d8bb24687796f041396
       //this.use( require( 'auto' ) );
       //this.use( require( 'Faker' ) );
+      //this.use( require( 'eventemitter2' ) );
+      //this.use( require( 'axon' ) );
+      //this.use( require( 'express' ) );
+
       //console.log( this.Helpers.userCard() );
     }
 

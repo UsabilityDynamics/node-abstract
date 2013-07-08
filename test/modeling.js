@@ -13,6 +13,7 @@ module.exports = {
 
     'can create a class and model': function() {
       var Abstract = require( '../' );
+<<<<<<< HEAD
 
       // Defining the Model Constructor
       var Vehicle = Abstract.Model( function Vehicle( Model ) {
@@ -27,10 +28,20 @@ module.exports = {
 
         // Define Properties to apply to Instances
         Model.properties({
+=======
+      
+      var Vehicle = Abstract.Model( function Vehicle() {
+
+        // Define Prototypal Properties
+        this.properties( this.prototype, {
+          sell: function sell() {},
+          stop: function stop() {},
+>>>>>>> ed08c132005b26495a122d8bb24687796f041396
           enable: function enable() {},
           disable: function disable() {}
         });
 
+<<<<<<< HEAD
         // Configure Instances
         Model.Instance( function() {
 
@@ -104,6 +115,13 @@ module.exports = {
       Chevy.should.not.have.property( 'on' );
       Chevy.should.not.have.property( 'emit' );
 
+=======
+      });
+
+      new Vehicle();
+      // console.log( Vehicle );
+
+>>>>>>> ed08c132005b26495a122d8bb24687796f041396
     }
 
   }
