@@ -54,6 +54,18 @@ module.exports = {
 
     },
 
+    "mixin()": function() {
+
+      var dummy = {};
+      var test = require( '../' ).mixin( dummy );
+
+      dummy.should.have.property( 'createModel' );
+      dummy.should.have.property( 'create' );
+      dummy.should.have.property( 'defineProperty' );
+      dummy.should.have.property( 'defineProperties' );
+
+    },
+
     "extendPrototype()": {
 
       "can create combined object from multiple prototypes": function() {
