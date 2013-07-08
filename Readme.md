@@ -1,68 +1,5 @@
 Abstract.js
 -----------
--WIP-
-
-Basic Usage
-===========
-
-    // Require Module
-    var TCP_Proxy = require( 'abstract' ).createModel( TCP_Proxy( self ) {
-
-
-    });
-
-    new TCP_Proxy( 7000, 8000, function( data ) {
-      console.log( data );
-    });
-
-    new TCP_Proxy( 7000, 8000, function( data ) {
-      console.log( data );
-    });
-
-Module Methods
-==============
-
-    - Abstract.createModel( [fn] ):
-    - Abstract.create( prototype, properties ) adds helper methods: extend, include, destroy
-    - Abstract.defineProperty( target, property, descriptor ) Add single property.
-    - Abstract.defineProperties( target, properties ) Add multiple properties.
-    - Abstract.addPrototype( target, prototype ) Insert prototype into chain.
-
-Model Factory Methods
-=====================
-
-    - this.set( key, value ): Set Model setting, can be used to configure defaults since Model settings are inherited by Instances.
-    - this.get( key ): Get a model setting.
-    - this.defineInstance( [fn] ):
-
-Instance Factory Methods
-========================
-The following methods are available for use within the Constructor method
-
-    - this.set( key, value ):
-    - this.get( key ):
-    - this.module( module ): Bind the context to the module object.
-    - this.use( prototype ): Inject external functionality into the context. Uses Abstract.addPrototype within context.
-    - this.extend( some_object ): Extend some object into current context.
-
-Property Descriptor Options
-===========================
-The following properties are available when defining a property.
-All the native Object properties perform as before, functionality is only extended.
-If "constructor" property exists in the description and is a function, it will be called when a module is initialized.
-
-    - value:
-    - get:
-    - set:
-    - configurable:
-    - enumerable:
-    - writable:
-
-    - properties:
-    - description:
-    - inheritable:
-    - watch:
-=======
 The Abstract library is used for rapidly developing JavaScript prototypal "Models" and "Instances".
 Each new Model can be defined by you as needed within a special context which allows you to rapidly 
 define complex constructors.
@@ -122,8 +59,8 @@ Thie is a basic example of creating a Model and then instantiating it.
     TCP_Proxy.on( '*::error', console.error );
     
 
-Static Module Methods
-=====================
+Module Methods
+==============
 In addition to the Model method, used for creating Prototype models, the module exposes a variety of useful
 static methods that can be used outside of the Model context.
 
@@ -140,6 +77,8 @@ Module Factory Methods
 ======================
 The below methods are available within the context of an Abstract.createModel( [fn] ) function.
 
+    - this.set( key, value ): Set meta key and value, will be used as defaults by instaces.
+    - this.get( key ): Get a value.
     - this.defineInstance( function MyInstanceConstructor() {} ): Creates an Instance Factory environment.
     - this.defineProperty( property, descriptor ): Add single property t othe instance prototype.
     - this.defineProperties( properties ): Add multiple properties to the Instance prototype.
@@ -151,15 +90,12 @@ The Abstract.prototype object contains properties that will be inherited by all 
 All the default methods listen below are non-enumerable, but any methods you define for the Model will be
 enumerable by default, and wil overwrite any default methods.
 
-    - this.use(): Inject external functionality into the context. Uses Abstract.addPrototype within context.
-    - this.extend( SomeObject ): Extends SomeObject into the Instance.
-    - this.module( module ): Bind the context to the module object.
-    - this.create(): [Tentative]
-    - this.destroy(): [Tentative]
-    - this.read(): [Tentative]
-    - this.update(): [Tentative]
-    - this.implement(): [Tentative]
-    - this.include(): [Tentative]
+    - this.use( obj ): Inject external functionality into the context. Uses Abstract.addPrototype within context.
+    - this.mixin( obj ): Extends the Instance's prototype into the target object.
+    - this.extend( obj ): Extends the target object into the current instance.
+    - this.create( args ): Create an instance with provided args.
+    - this.set( key, value ): Set meta key and value.
+    - this.get( key ): Get key a value.
 
 Property Descriptor Options
 ===========================
@@ -176,35 +112,25 @@ To review, the standard ECMA5 options are:
     - enumerable: true if and only if this property shows up during enumeration of the properties on the corresponding object. Defaults to false.
     - writable: True if and only if the value associated with the property may be changed with an assignment operator. Defaults to false.
 
-When using Abstract.defineProperty(), Abstract.create() or Abstract.defineProperties() the following options
-are also available:
+When using Abstract.defineProperty(), Abstract.create() or Abstract.defineProperties() the following options are also available:
 
     - description: The plain-text description of the property.
     - properties: Sets properties of the "value".
-    - inheritable: Configures if this property should be available in child objects.
-    - watch: Configures the property value as watchable. 
-    - __proto__: [tentative]
+    - watch: Configures the property value as watchable.
 
 The additional options determine the way Model properties are handled and passed down to Instances.
 The additional configuration is accessible via {YourObject}.meta.schema object. See Instance Meta section for more information.
-
-    - id: A random hash is generated.
-    - model: Should be declared, otherwise will attempt to determine based on constructors.
-    - path:
-    - schema: Generates from description properties.
-=======
-## Instance Meta
-Meta information regarding the instance is stored within the .meta property object.
 
     - id: A random hash is generated on instantiation
     - model: Set to the name of the constructor, e.g. "MyPrototypeModel" by default, used to determine "path".
     - schema: Object containing the property schema generated from property descriptors.
     - path: The prototype path to the current instance, e.g. Abstract.MyPrototypeModel.my_instance_id. (The Object.Function is omitted).
 
-Each Module and Instance must have a unique name which will be used to establish namespace and path. 
+Each Module and Instance must have a unique name which will be used to establish namespace and path.
 Name will be generated from constructor's name if not specified.
 
-## License
+License
+=======
 
 (The MIT License)
 
