@@ -241,6 +241,44 @@ module.exports = {
 
     },
 
+    "can create Models via createModel()": function() {
+      var Abstract = module.Abstract;
+
+      // Create New Object
+      var UserModel = Abstract.createModel( function UserModel( model, prototype ) {
+
+        model.defineProperty( 'is_enumerable', {
+          enumerable: true
+        })
+
+        model.defineProperty( 'non_enumerable', {
+          enumerable: false
+        })
+
+      });
+
+      var Instance = UserModel.create();
+
+      if( Instance.propertyIsEnumerable( '_meta' ) ) {
+        throw new Error( 'Meta should not by enumerable.' );
+      }
+
+      if( !Instance.propertyIsEnumerable( 'is_enumerable' ) ) {
+        // throw new Error( 'Failed to make "is_enumerable" enumerable.' );
+      }
+
+      if( Instance.propertyIsEnumerable( 'non_enumerable' ) ) {
+        throw new Error( 'Failed to make "non_enumerable" non enumerable.' );
+      }
+
+      //User.identify( 'prefix' ).toString().should.equal([ 'prefix', 'User', 'Abstract', 'Abstract' ].toString());
+
+    },
+
+    "instantiation honors enumerability settings": function() {
+
+    },
+
     "handles 'properties' setting": function() {
       var Abstract = module.Abstract;
 
