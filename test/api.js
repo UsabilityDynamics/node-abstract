@@ -58,43 +58,91 @@ module.exports = {
 
     "mixin()": function() {
 
-      var dummy = {};
-      var test = require( '../' ).mixin( dummy );
+      var target = {
+        original: true
+      };
 
-      dummy.should.have.property( 'createModel' );
-      dummy.should.have.property( 'create' );
-      dummy.should.have.property( 'defineProperty' );
-      dummy.should.have.property( 'defineProperties' );
+      var test = require( '../' ).mixin( target );
+
+      target.should.have.property( 'createModel' );
+      target.should.have.property( 'create' );
+      target.should.have.property( 'defineProperty' );
+      target.should.have.property( 'defineProperties' );
 
     },
 
-    "extendPrototype()": {
+    "call()": function() {
 
-      "can create combined object from multiple prototypes": function() {
+      var target = {
+        original: true
+      };
 
-        //console.log( require( 'async' ) );
-        var test = require( '../' ).extendPrototype(
-          require( 'eventemitter2' ).EventEmitter2.prototype,
-          require( 'async' ),
-          require( 'net' )
-        );
+      var call = require( '../' ).call( target );
 
-        // EventEmitter Methods
-        test.should.have.property( 'emit' );
-        test.should.have.property( 'on' );
-        test.should.have.property( 'onAny' );
+      call.should.be.a( 'object' );
+      //call.should.have.property( 'createModel' );
+      //call.should.have.property( 'create' );
+      //call.should.have.property( 'defineProperty' );
+      //call.should.have.property( 'defineProperties' );
 
-        // Async Methods
-        test.should.have.property( 'auto' );
-        test.should.have.property( 'series' );
-        test.should.have.property( 'queue' );
+    },
 
-        // Net Methods
-        test.should.have.property( 'Socket' );
-        test.should.have.property( 'Stream' );
-        test.should.have.property( 'Server' );
+    "bind()": function() {
 
-      }
+      var target = {
+        original: true
+      };
+
+      var bind = require( '../' ).bind( target );
+
+      bind.should.be.a( 'function' );
+      //target.should.have.property( 'createModel' );
+      //target.should.have.property( 'create' );
+      //target.should.have.property( 'defineProperty' );
+      //target.should.have.property( 'defineProperties' );
+
+    },
+
+    "apply()": function() {
+
+      var target = {
+        original: true
+      };
+
+      var apply = require( '../' ).call( target );
+
+      apply.should.be.a( 'object' );
+      //target.should.have.property( 'createModel' );
+      //target.should.have.property( 'create' );
+      //target.should.have.property( 'defineProperty' );
+      //target.should.have.property( 'defineProperties' );
+
+    },
+
+    // can create combined object from multiple prototypes
+    "extendPrototype()": function() {
+
+      //console.log( require( 'async' ) );
+      var test = require( '../' ).extendPrototype(
+        require( 'eventemitter2' ).EventEmitter2.prototype,
+        require( 'async' ),
+        require( 'net' )
+      );
+
+      // EventEmitter Methods
+      test.should.have.property( 'emit' );
+      test.should.have.property( 'on' );
+      test.should.have.property( 'onAny' );
+
+      // Async Methods
+      test.should.have.property( 'auto' );
+      test.should.have.property( 'series' );
+      test.should.have.property( 'queue' );
+
+      // Net Methods
+      test.should.have.property( 'Socket' );
+      test.should.have.property( 'Stream' );
+      test.should.have.property( 'Server' );
 
     },
 
