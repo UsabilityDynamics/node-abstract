@@ -1,9 +1,9 @@
 /**
- * Core Tests
+ * Abstract Module API Tests
  *
- * mocha core --reporter list --ui exports --watch
+ * Test the module API.
  *
- * console.log( require( 'util' ).inspect( Instance1, { showHidden: true, colors: true } ) );
+ * mocha test/api.js --reporter list --ui exports --watch
  *
  * @type {*}
  */
@@ -14,16 +14,16 @@ module.exports = {
     require( 'should' );
   },
 
-  "Abstract": {
+  "Abstract API": {
 
-    "set() and get() can be used at": {
-      
-      "module level.": function() {
+    "settings": {
+
+      "can be used at module level.": function() {
         module.Abstract.set( 'test', 'value' );
         module.Abstract.get( 'test' ).should.equal( 'value' );
       },
 
-      "model level.": function() {
+      "can be used at model level.": function() {
 
         var TestModel = require( '../' ).createModel( function TestModel() {
           this.set( 'module.test', 'module.value' );
@@ -34,7 +34,7 @@ module.exports = {
 
       },
 
-      "instance level.": function() {
+      "can be used at instance level.": function() {
 
         var Instance = require( '../' ).createModel( function TestModel() {
 

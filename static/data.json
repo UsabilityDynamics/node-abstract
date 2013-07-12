@@ -1,0 +1,1088 @@
+{
+    "project": {
+        "name": "Abstract",
+        "description": "Abstract JavaScript Object generation.",
+        "version": "0.0.1",
+        "url": "https://github.com/UsabilityDynamics/abstract/",
+        "logo": "http://a3d72a45d111006ec192-ec5b80a12b0b09b4d52373336afb4254.r80.cf1.rackcdn.com/usability-dynamics.png"
+    },
+    "files": {
+        "lib/abstract.js": {
+            "name": "lib/abstract.js",
+            "modules": {},
+            "classes": {
+                "Abstract": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/other.js": {
+            "name": "lib/other.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/polyfills.js": {
+            "name": "lib/polyfills.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/utility.js": {
+            "name": "lib/utility.js",
+            "modules": {},
+            "classes": {},
+            "fors": {
+                "Json": 1,
+                "ObjectExtender": 1
+            },
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "Abstract": {
+            "name": "Abstract",
+            "shortname": "Abstract",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "lib/abstract.js",
+            "line": 1,
+            "description": "Create custom objects and methods by aggregating and abstracting esources.",
+            "version": "0.0.1",
+            "constractor": ""
+        },
+        "Json": {
+            "name": "Json",
+            "shortname": "Json",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": []
+        },
+        "ObjectExtender": {
+            "name": "ObjectExtender",
+            "shortname": "ObjectExtender",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": []
+        }
+    },
+    "classitems": [
+        {
+            "file": "lib/abstract.js",
+            "line": 25,
+            "description": "Constructor Properties\n\nThe following properties are available within the constructor factory or by\nreferencing the constructor.",
+            "class": "Abstract"
+        },
+        {
+            "file": "lib/abstract.js",
+            "line": 34,
+            "description": "Get a key from current context's _meta",
+            "todo": [
+                "Migrate to use object-settings once Abstract core is ready."
+            ],
+            "temp": "",
+            "params": [
+                {
+                    "name": "key",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "Abstract"
+        },
+        {
+            "file": "lib/abstract.js",
+            "line": 51,
+            "description": "Set a key and value to current's context's _meta",
+            "todo": [
+                "Migrate to use object-settings once Abstract core is ready."
+            ],
+            "temp": "",
+            "params": [
+                {
+                    "name": "key",
+                    "description": ""
+                },
+                {
+                    "name": "value",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "Abstract"
+        },
+        {
+            "file": "lib/abstract.js",
+            "line": 69,
+            "return": {
+                "description": "",
+                "type": "Function"
+            },
+            "class": "Abstract"
+        },
+        {
+            "file": "lib/abstract.js",
+            "line": 82,
+            "description": "Creates a new object with the specified prototype object and properties.\nCopy the functions from the superclass prototype to the subclass prototype.",
+            "params": [
+                {
+                    "name": "proto",
+                    "description": "Superclass to use as prototype for new object.",
+                    "type": "Object|null"
+                }
+            ],
+            "class": "Abstract"
+        },
+        {
+            "file": "lib/abstract.js",
+            "line": 110,
+            "description": "Create Model Environment\n\nThis method expects a function to be passed to be used as the Model Builder.\nWithin the context of the Model Builder new methods become available.\n\nRemoved for now:\nAbstract.copyProperties( Model.create, Model );\nAbstract.addPrototype( Model.create, Model );",
+            "class": "Abstract"
+        },
+        {
+            "file": "lib/abstract.js",
+            "line": 150,
+            "description": "Constructed constructor\n\nThis is the method that is ran when a new instance is created.",
+            "class": "Abstract"
+        },
+        {
+            "file": "lib/abstract.js",
+            "line": 197,
+            "description": "Iterate through target's properties and reference them into the source object",
+            "params": [
+                {
+                    "name": "target",
+                    "description": "",
+                    "type": "Object"
+                },
+                {
+                    "name": "source",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "Target object.",
+                "type": "Object"
+            },
+            "class": "Abstract"
+        },
+        {
+            "file": "lib/abstract.js",
+            "line": 228,
+            "description": "Bind Instantiator to Context",
+            "params": [
+                {
+                    "name": "fn",
+                    "description": ""
+                }
+            ],
+            "class": "Abstract"
+        },
+        {
+            "file": "lib/abstract.js",
+            "line": 253,
+            "description": "Configure multiple object properties.",
+            "params": [
+                {
+                    "name": "obj",
+                    "description": ""
+                },
+                {
+                    "name": "props",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "*"
+            },
+            "class": "Abstract"
+        },
+        {
+            "file": "lib/abstract.js",
+            "line": 269,
+            "description": "Configure single object property.",
+            "params": [
+                {
+                    "name": "obj",
+                    "description": ""
+                },
+                {
+                    "name": "key",
+                    "description": ""
+                },
+                {
+                    "name": "prop",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "*"
+            },
+            "class": "Abstract"
+        },
+        {
+            "file": "lib/abstract.js",
+            "line": 352,
+            "description": "Allow Prototype useage method to be ran in custom context for static calls",
+            "return": {
+                "description": "",
+                "type": "Function"
+            },
+            "class": "Abstract"
+        },
+        {
+            "file": "lib/abstract.js",
+            "line": 366,
+            "description": "Allow Prototype useage method to be ran in custom context for static calls",
+            "return": {
+                "description": "",
+                "type": "Function"
+            },
+            "class": "Abstract"
+        },
+        {
+            "file": "lib/abstract.js",
+            "line": 403,
+            "description": "Cross Browser Compatible prototype getter.",
+            "params": [
+                {
+                    "name": "obj",
+                    "description": ""
+                }
+            ],
+            "class": "Abstract"
+        },
+        {
+            "file": "lib/abstract.js",
+            "line": 424,
+            "description": "Basic Wrapper - will be more fault-tolerant in future.",
+            "params": [
+                {
+                    "name": "obj",
+                    "description": ""
+                },
+                {
+                    "name": "proto",
+                    "description": ""
+                }
+            ],
+            "class": "Abstract"
+        },
+        {
+            "file": "lib/abstract.js",
+            "line": 450,
+            "description": "Instance Properties\n\nThe follow properties are available to each instance created from a constructor.\nSome of the Abstract Static methods reference the prototypal methods.\nPrototyal methods all work with the existing context.",
+            "class": "Abstract"
+        },
+        {
+            "file": "lib/abstract.js",
+            "line": 460,
+            "description": "Mixin current prototype into target object\n\nHonors property descriptor settings, if available.",
+            "params": [
+                {
+                    "name": "target",
+                    "description": ""
+                },
+                {
+                    "name": "source",
+                    "description": ""
+                }
+            ],
+            "class": "Abstract"
+        },
+        {
+            "file": "lib/abstract.js",
+            "line": 474,
+            "description": "Get a key from current context's _meta",
+            "todo": [
+                "Migrate to use object-settings once Abstract core is ready."
+            ],
+            "temp": "",
+            "params": [
+                {
+                    "name": "key",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "Abstract"
+        },
+        {
+            "file": "lib/abstract.js",
+            "line": 491,
+            "description": "Set a key and value to current's context's _meta",
+            "todo": [
+                "Migrate to use object-settings once Abstract core is ready."
+            ],
+            "temp": "",
+            "params": [
+                {
+                    "name": "key",
+                    "description": ""
+                },
+                {
+                    "name": "value",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "Abstract"
+        },
+        {
+            "file": "lib/abstract.js",
+            "line": 509,
+            "description": "Inserts an object/prototype into a target object.",
+            "params": [
+                {
+                    "name": "target",
+                    "description": ""
+                },
+                {
+                    "name": "proto",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "*"
+            },
+            "class": "Abstract"
+        },
+        {
+            "file": "lib/abstract.js",
+            "line": 540,
+            "description": "Get / Set Properties",
+            "return": {
+                "description": "",
+                "type": "Function"
+            },
+            "class": "Abstract"
+        },
+        {
+            "file": "lib/other.js",
+            "line": 1,
+            "description": "-\n\n-",
+            "author": "potanin",
+            "date": "7/6/13",
+            "class": "Json"
+        },
+        {
+            "file": "lib/other.js",
+            "line": 11,
+            "description": "Instantiate Children.",
+            "class": "Json"
+        },
+        {
+            "file": "lib/other.js",
+            "line": 61,
+            "description": "Start Context in another Worker",
+            "experimental": "",
+            "class": "Json"
+        },
+        {
+            "file": "lib/other.js",
+            "line": 72,
+            "description": "Generate Standalone JavaScript for browser integration\n\nThe result is not cached and is expected that the rendering engine does the caching.",
+            "params": [
+                {
+                    "name": "options",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "Json"
+        },
+        {
+            "file": "lib/other.js",
+            "line": 92,
+            "description": "Allow Prototype useage method to be ran in custom context for static calls",
+            "return": {
+                "description": "",
+                "type": "Function"
+            },
+            "class": "Json"
+        },
+        {
+            "file": "lib/polyfills.js",
+            "line": 1,
+            "description": "-\n\n-",
+            "author": "potanin",
+            "date": "7/5/13",
+            "class": "Json"
+        },
+        {
+            "file": "lib/polyfills.js",
+            "line": 10,
+            "description": "Add Object.setPrototypeOf()",
+            "source": ": https://gist.github.com/WebReflection/5593554#file-object-setprototypeof-js",
+            "params": [
+                {
+                    "name": "Object",
+                    "description": ""
+                },
+                {
+                    "name": "magic",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Function"
+            },
+            "class": "Json"
+        },
+        {
+            "file": "lib/utility.js",
+            "line": 1,
+            "description": "Helper Utility for Abstract",
+            "example": [
+                "\n\n   // Select specific methods to load\n   Utility( 'extend', 'unwatch', 'watch' );\n\n\n Concat will always result in an Array that can be safely joined\n [].concat( [ maybe_array ] ).join( '.' );\n [].concat( [ maybe_array, 'blah' ] ).join( '.' );"
+            ],
+            "author": "potanin@UD",
+            "date": "6/17/13",
+            "class": "Json"
+        },
+        {
+            "file": "lib/utility.js",
+            "line": 24,
+            "description": "Safely parse JSON",
+            "itemtype": "method",
+            "name": "parse",
+            "params": [
+                {
+                    "name": "json",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Parsed|json"
+            },
+            "class": "Json"
+        },
+        {
+            "file": "lib/utility.js",
+            "line": 50,
+            "description": "Prety Print complex objects",
+            "params": [
+                {
+                    "name": "data",
+                    "description": ""
+                },
+                {
+                    "name": "depth",
+                    "description": ""
+                }
+            ],
+            "requires": [
+                "lodash"
+            ],
+            "itemtype": "method",
+            "name": "console_json",
+            "return": {
+                "description": "The first argument.",
+                "type": "Object"
+            },
+            "class": "Json"
+        },
+        {
+            "file": "lib/utility.js",
+            "line": 79,
+            "description": "Pretty Print and Object's Methods",
+            "params": [
+                {
+                    "name": "data",
+                    "description": ""
+                },
+                {
+                    "name": "object",
+                    "description": ""
+                }
+            ],
+            "requires": [
+                "lodash"
+            ],
+            "itemtype": "method",
+            "name": "console_methods",
+            "return": {
+                "description": "The first argument.",
+                "type": "Object"
+            },
+            "class": "Json"
+        },
+        {
+            "file": "lib/utility.js",
+            "line": 105,
+            "description": "Get all Object Keys",
+            "params": [
+                {
+                    "name": "data",
+                    "description": ""
+                }
+            ],
+            "itemtype": "method",
+            "name": "console_keys",
+            "return": {
+                "description": "The first argument.",
+                "type": "Object"
+            },
+            "class": "Json"
+        },
+        {
+            "file": "lib/utility.js",
+            "line": 132,
+            "description": "Not a function, that's for sure.\nThis method does not accept any arguments.",
+            "class": "Json"
+        },
+        {
+            "file": "lib/utility.js",
+            "line": 144,
+            "description": "Creates a continuation function with some arguments already applied.",
+            "uses": [
+                "async"
+            ],
+            "class": "Json"
+        },
+        {
+            "file": "lib/utility.js",
+            "line": 155,
+            "description": "Configure Defaults for an Object",
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "Json"
+        },
+        {
+            "file": "lib/utility.js",
+            "line": 179,
+            "description": "Watch a Single Property",
+            "params": [
+                {
+                    "name": "prop",
+                    "description": "",
+                    "type": "Object"
+                },
+                {
+                    "name": "handler",
+                    "description": "",
+                    "type": "Callback"
+                }
+            ],
+            "itemtype": "method",
+            "name": "watch",
+            "chainable": 1,
+            "return": {
+                "description": "newval",
+                "type": "Object"
+            },
+            "class": "ObjectExtender"
+        },
+        {
+            "file": "lib/utility.js",
+            "line": 220,
+            "description": "Unwatch a Single Property",
+            "params": [
+                {
+                    "name": "prop",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "itemtype": "method",
+            "name": "unwatch",
+            "return": {
+                "description": "null"
+            },
+            "class": "ObjectExtender"
+        },
+        {
+            "file": "lib/utility.js",
+            "line": 249,
+            "description": "Get property value using a dot notation path.",
+            "params": [
+                {
+                    "name": "obj",
+                    "description": ""
+                },
+                {
+                    "name": "str",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "*"
+            },
+            "class": "ObjectExtender"
+        },
+        {
+            "file": "lib/utility.js",
+            "line": 281,
+            "description": "Unwrap dot notation string to nested Object",
+            "example": [
+                "\n\n   Utility.unwrap( 'first_name', 'john' );  // -> { first_name: 'John' }\n   Utility.unwrap( 'name.first', 'john' );  // -> { name: { first: 'John' } }\n   Utility.unwrap( 'first_name' );          // -> null\n   Utility.unwrap( 'name.first' );          // -> null\n\n   // Will not modify object if already exists\n   Utility.unwrap( 'name.first.fail', 'Anything' );"
+            ],
+            "params": [
+                {
+                    "name": "string",
+                    "description": ""
+                },
+                {
+                    "name": "value",
+                    "description": ""
+                },
+                {
+                    "name": "hash",
+                    "description": ""
+                },
+                {
+                    "name": "seperator",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "*"
+            },
+            "class": "ObjectExtender"
+        },
+        {
+            "file": "lib/utility.js",
+            "line": 328,
+            "description": "Mixin current prototype into target object\n\nHonors property descriptor settings, if available.",
+            "params": [
+                {
+                    "name": "source",
+                    "description": ""
+                },
+                {
+                    "name": "target",
+                    "description": ""
+                }
+            ],
+            "class": "ObjectExtender"
+        },
+        {
+            "file": "lib/utility.js",
+            "line": 361,
+            "description": "Carefully Inherit Properties",
+            "params": [
+                {
+                    "name": "target",
+                    "description": "Object to add properties to.",
+                    "type": "Object"
+                },
+                {
+                    "name": "target",
+                    "description": "Source object.",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "Extended target.",
+                "type": "Object"
+            },
+            "class": "ObjectExtender"
+        },
+        {
+            "file": "lib/utility.js",
+            "line": 384,
+            "description": "Flatten Array",
+            "class": "ObjectExtender"
+        },
+        {
+            "file": "lib/utility.js",
+            "line": 411,
+            "description": "Inherit the prototype methods from one constructor into another.\n\nCopy of the Node.js util.inherits method.",
+            "params": [
+                {
+                    "name": "target",
+                    "description": "Constructor function which needs to inherit the prototype.",
+                    "type": "Function"
+                },
+                {
+                    "name": "constructor",
+                    "description": "Constructor function to inherit prototype from.",
+                    "type": "Function"
+                }
+            ],
+            "class": "ObjectExtender"
+        },
+        {
+            "file": "lib/utility.js",
+            "line": 438,
+            "description": "Walk up the prototype chain, creating a JSON-Schema-esque structure",
+            "params": [
+                {
+                    "name": "context",
+                    "description": "The object to walk through.",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "JSON Schema-esque constructor chain.",
+                "type": "Object"
+            },
+            "class": "ObjectExtender"
+        },
+        {
+            "file": "lib/utility.js",
+            "line": 494,
+            "description": "Generate a unique hash for an Object, using md5 on default.",
+            "example": [
+                "\n\n   var _hash = Utility.hash({ type: 'some_object', name: 'Bob'});\n\n   console.log( _hash ); // -> 147ce3e2ccb7db6b928b303ce42bdafa"
+            ],
+            "params": [
+                {
+                    "name": "obj",
+                    "description": "Object to generate a hash for.",
+                    "type": "Object"
+                },
+                {
+                    "name": "options",
+                    "description": "options for hash generation.",
+                    "type": "Object"
+                },
+                {
+                    "name": "options",
+                    "description": "options.type Type of hash to generate, defaulting to md5.",
+                    "type": "String"
+                },
+                {
+                    "name": "options",
+                    "description": "options.silent_fail Do not throw errors, return empty string if there was an error when true.",
+                    "type": "String"
+                }
+            ],
+            "class": "ObjectExtender"
+        },
+        {
+            "file": "lib/utility.js",
+            "line": 555,
+            "description": "Output variables to console log.\n\nSettings can be configured like so:\n   abstract.log.config.depth = 2;\n   abstract.log.config.colors = true;",
+            "params": [
+                {
+                    "name": "data",
+                    "description": "A config object",
+                    "type": "Object|String"
+                }
+            ],
+            "example": [
+                "\n     Abstract.log( data )\n\nmethod log"
+            ],
+            "return": {
+                "description": "Abstract constructor.",
+                "type": "Object"
+            },
+            "chainable": 1,
+            "class": "ObjectExtender"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "unknown tag: version",
+            "line": " lib/abstract.js:1"
+        },
+        {
+            "message": "unknown tag: constractor",
+            "line": " lib/abstract.js:1"
+        },
+        {
+            "message": "unknown tag: temp",
+            "line": " lib/abstract.js:34"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " lib/abstract.js:34"
+        },
+        {
+            "message": "unknown tag: temp",
+            "line": " lib/abstract.js:51"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " lib/abstract.js:51"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " lib/abstract.js:69"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " lib/abstract.js:197"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " lib/abstract.js:253"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " lib/abstract.js:269"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " lib/abstract.js:352"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " lib/abstract.js:366"
+        },
+        {
+            "message": "unknown tag: temp",
+            "line": " lib/abstract.js:474"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " lib/abstract.js:474"
+        },
+        {
+            "message": "unknown tag: temp",
+            "line": " lib/abstract.js:491"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " lib/abstract.js:491"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " lib/abstract.js:509"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " lib/abstract.js:540"
+        },
+        {
+            "message": "unknown tag: date",
+            "line": " lib/other.js:1"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " lib/other.js:72"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " lib/other.js:92"
+        },
+        {
+            "message": "unknown tag: date",
+            "line": " lib/polyfills.js:1"
+        },
+        {
+            "message": "unknown tag: source",
+            "line": " lib/polyfills.js:10"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " lib/polyfills.js:10"
+        },
+        {
+            "message": "unknown tag: date",
+            "line": " lib/utility.js:1"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " lib/utility.js:155"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " lib/utility.js:249"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " lib/utility.js:361"
+        },
+        {
+            "message": "Missing item type\nConstructor Properties\n\nThe following properties are available within the constructor factory or by\nreferencing the constructor.",
+            "line": " lib/abstract.js:25"
+        },
+        {
+            "message": "Missing item type\nGet a key from current context's _meta",
+            "line": " lib/abstract.js:34"
+        },
+        {
+            "message": "Missing item type\nSet a key and value to current's context's _meta",
+            "line": " lib/abstract.js:51"
+        },
+        {
+            "message": "Missing item type",
+            "line": " lib/abstract.js:69"
+        },
+        {
+            "message": "Missing item type\nCreates a new object with the specified prototype object and properties.\nCopy the functions from the superclass prototype to the subclass prototype.",
+            "line": " lib/abstract.js:82"
+        },
+        {
+            "message": "Missing item type\nCreate Model Environment\n\nThis method expects a function to be passed to be used as the Model Builder.\nWithin the context of the Model Builder new methods become available.\n\nRemoved for now:\nAbstract.copyProperties( Model.create, Model );\nAbstract.addPrototype( Model.create, Model );",
+            "line": " lib/abstract.js:110"
+        },
+        {
+            "message": "Missing item type\nConstructed constructor\n\nThis is the method that is ran when a new instance is created.",
+            "line": " lib/abstract.js:150"
+        },
+        {
+            "message": "Missing item type\nIterate through target's properties and reference them into the source object",
+            "line": " lib/abstract.js:197"
+        },
+        {
+            "message": "Missing item type\nBind Instantiator to Context",
+            "line": " lib/abstract.js:228"
+        },
+        {
+            "message": "Missing item type\nConfigure multiple object properties.",
+            "line": " lib/abstract.js:253"
+        },
+        {
+            "message": "Missing item type\nConfigure single object property.",
+            "line": " lib/abstract.js:269"
+        },
+        {
+            "message": "Missing item type\nAllow Prototype useage method to be ran in custom context for static calls",
+            "line": " lib/abstract.js:352"
+        },
+        {
+            "message": "Missing item type\nAllow Prototype useage method to be ran in custom context for static calls",
+            "line": " lib/abstract.js:366"
+        },
+        {
+            "message": "Missing item type\nCross Browser Compatible prototype getter.",
+            "line": " lib/abstract.js:403"
+        },
+        {
+            "message": "Missing item type\nBasic Wrapper - will be more fault-tolerant in future.",
+            "line": " lib/abstract.js:424"
+        },
+        {
+            "message": "Missing item type\nInstance Properties\n\nThe follow properties are available to each instance created from a constructor.\nSome of the Abstract Static methods reference the prototypal methods.\nPrototyal methods all work with the existing context.",
+            "line": " lib/abstract.js:450"
+        },
+        {
+            "message": "Missing item type\nMixin current prototype into target object\n\nHonors property descriptor settings, if available.",
+            "line": " lib/abstract.js:460"
+        },
+        {
+            "message": "Missing item type\nGet a key from current context's _meta",
+            "line": " lib/abstract.js:474"
+        },
+        {
+            "message": "Missing item type\nSet a key and value to current's context's _meta",
+            "line": " lib/abstract.js:491"
+        },
+        {
+            "message": "Missing item type\nInserts an object/prototype into a target object.",
+            "line": " lib/abstract.js:509"
+        },
+        {
+            "message": "Missing item type\nGet / Set Properties",
+            "line": " lib/abstract.js:540"
+        },
+        {
+            "message": "Missing item type\n-\n\n-",
+            "line": " lib/other.js:1"
+        },
+        {
+            "message": "Missing item type\nInstantiate Children.",
+            "line": " lib/other.js:11"
+        },
+        {
+            "message": "Missing item type\nStart Context in another Worker",
+            "line": " lib/other.js:61"
+        },
+        {
+            "message": "Missing item type\nGenerate Standalone JavaScript for browser integration\n\nThe result is not cached and is expected that the rendering engine does the caching.",
+            "line": " lib/other.js:72"
+        },
+        {
+            "message": "Missing item type\nAllow Prototype useage method to be ran in custom context for static calls",
+            "line": " lib/other.js:92"
+        },
+        {
+            "message": "Missing item type\n-\n\n-",
+            "line": " lib/polyfills.js:1"
+        },
+        {
+            "message": "Missing item type\nAdd Object.setPrototypeOf()",
+            "line": " lib/polyfills.js:10"
+        },
+        {
+            "message": "Missing item type\nHelper Utility for Abstract",
+            "line": " lib/utility.js:1"
+        },
+        {
+            "message": "Missing item type\nNot a function, that's for sure.\nThis method does not accept any arguments.",
+            "line": " lib/utility.js:132"
+        },
+        {
+            "message": "Missing item type\nCreates a continuation function with some arguments already applied.",
+            "line": " lib/utility.js:144"
+        },
+        {
+            "message": "Missing item type\nConfigure Defaults for an Object",
+            "line": " lib/utility.js:155"
+        },
+        {
+            "message": "Missing item type\nGet property value using a dot notation path.",
+            "line": " lib/utility.js:249"
+        },
+        {
+            "message": "Missing item type\nUnwrap dot notation string to nested Object",
+            "line": " lib/utility.js:281"
+        },
+        {
+            "message": "Missing item type\nMixin current prototype into target object\n\nHonors property descriptor settings, if available.",
+            "line": " lib/utility.js:328"
+        },
+        {
+            "message": "Missing item type\nCarefully Inherit Properties",
+            "line": " lib/utility.js:361"
+        },
+        {
+            "message": "Missing item type\nFlatten Array",
+            "line": " lib/utility.js:384"
+        },
+        {
+            "message": "Missing item type\nInherit the prototype methods from one constructor into another.\n\nCopy of the Node.js util.inherits method.",
+            "line": " lib/utility.js:411"
+        },
+        {
+            "message": "Missing item type\nWalk up the prototype chain, creating a JSON-Schema-esque structure",
+            "line": " lib/utility.js:438"
+        },
+        {
+            "message": "Missing item type\nGenerate a unique hash for an Object, using md5 on default.",
+            "line": " lib/utility.js:494"
+        },
+        {
+            "message": "Missing item type\nOutput variables to console log.\n\nSettings can be configured like so:\n   abstract.log.config.depth = 2;\n   abstract.log.config.colors = true;",
+            "line": " lib/utility.js:555"
+        }
+    ]
+}
