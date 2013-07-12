@@ -295,10 +295,11 @@ module.exports = {
       // Create New Object
       var UserModel = Abstract.createModel( function UserModel( model, prototype ) {
 
-        model.defineProperty( 'is_enumerable', {
+        model.defineProperty( model, 'is_enumerable', {
           enumerable: true
         })
 
+        // @todo Add separate test - defineProperty, defineProperties and properties can be called w/o target argument when done in context
         model.defineProperty( 'non_enumerable', {
           enumerable: false
         })
