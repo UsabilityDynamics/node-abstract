@@ -174,21 +174,6 @@ Object.defineProperties( module.exports = Abstract, {
     configurable: true,
     enumerable: false
   },
-  call: {
-    /**
-     * Creates instance within a specified context.
-     *
-     * @params {Object} Target object to use as the context.
-     * @returns {Function}
-     */
-    get: function() {
-      return function call( target ) {
-        return Abstract.prototype.mixin( target, target );
-      }
-    },
-    configurable: true,
-    enumerable: false
-  },
   apply: {
     /**
      * Instantiate within a custom context.
@@ -214,53 +199,22 @@ Object.defineProperties( module.exports = Abstract, {
      */
     value: function create( proto, properties ) {
 
-      var Model = Object.create( Abstract.prototype, {
-        create: {
-          value: function create() {
+      // If first argument is a method, assume we are making a model
+      if( &#x27;function&#x27; === typeof proto ) {
+        return Abstract.createModel( proto, properties );
+      }
 
-          },
-          enumerable: true,
-          writable: true,
-          configurable: true
-        }
-      });
+      var Instance = Object.create( proto );
+
+      Abstract.defineProperties( Instance, properties );
 
       // Return for context
-      return Model;
+      return Instance;
 
     },
     configurable: true,
     writable: false,
     enumerable: true
-  },
-  engine: {
-    /**
-     * Set Model Engine
-     *
-     * @param target
-     * @param engine
-     */
-    value: function engine( target, engine ) {
-
-      // Getting engine
-      if( target &amp;&amp; !engine ) {
-        return target._engine;
-      }
-
-      // Setting engine
-      Object.defineProperty( target, &#x27;_engine&#x27;, {
-        value: engine,
-        enumerable: false,
-        writable: true,
-        configurable: true
-      });
-
-      return engine || undefined;
-
-    },
-    configurable: true,
-    enumerable: true,
-    writable: true
   },
   createModel: {
     /**
@@ -275,6 +229,7 @@ Object.defineProperties( module.exports = Abstract, {
      *
      */
     value: function createModel( Model ) {
+      // console.log( &#x27;createModel&#x27; );
 
       // Call Constructor, pass in some arguments maybe
       if( &#x27;function&#x27; !== typeof Model ) {
@@ -282,20 +237,19 @@ Object.defineProperties( module.exports = Abstract, {
       }
 
       // If Instantiator already bound
-      if( &#x27;function&#x27; === typeof Model.create &amp;&amp; model.create.name === &#x27;Instantiator&#x27; ) {
+      if( &#x27;function&#x27; === typeof Model.create &amp;&amp; model.create.name === &#x27;createInstance&#x27; ) {
         return Model.create;
       }
 
       // Create dynamically-created Model Constructor context
       Abstract.defineProperties( Model, {
-        use: Abstract.prototype.use.bind( Model ),
-        get: Abstract.prototype.get.bind( Model ),
-        set: Abstract.prototype.set.bind( Model ),
-        properties: Abstract.prototype.properties.bind( Model ),
-        engine: Abstract.engine.bind( Model, Model ),
-        defineInstance: Abstract.defineInstance.bind( Model, Model ),
-        defineProperties: Abstract.defineProperties.bind( Model ),
-        defineProperty: Abstract.defineProperty.bind( Model )
+        use: { value: Abstract.prototype.use.bind( Model ), enumerable: false },
+        get: { value: Abstract.prototype.get.bind( Model ), enumerable: false },
+        set: { value: Abstract.prototype.set.bind( Model ), enumerable: false },
+        properties: { value: Abstract.prototype.properties.bind( Model ), enumerable: false },
+        defineInstance: { value: Abstract.defineInstance.bind( Model, Model ), enumerable: false },
+        defineProperties: { value: Abstract.defineProperties.bind( Model ), enumerable: false },
+        defineProperty: { value: Abstract.defineProperty.bind( Model ), enumerable: false }
       });
 
       // Create Instance Prototype from Abstract Prototype
@@ -304,53 +258,10 @@ Object.defineProperties( module.exports = Abstract, {
       // Run Builder in Model context
       Model.call( Model, Model, Model.prototype );
 
-      /**
-       * Constructed constructor
-       *
-       * This is the method that is ran when a new instance is created.
-       *
-       */
-      Model.create = function Instantiator() {
-
-        var args = arguments;
-
-        // Create the instance
-        var Instance = Object.create( Model.prototype );
-
-        // Not very elegant... @todo Revise prototype chain logic if this causes issues.
-
-        for( var key in Model.__proto__ ) {
-
-          // Only check own properties of model for inheritence; all &quot;use()&#x27;d&quot; properties will be non-enumerable
-          var is_enumerable = Model.propertyIsEnumerable( key );
-
-          Object.defineProperty( Instance, key, {
-            value: Model.__proto__[key],
-            enumerable: is_enumerable,
-            writable: true,
-            configurable: true
-          });
-        }
-
-        // Set instance ID and Schema scaffolding
-        Instance.set({
-          id: Abstract.utility.hash( null, { random: true }),
-          model: Model.name || &#x27;Model&#x27;,
-          schema: {
-            id: [ &#x27;#&#x27;, Instance.get( &#x27;id&#x27; ) || Model.name || &#x27;Model&#x27; ].join( &#x27;&#x27; ),
-            type: &#x27;object&#x27;,
-            properties: {}
-          }
-        });
-
-        // Call Instantiator
-        if( this.instantiator &amp;&amp; Object.keys( this.instantiator ).length ) {
-          this.instantiator.forEach( function( fn ) { fn.apply( Instance, args ); });
-        }
-
-        return Instance;
-
-      };
+      // Context wrapper for instantiation
+      Model.create = function createInstance() {
+        return Abstract.createInstance.apply( Model, arguments );;
+      }
 
       // Return constructor function
       return Model;
@@ -391,25 +302,84 @@ Object.defineProperties( module.exports = Abstract, {
     enumerable: false,
     writable: true
   },
+  createInstance: {
+    /**
+     * Create Instance
+     *
+     * It&#x27;s rather imperative that this method be run in context.
+     *
+     * @returns {*}
+     */
+    value: function createInstance() {
+      // console.log( &#x27;createInstance&#x27; );
+
+      var args = arguments;
+
+      // Create the instance
+      var Instance = Object.create( this.prototype );
+
+      // Not very elegant... @todo Revise prototype chain logic if this causes issues.
+      for( var key in this.__proto__ ) {
+
+        // Only check own properties of model for inheritence; all &quot;use()&#x27;d&quot; properties will be non-enumerable
+        var is_enumerable = this.propertyIsEnumerable( key );
+
+        Object.defineProperty( Instance, key, {
+          value: this.__proto__[key],
+          enumerable: is_enumerable,
+          writable: true,
+          configurable: true
+        });
+      }
+
+      // Set instance ID and Schema scaffolding
+      Instance.set({
+        id: Abstract.utility.hash( null, { random: true }),
+        model: this.name || &#x27;Model&#x27;,
+        schema: {
+          id: [ &#x27;#&#x27;, Instance.get( &#x27;id&#x27; ) || this.name || &#x27;Model&#x27; ].join( &#x27;&#x27; ),
+          type: &#x27;object&#x27;,
+          properties: {}
+        }
+      });
+
+      // Call createInstance
+      if( this.instantiator &amp;&amp; Object.keys( this.instantiator ).length ) {
+        this.instantiator.forEach( function( fn ) { fn.apply( Instance, args ); });
+      }
+
+      return Instance;
+
+    },
+    configurable: true,
+    enumerable: false,
+    writable: true
+  },
   defineInstance: {
     /**
-     * Bind Instantiator to Context
+     * Bind createInstance to Context
      *
      * @param fn
      */
     value: function defineInstance( target, fn ) {
+      // console.log( &#x27;defineInstance&#x27; );
 
       if( target.instantiator &amp;&amp; Object.keys( target.instantiator ).length ) {
         target.instantiator.push( &#x27;function&#x27; === typeof fn ? fn : Abstract.utility.noop );
         return target;
       }
 
-      return Object.defineProperty( target, &#x27;instantiator&#x27;, {
+      Object.defineProperty( target, &#x27;instantiator&#x27;, {
         value: [ &#x27;function&#x27; === typeof fn ? fn : Abstract.utility.noop ],
         configurable: true,
-        enumerable: true,
+        enumerable: false,
         writable: true
       });
+
+      // Context wrapper for instantiation
+      return function createInstance() {
+        return Abstract.createInstance.apply( target, arguments );;
+      }
 
     },
     configurable: true,

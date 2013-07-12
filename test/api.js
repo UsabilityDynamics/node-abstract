@@ -119,8 +119,7 @@ module.exports = {
 
     },
 
-    // can create combined object from multiple prototypes
-    "extendPrototype()": function() {
+    "extendPrototype() - creates combined object from multiple prototypes.": function() {
 
       //console.log( require( 'async' ) );
       var test = require( '../' ).extendPrototype(
@@ -143,6 +142,36 @@ module.exports = {
       test.should.have.property( 'Socket' );
       test.should.have.property( 'Stream' );
       test.should.have.property( 'Server' );
+
+    },
+
+    "create() - generates basic Objects.": function() {
+      var Abstract = module.Abstract;
+
+      // Create New Object
+      var UserModel = { data: Abstract.create( null, {
+        name: {
+          value: 'User',
+          description: 'Model for generating Users.',
+          watched: true
+        },
+        meta: {
+          value: {
+            age: undefined,
+            sex: undefined,
+            key: undefined
+          },
+          description: 'Used for storing majority of user information.'
+        },
+        identify: {
+          value: function identify( say ) { return [ say, this._id, this._type, this._path ]; },
+          inheritable: false
+        }
+      }) };
+
+      if( UserModel.data.name !== 'User' ) {
+        throw new Error( 'Abstract.create() not working right.' );
+      }
 
     },
 
@@ -244,6 +273,82 @@ module.exports = {
 
     },
 
+    "can instantiate Models using": {
+
+      "Model.create()": function() {
+        var Abstract = module.Abstract;
+
+        var MyModel = Abstract.createModel( function MyModel( MyModel, prototype ) {
+          MyModel.defineProperties( prototype, { make: 'Chevy', model: 'Tahoe' })
+          MyModel.defineInstance( function Constructor( options ) { Abstract.utility.extend( this, options ); });
+        });
+
+        var Instance = MyModel.create({ year: 2010, mileage: 40000 });
+
+        Instance.should.be.a( 'object' );
+        Instance.should.have.property( 'make', 'Chevy' );
+        Instance.should.have.property( 'model', 'Tahoe' );
+        Instance.should.have.property( 'year', 2010 );
+        Instance.should.have.property( 'mileage', 40000 );
+
+      },
+
+      "new MyModel.create": function() {
+        var Abstract = module.Abstract;
+
+        var MyModel = Abstract.createModel( function MyModel( MyModel, prototype ) {
+          MyModel.defineProperties( prototype, { make: 'Chevy', model: 'Tahoe' })
+          MyModel.defineInstance( function Constructor( options ) { Abstract.utility.extend( this, options ); });
+        });
+
+        var Instance = new MyModel.create({ year: 2010, mileage: 40000 });
+
+        Instance.should.be.a( 'object' );
+        Instance.should.have.property( 'make', 'Chevy' );
+        Instance.should.have.property( 'model', 'Tahoe' );
+        Instance.should.have.property( 'year', 2010 );
+        Instance.should.have.property( 'mileage', 40000 );
+
+      },
+
+      "Model.custom()": function() {
+        var Abstract = module.Abstract;
+
+        var MyModel = Abstract.createModel( function MyModel( MyModel, prototype ) {
+          MyModel.defineProperties( prototype, { make: 'Chevy', model: 'Tahoe' })
+          MyModel.custom = MyModel.defineInstance( function Constructor( options ) { Abstract.utility.extend( this, options ); });
+        });
+
+        var Instance = MyModel.custom({ year: 2010, mileage: 40000 });
+
+        Instance.should.be.a( 'object' );
+        Instance.should.have.property( 'make', 'Chevy' );
+        Instance.should.have.property( 'model', 'Tahoe' );
+        Instance.should.have.property( 'year', 2010 );
+        Instance.should.have.property( 'mileage', 40000 );
+
+      },
+
+      "new Model.custom()": function() {
+        var Abstract = module.Abstract;
+
+        var MyModel = Abstract.createModel( function MyModel( MyModel, prototype ) {
+          MyModel.defineProperties( prototype, { make: 'Chevy', model: 'Tahoe' })
+          MyModel.custom = MyModel.defineInstance( function Constructor( options ) { Abstract.utility.extend( this, options ); });
+        });
+
+        var Instance = new MyModel.custom({ year: 2010, mileage: 40000 });
+
+        Instance.should.be.a( 'object' );
+        Instance.should.have.property( 'make', 'Chevy' );
+        Instance.should.have.property( 'model', 'Tahoe' );
+        Instance.should.have.property( 'year', 2010 );
+        Instance.should.have.property( 'mileage', 40000 );
+
+      }
+
+    },
+
     "can set and store default settings": function() {
       var Abstract = module.Abstract;
 
@@ -257,70 +362,8 @@ module.exports = {
         delayed: false
       });
 
-      //Abstract._meta.should.have.property( 'configurable', true );
-
-    },
-
-    "can create() new Objects": function() {
-      var Abstract = module.Abstract;
-
-      // Create New Object
-      var UserModel = Abstract.create( null, {
-        name: {
-          value: 'User',
-          description: 'Model for generating Users.',
-          watched: true
-        },
-        meta: {
-          value: {
-            age: undefined,
-            sex: undefined,
-            key: undefined
-          },
-          description: 'Used for storing majority of user information.'
-        },
-        identify: {
-          value: function identify( say ) { return [ say, this._id, this._type, this._path ]; },
-          inheritable: false
-        }
-      });
-
-      //User.identify( 'prefix' ).toString().should.equal([ 'prefix', 'User', 'Abstract', 'Abstract' ].toString());
-
-    },
-
-    "can create Models via createModel()": function() {
-      var Abstract = module.Abstract;
-
-      // Create New Object
-      var UserModel = Abstract.createModel( function UserModel( model, prototype ) {
-
-        model.defineProperty( model, 'is_enumerable', {
-          enumerable: true
-        })
-
-        // @todo Add separate test - defineProperty, defineProperties and properties can be called w/o target argument when done in context
-        model.defineProperty( 'non_enumerable', {
-          enumerable: false
-        })
-
-      });
-
-      var Instance = UserModel.create();
-
-      if( Instance.propertyIsEnumerable( '_meta' ) ) {
-        throw new Error( 'Meta should not by enumerable.' );
-      }
-
-      if( !Instance.propertyIsEnumerable( 'is_enumerable' ) ) {
-        // throw new Error( 'Failed to make "is_enumerable" enumerable.' );
-      }
-
-      if( Instance.propertyIsEnumerable( 'non_enumerable' ) ) {
-        throw new Error( 'Failed to make "non_enumerable" non enumerable.' );
-      }
-
-      //User.identify( 'prefix' ).toString().should.equal([ 'prefix', 'User', 'Abstract', 'Abstract' ].toString());
+      Abstract._meta.should.have.property( 'defaults' );
+      Abstract._meta.defaults.should.have.property( 'enumerable', true );
 
     },
 

@@ -196,24 +196,6 @@
         {
             "file": "lib/abstract.js",
             "line": 82,
-            "description": "Creates instance within a specified context.",
-            "params": [
-                {
-                    "name": "Target",
-                    "description": "object to use as the context.",
-                    "type": "Object"
-                }
-            ],
-            "return": {
-                "description": "",
-                "type": "Function"
-            },
-            "class": "abstract",
-            "module": "abstract"
-        },
-        {
-            "file": "lib/abstract.js",
-            "line": 97,
             "description": "Instantiate within a custom context.",
             "params": [
                 {
@@ -236,7 +218,7 @@
         },
         {
             "file": "lib/abstract.js",
-            "line": 113,
+            "line": 98,
             "description": "Creates a new object with the specified prototype object and properties.\nCopy the functions from the superclass prototype to the subclass prototype.",
             "params": [
                 {
@@ -250,38 +232,14 @@
         },
         {
             "file": "lib/abstract.js",
-            "line": 141,
-            "description": "Set Model Engine",
-            "params": [
-                {
-                    "name": "target",
-                    "description": ""
-                },
-                {
-                    "name": "engine",
-                    "description": ""
-                }
-            ],
-            "class": "abstract",
-            "module": "abstract"
-        },
-        {
-            "file": "lib/abstract.js",
-            "line": 170,
+            "line": 124,
             "description": "Create Model Environment\n\nThis method expects a function to be passed to be used as the Model Builder.\nWithin the context of the Model Builder new methods become available.\n\nRemoved for now:\nAbstract.copyProperties( Model.create, Model );\nAbstract.addPrototype( Model.create, Model );",
             "class": "abstract",
             "module": "abstract"
         },
         {
             "file": "lib/abstract.js",
-            "line": 211,
-            "description": "Constructed constructor\n\nThis is the method that is ran when a new instance is created.",
-            "class": "abstract",
-            "module": "abstract"
-        },
-        {
-            "file": "lib/abstract.js",
-            "line": 268,
+            "line": 179,
             "description": "Iterate through target's properties and reference them into the source object",
             "params": [
                 {
@@ -304,8 +262,19 @@
         },
         {
             "file": "lib/abstract.js",
-            "line": 299,
-            "description": "Bind Instantiator to Context",
+            "line": 210,
+            "description": "Create Instance\n\nIt's rather imperative that this method be run in context.",
+            "return": {
+                "description": "",
+                "type": "*"
+            },
+            "class": "abstract",
+            "module": "abstract"
+        },
+        {
+            "file": "lib/abstract.js",
+            "line": 263,
+            "description": "Bind createInstance to Context",
             "params": [
                 {
                     "name": "fn",
@@ -317,7 +286,7 @@
         },
         {
             "file": "lib/abstract.js",
-            "line": 324,
+            "line": 294,
             "description": "Configure multiple object properties.",
             "params": [
                 {
@@ -338,7 +307,7 @@
         },
         {
             "file": "lib/abstract.js",
-            "line": 353,
+            "line": 323,
             "description": "Configure single object property.",
             "params": [
                 {
@@ -363,7 +332,7 @@
         },
         {
             "file": "lib/abstract.js",
-            "line": 444,
+            "line": 414,
             "description": "Allow Prototype useage method to be ran in custom context for static calls",
             "return": {
                 "description": "",
@@ -374,7 +343,7 @@
         },
         {
             "file": "lib/abstract.js",
-            "line": 458,
+            "line": 428,
             "description": "Allow Prototype useage method to be ran in custom context for static calls",
             "return": {
                 "description": "",
@@ -385,7 +354,7 @@
         },
         {
             "file": "lib/abstract.js",
-            "line": 495,
+            "line": 465,
             "description": "Cross Browser Compatible prototype getter.",
             "params": [
                 {
@@ -398,7 +367,7 @@
         },
         {
             "file": "lib/abstract.js",
-            "line": 516,
+            "line": 486,
             "description": "Basic Wrapper - will be more fault-tolerant in future.",
             "params": [
                 {
@@ -415,14 +384,14 @@
         },
         {
             "file": "lib/abstract.js",
-            "line": 548,
+            "line": 518,
             "description": "Instance Properties\n\nThe follow properties are available to each instance created from a constructor.\nSome of the Abstract Static methods reference the prototypal methods.\nPrototyal methods all work with the existing context.",
             "class": "abstract",
             "module": "abstract"
         },
         {
             "file": "lib/abstract.js",
-            "line": 558,
+            "line": 528,
             "description": "Mixin current prototype into target object\n\nHonors property descriptor settings, if available.",
             "params": [
                 {
@@ -439,7 +408,7 @@
         },
         {
             "file": "lib/abstract.js",
-            "line": 572,
+            "line": 542,
             "description": "Get a key from current context's _meta",
             "todo": [
                 "Migrate to use object-settings once Abstract core is ready."
@@ -460,7 +429,7 @@
         },
         {
             "file": "lib/abstract.js",
-            "line": 589,
+            "line": 559,
             "description": "Set a key and value to current's context's _meta",
             "todo": [
                 "Migrate to use object-settings once Abstract core is ready."
@@ -485,7 +454,7 @@
         },
         {
             "file": "lib/abstract.js",
-            "line": 607,
+            "line": 577,
             "description": "Inserts an object/prototype into a target object.",
             "params": [
                 {
@@ -506,7 +475,7 @@
         },
         {
             "file": "lib/abstract.js",
-            "line": 638,
+            "line": 608,
             "description": "Get / Set Properties",
             "return": {
                 "description": "",
@@ -1023,64 +992,60 @@
             "line": " lib/abstract.js:82"
         },
         {
+            "message": "replacing incorrect tag: params with param",
+            "line": " lib/abstract.js:82"
+        },
+        {
             "message": "replacing incorrect tag: returns with return",
             "line": " lib/abstract.js:82"
         },
         {
-            "message": "replacing incorrect tag: params with param",
-            "line": " lib/abstract.js:97"
-        },
-        {
-            "message": "replacing incorrect tag: params with param",
-            "line": " lib/abstract.js:97"
+            "message": "replacing incorrect tag: returns with return",
+            "line": " lib/abstract.js:179"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " lib/abstract.js:97"
+            "line": " lib/abstract.js:210"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " lib/abstract.js:268"
+            "line": " lib/abstract.js:294"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " lib/abstract.js:324"
+            "line": " lib/abstract.js:323"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " lib/abstract.js:353"
+            "line": " lib/abstract.js:414"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " lib/abstract.js:444"
-        },
-        {
-            "message": "replacing incorrect tag: returns with return",
-            "line": " lib/abstract.js:458"
+            "line": " lib/abstract.js:428"
         },
         {
             "message": "unknown tag: temp",
-            "line": " lib/abstract.js:572"
+            "line": " lib/abstract.js:542"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " lib/abstract.js:572"
+            "line": " lib/abstract.js:542"
         },
         {
             "message": "unknown tag: temp",
-            "line": " lib/abstract.js:589"
+            "line": " lib/abstract.js:559"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " lib/abstract.js:589"
+            "line": " lib/abstract.js:559"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " lib/abstract.js:607"
+            "line": " lib/abstract.js:577"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " lib/abstract.js:638"
+            "line": " lib/abstract.js:608"
         },
         {
             "message": "unknown tag: date",
@@ -1143,84 +1108,76 @@
             "line": " lib/abstract.js:69"
         },
         {
-            "message": "Missing item type\nCreates instance within a specified context.",
+            "message": "Missing item type\nInstantiate within a custom context.",
             "line": " lib/abstract.js:82"
         },
         {
-            "message": "Missing item type\nInstantiate within a custom context.",
-            "line": " lib/abstract.js:97"
-        },
-        {
             "message": "Missing item type\nCreates a new object with the specified prototype object and properties.\nCopy the functions from the superclass prototype to the subclass prototype.",
-            "line": " lib/abstract.js:113"
-        },
-        {
-            "message": "Missing item type\nSet Model Engine",
-            "line": " lib/abstract.js:141"
+            "line": " lib/abstract.js:98"
         },
         {
             "message": "Missing item type\nCreate Model Environment\n\nThis method expects a function to be passed to be used as the Model Builder.\nWithin the context of the Model Builder new methods become available.\n\nRemoved for now:\nAbstract.copyProperties( Model.create, Model );\nAbstract.addPrototype( Model.create, Model );",
-            "line": " lib/abstract.js:170"
-        },
-        {
-            "message": "Missing item type\nConstructed constructor\n\nThis is the method that is ran when a new instance is created.",
-            "line": " lib/abstract.js:211"
+            "line": " lib/abstract.js:124"
         },
         {
             "message": "Missing item type\nIterate through target's properties and reference them into the source object",
-            "line": " lib/abstract.js:268"
+            "line": " lib/abstract.js:179"
         },
         {
-            "message": "Missing item type\nBind Instantiator to Context",
-            "line": " lib/abstract.js:299"
+            "message": "Missing item type\nCreate Instance\n\nIt's rather imperative that this method be run in context.",
+            "line": " lib/abstract.js:210"
+        },
+        {
+            "message": "Missing item type\nBind createInstance to Context",
+            "line": " lib/abstract.js:263"
         },
         {
             "message": "Missing item type\nConfigure multiple object properties.",
-            "line": " lib/abstract.js:324"
+            "line": " lib/abstract.js:294"
         },
         {
             "message": "Missing item type\nConfigure single object property.",
-            "line": " lib/abstract.js:353"
+            "line": " lib/abstract.js:323"
         },
         {
             "message": "Missing item type\nAllow Prototype useage method to be ran in custom context for static calls",
-            "line": " lib/abstract.js:444"
+            "line": " lib/abstract.js:414"
         },
         {
             "message": "Missing item type\nAllow Prototype useage method to be ran in custom context for static calls",
-            "line": " lib/abstract.js:458"
+            "line": " lib/abstract.js:428"
         },
         {
             "message": "Missing item type\nCross Browser Compatible prototype getter.",
-            "line": " lib/abstract.js:495"
+            "line": " lib/abstract.js:465"
         },
         {
             "message": "Missing item type\nBasic Wrapper - will be more fault-tolerant in future.",
-            "line": " lib/abstract.js:516"
+            "line": " lib/abstract.js:486"
         },
         {
             "message": "Missing item type\nInstance Properties\n\nThe follow properties are available to each instance created from a constructor.\nSome of the Abstract Static methods reference the prototypal methods.\nPrototyal methods all work with the existing context.",
-            "line": " lib/abstract.js:548"
+            "line": " lib/abstract.js:518"
         },
         {
             "message": "Missing item type\nMixin current prototype into target object\n\nHonors property descriptor settings, if available.",
-            "line": " lib/abstract.js:558"
+            "line": " lib/abstract.js:528"
         },
         {
             "message": "Missing item type\nGet a key from current context's _meta",
-            "line": " lib/abstract.js:572"
+            "line": " lib/abstract.js:542"
         },
         {
             "message": "Missing item type\nSet a key and value to current's context's _meta",
-            "line": " lib/abstract.js:589"
+            "line": " lib/abstract.js:559"
         },
         {
             "message": "Missing item type\nInserts an object/prototype into a target object.",
-            "line": " lib/abstract.js:607"
+            "line": " lib/abstract.js:577"
         },
         {
             "message": "Missing item type\nGet / Set Properties",
-            "line": " lib/abstract.js:638"
+            "line": " lib/abstract.js:608"
         },
         {
             "message": "Missing item type\n-\n\n-",
