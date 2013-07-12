@@ -41,15 +41,19 @@
         <div id="api-tabview-panel">
             <ul id="api-classes" class="apis classes">
             
-                <li><a href="../classes/Abstract.html">Abstract</a></li>
+                <li><a href="../classes/abstract.html">abstract</a></li>
+            
+                <li><a href="../classes/abstract-utility.html">abstract-utility</a></li>
             
                 <li><a href="../classes/Json.html">Json</a></li>
-            
-                <li><a href="../classes/ObjectExtender.html">ObjectExtender</a></li>
             
             </ul>
 
             <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/abstract.html">abstract</a></li>
+            
+                <li><a href="../modules/abstract-utility.html">abstract-utility</a></li>
             
             </ul>
         </div>
@@ -94,7 +98,7 @@
  * Create custom objects and methods by aggregating and abstracting esources.
  *
  * @version 0.0.1
- * @class Abstract
+ * @module abstract
  * @constractor
  */
 function Abstract() {
@@ -290,8 +294,8 @@ Object.defineProperties( module.exports = Abstract, {
         properties: Abstract.prototype.properties.bind( Model ),
         engine: Abstract.engine.bind( Model, Model ),
         defineInstance: Abstract.defineInstance.bind( Model, Model ),
-        defineProperties: Abstract.defineProperties.bind( Model, Model ),
-        defineProperty: Abstract.defineProperty.bind( Model, Model )
+        defineProperties: Abstract.defineProperties.bind( Model ),
+        defineProperty: Abstract.defineProperty.bind( Model )
       });
 
       // Create Instance Prototype from Abstract Prototype
@@ -308,6 +312,8 @@ Object.defineProperties( module.exports = Abstract, {
        */
       Model.create = function Instantiator() {
 
+        var args = arguments;
+
         // Create the instance
         var Instance = Object.create( Model.prototype );
 
@@ -315,8 +321,8 @@ Object.defineProperties( module.exports = Abstract, {
 
         for( var key in Model.__proto__ ) {
 
-          // @todo This does not work.
-          var is_enumerable = Model.__proto__.propertyIsEnumerable( key );
+          // Only check own properties of model for inheritence; all &quot;use()&#x27;d&quot; properties will be non-enumerable
+          var is_enumerable = Model.propertyIsEnumerable( key );
 
           Object.defineProperty( Instance, key, {
             value: Model.__proto__[key],
@@ -331,7 +337,7 @@ Object.defineProperties( module.exports = Abstract, {
           id: Abstract.utility.hash( null, { random: true }),
           model: Model.name || &#x27;Model&#x27;,
           schema: {
-            id: Instance.get( &#x27;id&#x27; ),
+            id: [ &#x27;#&#x27;, Instance.get( &#x27;id&#x27; ) || Model.name || &#x27;Model&#x27; ].join( &#x27;&#x27; ),
             type: &#x27;object&#x27;,
             properties: {}
           }
@@ -339,7 +345,7 @@ Object.defineProperties( module.exports = Abstract, {
 
         // Call Instantiator
         if( this.instantiator &amp;&amp; Object.keys( this.instantiator ).length ) {
-          this.instantiator.forEach( function( fn ) { fn.apply( Instance, arguments ); });
+          this.instantiator.forEach( function( fn ) { fn.apply( Instance, args ); });
         }
 
         return Instance;
@@ -419,7 +425,20 @@ Object.defineProperties( module.exports = Abstract, {
      * @returns {*}
      */
     value: function defineProperties( target, props ) {
-      Object.keys( props ).forEach( function( key ) { Abstract.defineProperty( target, key, props[ key ] ); });
+
+      if( !props &amp;&amp; &#x27;object&#x27; === typeof props &amp;&amp; this.hasOwnProperty( &#x27;defineInstance&#x27; ) ) {
+        props = target;
+        target = this;
+      }
+
+      if( !props || &#x27;object&#x27; !== typeof props ) {
+        return target || {};
+      }
+
+      Object.keys( props ).forEach( function( key ) {
+        Abstract.defineProperty( target, key, props[ key ] );
+      });
+
       return target;
     },
     configurable: true,
@@ -438,7 +457,15 @@ Object.defineProperties( module.exports = Abstract, {
     value: function defineProperty( obj, key, prop ) {
 
       if( !prop ) {
-        prop = {};
+
+        // If &quot;obj&quot; was omitted we assue we are binding to context
+        if( &#x27;string&#x27; === typeof obj &amp;&amp; &#x27;object&#x27; === typeof key &amp;&amp; this.hasOwnProperty( &#x27;defineInstance&#x27; ) ) {
+          obj = this;
+          key = obj;
+          prop = key;
+        } else {
+          prop = {};
+        }
       }
 
       if( !obj ) {

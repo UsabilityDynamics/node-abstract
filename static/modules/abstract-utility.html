@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>lib/other.js - Abstract</title>
+    <title>abstract-utility - Abstract</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -90,117 +90,73 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-                        <h1 class="file-heading">File: lib/other.js</h1>
+                        <h1>abstract-utility Module</h1>
+<div class="box clearfix meta">
+    
 
-<div class="file">
-    <pre class="code prettyprint linenums">
-/**
- * -
- *
- * -
- *
- * @author potanin
- * @date 7/6/13
- */
-module.exports = {
-  _create: {
-    /**
-     * Instantiate Children.
-     *
-     */
-    value: function create( fn ) {
+    
 
-      // Create new Abstract Instance as a base
-      //var child = Object.create( Abstract.prototype );
-      //var child = new Abstract;
-      var child = new Abstract;
+    
+        <div class="foundat">
+            Defined in: <a href="../files/lib_utility.js.html#l1"><code>lib&#x2F;utility.js:1</code></a>
+        </div>
+    
 
-      // Set Constructor
-      Object.defineProperty( child, &#x27;constructor&#x27;, {
-        value: fn,
-        configurable: true,
-        enumerable: false
-      })
+    
+</div>
 
-      // Add this to the child&#x27;s chain, allowing the child
-      Abstract.addPrototype( child, this );
 
-      if( this._meta.initialization ) {
-        this._meta.initialization.call( child );
-      }
 
-      // Call Constructor, pass in some arguments maybe
-      if( &#x27;function&#x27; === typeof fn ) {
-        fn.call( child, child, Abstract );
-      }
+<div class="box intro">
+    <p>Helper Utility for Abstract</p>
+</div>
 
-      return child;
 
-    },
-    configurable: true,
-    enumerable: false,
-    writable: true
-  },
-  identity: {
-    get: function() {
-      var path = Abstract.utility.get_constructors( this ).reverse();
-      return {
-        id: this._meta.id,
-        type: path[ ( path.length - 1 ) ],
-        path: path.join( &#x27;.&#x27; )
-      }
-    },
-    configurable: true,
-    enumerable: false
-  },
-  spawn: {
-    /**
-     * Start Context in another Worker
-     *
-     * @experimental
-     */
-    value: function spawn() {},
-    configurable: true,
-    enumerable: true,
-    writable: true
-  },
-  build: {
-    /**
-     * Generate Standalone JavaScript for browser integration
-     *
-     * The result is not cached and is expected that the rendering engine does the caching.
-     *
-     * @param options
-     * @returns {String}
-     */
-    value: function build( options ) {
-      var script = &#x27;&#x27;;
-      // read this file
-      // include dependencies
-      // minify
-      return script;
-    },
-    configurable: true,
-    enumerable: false,
-    writable: true
-  },
-  addPrototype: {
-    /**
-     * Allow Prototype useage method to be ran in custom context for static calls
-     *
-     * @returns {Function}
-     */
-    get: function() {
-      return function( context, proto ) {
-        return Abstract.prototype.use.call( context, proto );
-      }
-    },
-    configurable: false,
-    enumerable: true
-  }
-}
+    <div class="example">
+        <h4>Example:</h4>
+        <div class="example-content">
+            <p>// Select specific methods to load
+   Utility( 'extend', 'unwatch', 'watch' );</p>
 
-    </pre>
+<p>Concat will always result in an Array that can be safely joined
+ [].concat( [ maybe<em>array ] ).join( '.' );
+ [].concat( [ maybe</em>array, 'blah' ] ).join( '.' );</p>
+        </div>
+    </div>
+
+
+<div class="yui3-g">
+    <div class="yui3-u-1-2">
+        
+            <p>This module provides the following classes:</p>
+
+            <ul class="module-classes">
+            
+                <li class="module-class">
+                    <a href="../classes/abstract.html">
+                        abstract
+                    </a>
+                </li>
+            
+                <li class="module-class">
+                    <a href="../classes/abstract-utility.html">
+                        abstract-utility
+                    </a>
+                </li>
+            
+                <li class="module-class">
+                    <a href="../classes/Json.html">
+                        Json
+                    </a>
+                </li>
+            
+            </ul>
+        
+    </div>
+
+    <div class="yui3-u-1-2">
+        
+    </div>
 </div>
 
                     </div>

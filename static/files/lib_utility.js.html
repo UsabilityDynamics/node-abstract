@@ -41,15 +41,19 @@
         <div id="api-tabview-panel">
             <ul id="api-classes" class="apis classes">
             
-                <li><a href="../classes/Abstract.html">Abstract</a></li>
+                <li><a href="../classes/abstract.html">abstract</a></li>
+            
+                <li><a href="../classes/abstract-utility.html">abstract-utility</a></li>
             
                 <li><a href="../classes/Json.html">Json</a></li>
-            
-                <li><a href="../classes/ObjectExtender.html">ObjectExtender</a></li>
             
             </ul>
 
             <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/abstract.html">abstract</a></li>
+            
+                <li><a href="../modules/abstract-utility.html">abstract-utility</a></li>
             
             </ul>
         </div>
@@ -103,6 +107,8 @@
  *  [].concat( [ maybe_array ] ).join( &#x27;.&#x27; );
  *  [].concat( [ maybe_array, &#x27;blah&#x27; ] ).join( &#x27;.&#x27; );
  *
+ * @for abstract
+ * @submodule abstract-utility
  * @author potanin@UD
  * @date 6/17/13
  */
@@ -275,29 +281,42 @@ Object.defineProperties( module.exports = Utility, {
      * @param {callback} handler
      *
      * @method watch
-     * @for ObjectExtender
+     * @for abstract-utility
      *
      * @chainable
      *
      * @return {Object} newval
      */
-    value: function watch( prop, handler ) {
-      var oldval = this[prop];
+    value: function watch( target, prop, handler ) {
+      var oldval = target[prop];
       var newval = oldval;
-      var description = Object.getOwnPropertyDescriptor( this, prop );
+      var description = Object.getOwnPropertyDescriptor( target, prop ) || {};
 
-      // Delete original property and replace with getter/setter if possible
-      if( description.configurable === false || !( delete this[ prop ] ) ) {
-        return this;
+      switch( typeof target[prop] ) {
+        case &#x27;function&#x27;:break;
+        case &#x27;object&#x27;:break;
+        case &#x27;string&#x27;:break;
+        case &#x27;number&#x27;:break;
       }
 
-      return Object.defineProperty( this, prop, {
+      // Delete original property and replace with getter/setter if possible
+      if( description.configurable === false || !( delete target[ prop ] ) ) {
+        return target;
+      }
+
+      return Object.defineProperty( target, prop, {
         get: function get() {
           return newval;
         },
         set: function set( val ) {
           oldval = newval;
-          return newval = handler.call( this, prop, oldval, val );
+
+          // Set value
+          newval = val;
+
+          // Execute hander and potentially mody value
+          return newval = handler.call( target, prop, oldval, val );
+
         },
         enumerable: description.enumerable,
         configurable: true
@@ -315,7 +334,7 @@ Object.defineProperties( module.exports = Utility, {
      * @param {Object} prop
      *
      * @method unwatch
-     * @for ObjectExtender
+     * @for abstract-utility
      *
      * @return null
      */
