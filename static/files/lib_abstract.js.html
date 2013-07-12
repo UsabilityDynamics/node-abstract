@@ -170,6 +170,37 @@ Object.defineProperties( module.exports = Abstract, {
     configurable: true,
     enumerable: false
   },
+  call: {
+    /**
+     * Creates instance within a specified context.
+     *
+     * @params {Object} Target object to use as the context.
+     * @returns {Function}
+     */
+    get: function() {
+      return function call( target ) {
+        return Abstract.prototype.mixin( target, target );
+      }
+    },
+    configurable: true,
+    enumerable: false
+  },
+  apply: {
+    /**
+     * Instantiate within a custom context.
+     *
+     * @params target {Object} Target object to use as the context.
+     * @params arguments {Object} Arguments to instantiate with.
+     * @returns {Function}
+     */
+    get: function() {
+      return function apply( target, arguments ) {
+        return Abstract.prototype.mixin( target, target );
+      }
+    },
+    configurable: true,
+    enumerable: false
+  },
   create: {
     /**
      * Creates a new object with the specified prototype object and properties.
@@ -197,6 +228,35 @@ Object.defineProperties( module.exports = Abstract, {
     configurable: true,
     writable: false,
     enumerable: true
+  },
+  engine: {
+    /**
+     * Set Model Engine
+     *
+     * @param target
+     * @param engine
+     */
+    value: function engine( target, engine ) {
+
+      // Getting engine
+      if( target &amp;&amp; !engine ) {
+        return target._engine;
+      }
+
+      // Setting engine
+      Object.defineProperty( target, &#x27;_engine&#x27;, {
+        value: engine,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      });
+
+      return engine || undefined;
+
+    },
+    configurable: true,
+    enumerable: true,
+    writable: true
   },
   createModel: {
     /**
@@ -228,6 +288,7 @@ Object.defineProperties( module.exports = Abstract, {
         get: Abstract.prototype.get.bind( Model ),
         set: Abstract.prototype.set.bind( Model ),
         properties: Abstract.prototype.properties.bind( Model ),
+        engine: Abstract.engine.bind( Model, Model ),
         defineInstance: Abstract.defineInstance.bind( Model, Model ),
         defineProperties: Abstract.defineProperties.bind( Model, Model ),
         defineProperty: Abstract.defineProperty.bind( Model, Model )
@@ -251,9 +312,17 @@ Object.defineProperties( module.exports = Abstract, {
         var Instance = Object.create( Model.prototype );
 
         // Not very elegant... @todo Revise prototype chain logic if this causes issues.
+
         for( var key in Model.__proto__ ) {
+
+          // @todo This does not work.
+          var is_enumerable = Model.__proto__.propertyIsEnumerable( key );
+
           Object.defineProperty( Instance, key, {
-            value: Model.__proto__[key], enumerable: false, writable: true, configurable: true
+            value: Model.__proto__[key],
+            enumerable: is_enumerable,
+            writable: true,
+            configurable: true
           });
         }
 
@@ -377,7 +446,7 @@ Object.defineProperties( module.exports = Abstract, {
       }
 
       // General Descriptors for basic data
-      if( &#x27;object&#x27; !== typeof prop || ( !prop.set &amp;&amp; !prop.value ) ) {
+      if( &#x27;object&#x27; !== typeof prop || ( !prop.get &amp;&amp; !prop.set &amp;&amp; !prop.value ) ) {
 
         if( prop.value ) { prop = prop.value; }
 
@@ -635,7 +704,7 @@ Object.defineProperties( Abstract.prototype, {
      * @returns {Function}
      */
     get: function() {
-      return function( properties ) {
+      return function properties( properties ) {
         if( arguments.length === 1 ) {
           return Abstract.defineProperties( this, arguments[0] );
         } else {
