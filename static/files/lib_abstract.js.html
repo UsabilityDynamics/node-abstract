@@ -258,9 +258,16 @@ Object.defineProperties( module.exports = Abstract, {
       // Run Builder in Model context
       Model.call( Model, Model, Model.prototype );
 
+      // Set custom name for creating method if available
+      var _create = &#x27;create&#x27;;
+
+      if( Model.instantiator &amp;&amp; Object.keys( Model.instantiator ).length ) {
+        Model.instantiator.forEach( function( fn ) { _create = fn.name || _create; });
+      }
+
       // Context wrapper for instantiation
-      Model.create = function createInstance() {
-        return Abstract.createInstance.apply( Model, arguments );;
+      if( _create || &#x27;string&#x27; === typeof _create ) {
+        Model[ _create ] = function createInstance() { return Abstract.createInstance.apply( Model, arguments ); }
       }
 
       // Return constructor function

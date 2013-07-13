@@ -100,12 +100,7 @@
  * @example
  *
  *    // Select specific methods to load
- *    Utility( &#x27;extend&#x27;, &#x27;unwatch&#x27;, &#x27;watch&#x27; );
- *
- *
- *  Concat will always result in an Array that can be safely joined
- *  [].concat( [ maybe_array ] ).join( &#x27;.&#x27; );
- *  [].concat( [ maybe_array, &#x27;blah&#x27; ] ).join( &#x27;.&#x27; );
+ *    var my_tools = Abstract.utility( &#x27;if&#x27;, &#x27;extend&#x27;, &#x27;flatten&#x27;, &#x27;unwatch&#x27;, &#x27;watch&#x27; );
  *
  * @for abstract
  * @submodule abstract-utility
@@ -495,26 +490,46 @@ Object.defineProperties( module.exports = Utility, {
     /**
      * Flatten Array
      *
+     * @todo Notice - nested arrays will not honor delimiter.
      */
     value: function flatten( data, options ) {
-      data = data || [];
-      options = options || { delimiter: &#x27;.&#x27; };
-      var result = [];
 
-      // Flatten Channel Name with Delimiter
-      if( data instanceof Array ) {
-        data.forEach( function( value ) {
-          if( &#x27;string&#x27; === typeof value || &#x27;number&#x27; === typeof value ) {
-            result.push( value );
+      options = Utility.defaults( options, {
+        delimiter: 1
+      });
+
+      return Array.prototype.concat( data ).join( options.delimiter ).toLowerCase();
+
+
+    },
+    enumerable: true
+  },
+  flatten_obj: {
+    value: function flatten_obj( obj ) {
+
+      var list = {};
+
+      (function callee(o, r) {
+
+        r = r || &#x27;&#x27;;
+
+        if (typeof o != &#x27;object&#x27;) {
+          return true;
+        }
+
+        for (var c in o) {
+
+          if ( callee( o[c], r + &quot;.&quot; + c ) ) {
+
+            list[r.substring(1) + &quot;.&quot; + c] = o[c]
           }
-        });
-      }
+        }
 
-      result = result.join( options.delimiter );
+        return false;
 
-      // Lowercase
-      return result.toLowerCase()
+      })(obj);
 
+      return list;
     },
     enumerable: true
   },
