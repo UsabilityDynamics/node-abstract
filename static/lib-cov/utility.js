@@ -9,137 +9,153 @@ if (! _$jscoverage['utility.js']) {
   _$jscoverage['utility.js'][33] = 0;
   _$jscoverage['utility.js'][36] = 0;
   _$jscoverage['utility.js'][37] = 0;
-  _$jscoverage['utility.js'][38] = 0;
-  _$jscoverage['utility.js'][59] = 0;
-  _$jscoverage['utility.js'][61] = 0;
-  _$jscoverage['utility.js'][62] = 0;
+  _$jscoverage['utility.js'][40] = 0;
+  _$jscoverage['utility.js'][42] = 0;
   _$jscoverage['utility.js'][63] = 0;
-  _$jscoverage['utility.js'][64] = 0;
+  _$jscoverage['utility.js'][65] = 0;
+  _$jscoverage['utility.js'][66] = 0;
   _$jscoverage['utility.js'][67] = 0;
-  _$jscoverage['utility.js'][69] = 0;
+  _$jscoverage['utility.js'][68] = 0;
   _$jscoverage['utility.js'][71] = 0;
   _$jscoverage['utility.js'][73] = 0;
-  _$jscoverage['utility.js'][88] = 0;
-  _$jscoverage['utility.js'][90] = 0;
-  _$jscoverage['utility.js'][91] = 0;
+  _$jscoverage['utility.js'][75] = 0;
+  _$jscoverage['utility.js'][77] = 0;
   _$jscoverage['utility.js'][92] = 0;
+  _$jscoverage['utility.js'][94] = 0;
   _$jscoverage['utility.js'][95] = 0;
-  _$jscoverage['utility.js'][97] = 0;
+  _$jscoverage['utility.js'][96] = 0;
   _$jscoverage['utility.js'][99] = 0;
-  _$jscoverage['utility.js'][112] = 0;
-  _$jscoverage['utility.js'][113] = 0;
-  _$jscoverage['utility.js'][114] = 0;
-  _$jscoverage['utility.js'][115] = 0;
+  _$jscoverage['utility.js'][101] = 0;
+  _$jscoverage['utility.js'][103] = 0;
+  _$jscoverage['utility.js'][116] = 0;
   _$jscoverage['utility.js'][117] = 0;
-  _$jscoverage['utility.js'][120] = 0;
+  _$jscoverage['utility.js'][118] = 0;
+  _$jscoverage['utility.js'][119] = 0;
   _$jscoverage['utility.js'][121] = 0;
-  _$jscoverage['utility.js'][160] = 0;
+  _$jscoverage['utility.js'][124] = 0;
+  _$jscoverage['utility.js'][125] = 0;
+  _$jscoverage['utility.js'][153] = 0;
+  _$jscoverage['utility.js'][154] = 0;
+  _$jscoverage['utility.js'][156] = 0;
+  _$jscoverage['utility.js'][159] = 0;
   _$jscoverage['utility.js'][161] = 0;
-  _$jscoverage['utility.js'][165] = 0;
+  _$jscoverage['utility.js'][163] = 0;
   _$jscoverage['utility.js'][168] = 0;
-  _$jscoverage['utility.js'][190] = 0;
-  _$jscoverage['utility.js'][191] = 0;
-  _$jscoverage['utility.js'][192] = 0;
+  _$jscoverage['utility.js'][171] = 0;
+  _$jscoverage['utility.js'][172] = 0;
+  _$jscoverage['utility.js'][175] = 0;
+  _$jscoverage['utility.js'][176] = 0;
+  _$jscoverage['utility.js'][179] = 0;
+  _$jscoverage['utility.js'][180] = 0;
   _$jscoverage['utility.js'][194] = 0;
   _$jscoverage['utility.js'][195] = 0;
-  _$jscoverage['utility.js'][196] = 0;
-  _$jscoverage['utility.js'][197] = 0;
-  _$jscoverage['utility.js'][198] = 0;
-  _$jscoverage['utility.js'][202] = 0;
-  _$jscoverage['utility.js'][203] = 0;
-  _$jscoverage['utility.js'][206] = 0;
-  _$jscoverage['utility.js'][208] = 0;
-  _$jscoverage['utility.js'][211] = 0;
-  _$jscoverage['utility.js'][214] = 0;
-  _$jscoverage['utility.js'][217] = 0;
-  _$jscoverage['utility.js'][241] = 0;
+  _$jscoverage['utility.js'][234] = 0;
+  _$jscoverage['utility.js'][235] = 0;
+  _$jscoverage['utility.js'][239] = 0;
   _$jscoverage['utility.js'][242] = 0;
-  _$jscoverage['utility.js'][245] = 0;
-  _$jscoverage['utility.js'][246] = 0;
-  _$jscoverage['utility.js'][249] = 0;
-  _$jscoverage['utility.js'][251] = 0;
+  _$jscoverage['utility.js'][264] = 0;
+  _$jscoverage['utility.js'][265] = 0;
+  _$jscoverage['utility.js'][266] = 0;
   _$jscoverage['utility.js'][268] = 0;
   _$jscoverage['utility.js'][269] = 0;
+  _$jscoverage['utility.js'][270] = 0;
+  _$jscoverage['utility.js'][271] = 0;
   _$jscoverage['utility.js'][272] = 0;
   _$jscoverage['utility.js'][276] = 0;
   _$jscoverage['utility.js'][277] = 0;
-  _$jscoverage['utility.js'][278] = 0;
+  _$jscoverage['utility.js'][280] = 0;
   _$jscoverage['utility.js'][282] = 0;
-  _$jscoverage['utility.js'][312] = 0;
-  _$jscoverage['utility.js'][313] = 0;
-  _$jscoverage['utility.js'][314] = 0;
+  _$jscoverage['utility.js'][285] = 0;
+  _$jscoverage['utility.js'][288] = 0;
+  _$jscoverage['utility.js'][291] = 0;
   _$jscoverage['utility.js'][315] = 0;
   _$jscoverage['utility.js'][316] = 0;
-  _$jscoverage['utility.js'][318] = 0;
   _$jscoverage['utility.js'][319] = 0;
   _$jscoverage['utility.js'][320] = 0;
-  _$jscoverage['utility.js'][322] = 0;
   _$jscoverage['utility.js'][323] = 0;
-  _$jscoverage['utility.js'][326] = 0;
-  _$jscoverage['utility.js'][330] = 0;
-  _$jscoverage['utility.js'][347] = 0;
-  _$jscoverage['utility.js'][348] = 0;
+  _$jscoverage['utility.js'][325] = 0;
+  _$jscoverage['utility.js'][342] = 0;
+  _$jscoverage['utility.js'][343] = 0;
+  _$jscoverage['utility.js'][346] = 0;
   _$jscoverage['utility.js'][350] = 0;
+  _$jscoverage['utility.js'][351] = 0;
   _$jscoverage['utility.js'][352] = 0;
-  _$jscoverage['utility.js'][353] = 0;
-  _$jscoverage['utility.js'][359] = 0;
-  _$jscoverage['utility.js'][363] = 0;
-  _$jscoverage['utility.js'][379] = 0;
-  _$jscoverage['utility.js'][380] = 0;
-  _$jscoverage['utility.js'][384] = 0;
-  _$jscoverage['utility.js'][385] = 0;
+  _$jscoverage['utility.js'][356] = 0;
+  _$jscoverage['utility.js'][386] = 0;
+  _$jscoverage['utility.js'][387] = 0;
   _$jscoverage['utility.js'][388] = 0;
-  _$jscoverage['utility.js'][401] = 0;
-  _$jscoverage['utility.js'][405] = 0;
-  _$jscoverage['utility.js'][414] = 0;
-  _$jscoverage['utility.js'][416] = 0;
-  _$jscoverage['utility.js'][418] = 0;
-  _$jscoverage['utility.js'][420] = 0;
+  _$jscoverage['utility.js'][389] = 0;
+  _$jscoverage['utility.js'][390] = 0;
+  _$jscoverage['utility.js'][392] = 0;
+  _$jscoverage['utility.js'][393] = 0;
+  _$jscoverage['utility.js'][394] = 0;
+  _$jscoverage['utility.js'][396] = 0;
+  _$jscoverage['utility.js'][397] = 0;
+  _$jscoverage['utility.js'][400] = 0;
+  _$jscoverage['utility.js'][404] = 0;
   _$jscoverage['utility.js'][421] = 0;
+  _$jscoverage['utility.js'][422] = 0;
   _$jscoverage['utility.js'][424] = 0;
   _$jscoverage['utility.js'][426] = 0;
-  _$jscoverage['utility.js'][428] = 0;
-  _$jscoverage['utility.js'][432] = 0;
-  _$jscoverage['utility.js'][436] = 0;
-  _$jscoverage['utility.js'][451] = 0;
+  _$jscoverage['utility.js'][427] = 0;
+  _$jscoverage['utility.js'][433] = 0;
+  _$jscoverage['utility.js'][437] = 0;
   _$jscoverage['utility.js'][453] = 0;
+  _$jscoverage['utility.js'][454] = 0;
+  _$jscoverage['utility.js'][458] = 0;
+  _$jscoverage['utility.js'][459] = 0;
+  _$jscoverage['utility.js'][462] = 0;
   _$jscoverage['utility.js'][475] = 0;
-  _$jscoverage['utility.js'][476] = 0;
-  _$jscoverage['utility.js'][478] = 0;
   _$jscoverage['utility.js'][479] = 0;
-  _$jscoverage['utility.js'][481] = 0;
-  _$jscoverage['utility.js'][483] = 0;
-  _$jscoverage['utility.js'][484] = 0;
-  _$jscoverage['utility.js'][486] = 0;
-  _$jscoverage['utility.js'][508] = 0;
-  _$jscoverage['utility.js'][509] = 0;
-  _$jscoverage['utility.js'][512] = 0;
-  _$jscoverage['utility.js'][513] = 0;
-  _$jscoverage['utility.js'][516] = 0;
-  _$jscoverage['utility.js'][531] = 0;
-  _$jscoverage['utility.js'][532] = 0;
-  _$jscoverage['utility.js'][533] = 0;
-  _$jscoverage['utility.js'][535] = 0;
-  _$jscoverage['utility.js'][559] = 0;
+  _$jscoverage['utility.js'][488] = 0;
+  _$jscoverage['utility.js'][490] = 0;
+  _$jscoverage['utility.js'][492] = 0;
+  _$jscoverage['utility.js'][494] = 0;
+  _$jscoverage['utility.js'][495] = 0;
+  _$jscoverage['utility.js'][498] = 0;
+  _$jscoverage['utility.js'][500] = 0;
+  _$jscoverage['utility.js'][502] = 0;
+  _$jscoverage['utility.js'][506] = 0;
+  _$jscoverage['utility.js'][510] = 0;
+  _$jscoverage['utility.js'][525] = 0;
+  _$jscoverage['utility.js'][527] = 0;
+  _$jscoverage['utility.js'][549] = 0;
+  _$jscoverage['utility.js'][550] = 0;
+  _$jscoverage['utility.js'][552] = 0;
+  _$jscoverage['utility.js'][553] = 0;
+  _$jscoverage['utility.js'][555] = 0;
+  _$jscoverage['utility.js'][557] = 0;
+  _$jscoverage['utility.js'][558] = 0;
   _$jscoverage['utility.js'][560] = 0;
-  _$jscoverage['utility.js'][561] = 0;
-  _$jscoverage['utility.js'][567] = 0;
-  _$jscoverage['utility.js'][569] = 0;
-  _$jscoverage['utility.js'][570] = 0;
-  _$jscoverage['utility.js'][573] = 0;
-  _$jscoverage['utility.js'][575] = 0;
-  _$jscoverage['utility.js'][578] = 0;
-  _$jscoverage['utility.js'][620] = 0;
-  _$jscoverage['utility.js'][623] = 0;
-  _$jscoverage['utility.js'][624] = 0;
-  _$jscoverage['utility.js'][627] = 0;
-  _$jscoverage['utility.js'][629] = 0;
-  _$jscoverage['utility.js'][631] = 0;
+  _$jscoverage['utility.js'][582] = 0;
+  _$jscoverage['utility.js'][583] = 0;
+  _$jscoverage['utility.js'][586] = 0;
+  _$jscoverage['utility.js'][587] = 0;
+  _$jscoverage['utility.js'][590] = 0;
+  _$jscoverage['utility.js'][605] = 0;
+  _$jscoverage['utility.js'][606] = 0;
+  _$jscoverage['utility.js'][607] = 0;
+  _$jscoverage['utility.js'][609] = 0;
   _$jscoverage['utility.js'][633] = 0;
   _$jscoverage['utility.js'][634] = 0;
-  _$jscoverage['utility.js'][636] = 0;
+  _$jscoverage['utility.js'][635] = 0;
   _$jscoverage['utility.js'][641] = 0;
   _$jscoverage['utility.js'][643] = 0;
+  _$jscoverage['utility.js'][644] = 0;
+  _$jscoverage['utility.js'][647] = 0;
+  _$jscoverage['utility.js'][649] = 0;
+  _$jscoverage['utility.js'][652] = 0;
+  _$jscoverage['utility.js'][695] = 0;
+  _$jscoverage['utility.js'][698] = 0;
+  _$jscoverage['utility.js'][699] = 0;
+  _$jscoverage['utility.js'][702] = 0;
+  _$jscoverage['utility.js'][704] = 0;
+  _$jscoverage['utility.js'][706] = 0;
+  _$jscoverage['utility.js'][708] = 0;
+  _$jscoverage['utility.js'][709] = 0;
+  _$jscoverage['utility.js'][711] = 0;
+  _$jscoverage['utility.js'][716] = 0;
+  _$jscoverage['utility.js'][718] = 0;
 }
 _$jscoverage['utility.js'][14]++;
 function Utility() {
@@ -164,355 +180,403 @@ Object.defineProperties(module.exports = Utility, {json: {value: {parse: (functi
     _$jscoverage['utility.js'][37]++;
     parsed = false;
   }
-  _$jscoverage['utility.js'][38]++;
+  _$jscoverage['utility.js'][40]++;
+  if (! parsed && "string" === typeof json) {
+  }
+  _$jscoverage['utility.js'][42]++;
   return parsed? parsed: json;
 })}, configurable: false, enumerable: true, writable: true}, console: {value: {json: (function json(data, depth) {
-  _$jscoverage['utility.js'][59]++;
+  _$jscoverage['utility.js'][63]++;
   try {
-    _$jscoverage['utility.js'][61]++;
+    _$jscoverage['utility.js'][65]++;
     if ("string" === typeof data && ("object" === typeof depth || "function" === typeof depth)) {
-      _$jscoverage['utility.js'][62]++;
+      _$jscoverage['utility.js'][66]++;
       console.log("\n" + "===============" + data + " Properties===============");
-      _$jscoverage['utility.js'][63]++;
+      _$jscoverage['utility.js'][67]++;
       data = depth;
-      _$jscoverage['utility.js'][64]++;
+      _$jscoverage['utility.js'][68]++;
       depth = arguments[2] || 1;
     }
-    _$jscoverage['utility.js'][67]++;
+    _$jscoverage['utility.js'][71]++;
     var output = require("util").inspect(data, false, "number" === typeof depth? (depth - 1): 1, true);
-    _$jscoverage['utility.js'][69]++;
+    _$jscoverage['utility.js'][73]++;
     console.log(output);
   }
   catch (error) {
-    _$jscoverage['utility.js'][71]++;
+    _$jscoverage['utility.js'][75]++;
     console.error("Error with console.json()", error);
   }
-  _$jscoverage['utility.js'][73]++;
+  _$jscoverage['utility.js'][77]++;
   return arguments[0];
 }), method: (function method(data, object) {
-  _$jscoverage['utility.js'][88]++;
+  _$jscoverage['utility.js'][92]++;
   try {
-    _$jscoverage['utility.js'][90]++;
+    _$jscoverage['utility.js'][94]++;
     if ("string" === typeof data && ("object" === typeof object || "function" === typeof object)) {
-      _$jscoverage['utility.js'][91]++;
+      _$jscoverage['utility.js'][95]++;
       console.log("\n" + "===============" + data + " Methods===============");
-      _$jscoverage['utility.js'][92]++;
+      _$jscoverage['utility.js'][96]++;
       data = object;
     }
-    _$jscoverage['utility.js'][95]++;
+    _$jscoverage['utility.js'][99]++;
     module.exports.json(_.methods(data));
   }
   catch (error) {
-    _$jscoverage['utility.js'][97]++;
+    _$jscoverage['utility.js'][101]++;
     console.error("Error with console.methods()", error);
   }
-  _$jscoverage['utility.js'][99]++;
+  _$jscoverage['utility.js'][103]++;
   return arguments[0];
 }), keys: (function keys(data) {
-  _$jscoverage['utility.js'][112]++;
+  _$jscoverage['utility.js'][116]++;
   function Iterate(target) {
-    _$jscoverage['utility.js'][113]++;
+    _$jscoverage['utility.js'][117]++;
     var result = [];
-    _$jscoverage['utility.js'][114]++;
+    _$jscoverage['utility.js'][118]++;
     for (var key in target) {
-      _$jscoverage['utility.js'][115]++;
+      _$jscoverage['utility.js'][119]++;
       result.push(key);
 }
-    _$jscoverage['utility.js'][117]++;
+    _$jscoverage['utility.js'][121]++;
     return result;
 }
-  _$jscoverage['utility.js'][120]++;
+  _$jscoverage['utility.js'][124]++;
   console.log([Object.keys(data) + Object.getOwnPropertyNames(data) + Iterate(data)]);
-  _$jscoverage['utility.js'][121]++;
+  _$jscoverage['utility.js'][125]++;
   return data;
+}), table: (function table(data) {
+  _$jscoverage['utility.js'][153]++;
+  try {
+    _$jscoverage['utility.js'][154]++;
+    var table = require("cli-table");
+  }
+  catch (error) {
+    _$jscoverage['utility.js'][156]++;
+    return console.log(data);
+  }
+  _$jscoverage['utility.js'][159]++;
+  var rows = [];
+  _$jscoverage['utility.js'][161]++;
+  if (_.isObject(data) && data.rows) {
+    _$jscoverage['utility.js'][163]++;
+    table = new table({"head": data.head || [], "colWidths": data.colWidths || []});
+    _$jscoverage['utility.js'][168]++;
+    rows = data.rows;
+  }
+  else {
+    _$jscoverage['utility.js'][171]++;
+    table = new table();
+    _$jscoverage['utility.js'][172]++;
+    rows = data;
+  }
+  _$jscoverage['utility.js'][175]++;
+  _.each(rows, (function (row) {
+  _$jscoverage['utility.js'][176]++;
+  if (! _.isEmpty(row)) {
+    _$jscoverage['utility.js'][176]++;
+    table.push(row);
+  }
+}));
+  _$jscoverage['utility.js'][179]++;
+  try {
+    _$jscoverage['utility.js'][180]++;
+    console.log(table.toString());
+  }
+  catch (error) {
+  }
+}), report: (function report() {
+  _$jscoverage['utility.js'][194]++;
+  module.exports.console.json.apply(module.exports, arguments);
+  _$jscoverage['utility.js'][195]++;
+  module.exports.console.methods.apply(module.exports, arguments);
 })}, configurable: false, enumerable: true, writable: true}, noop: {value: (function noop() {
 }), configurable: false, enumerable: true, writable: true}, apply: {value: require("async").apply, configurable: true, enumerable: true, writable: true}, defaults: {value: (function defaults(target, defaults) {
-  _$jscoverage['utility.js'][160]++;
+  _$jscoverage['utility.js'][234]++;
   if (! target && ! defaults) {
-    _$jscoverage['utility.js'][161]++;
+    _$jscoverage['utility.js'][235]++;
     return ({});
   }
-  _$jscoverage['utility.js'][165]++;
+  _$jscoverage['utility.js'][239]++;
   target = Object.keys(target || {}).length? target: {};
-  _$jscoverage['utility.js'][168]++;
+  _$jscoverage['utility.js'][242]++;
   return require("lodash").defaults.apply({}, arguments);
 }), configurable: true, enumerable: true, writable: true}, watch: {value: (function watch(target, prop, handler) {
-  _$jscoverage['utility.js'][190]++;
+  _$jscoverage['utility.js'][264]++;
   var oldval = target[prop];
-  _$jscoverage['utility.js'][191]++;
+  _$jscoverage['utility.js'][265]++;
   var newval = oldval;
-  _$jscoverage['utility.js'][192]++;
+  _$jscoverage['utility.js'][266]++;
   var description = Object.getOwnPropertyDescriptor(target, prop) || {};
-  _$jscoverage['utility.js'][194]++;
+  _$jscoverage['utility.js'][268]++;
   switch (typeof target[prop]) {
   case "function":
-    _$jscoverage['utility.js'][195]++;
+    _$jscoverage['utility.js'][269]++;
     break;
   case "object":
-    _$jscoverage['utility.js'][196]++;
+    _$jscoverage['utility.js'][270]++;
     break;
   case "string":
-    _$jscoverage['utility.js'][197]++;
+    _$jscoverage['utility.js'][271]++;
     break;
   case "number":
-    _$jscoverage['utility.js'][198]++;
+    _$jscoverage['utility.js'][272]++;
     break;
   }
-  _$jscoverage['utility.js'][202]++;
+  _$jscoverage['utility.js'][276]++;
   if (description.configurable === false || ! (delete target[prop])) {
-    _$jscoverage['utility.js'][203]++;
+    _$jscoverage['utility.js'][277]++;
     return target;
   }
-  _$jscoverage['utility.js'][206]++;
+  _$jscoverage['utility.js'][280]++;
   return Object.defineProperty(target, prop, {get: (function get() {
-  _$jscoverage['utility.js'][208]++;
+  _$jscoverage['utility.js'][282]++;
   return newval;
 }), set: (function set(val) {
-  _$jscoverage['utility.js'][211]++;
+  _$jscoverage['utility.js'][285]++;
   oldval = newval;
-  _$jscoverage['utility.js'][214]++;
+  _$jscoverage['utility.js'][288]++;
   newval = val;
-  _$jscoverage['utility.js'][217]++;
+  _$jscoverage['utility.js'][291]++;
   return newval = handler.call(target, prop, oldval, val);
 }), enumerable: description.enumerable, configurable: true});
 }), configurable: true, enumerable: true, writable: true}, unwatch: {value: (function unwatch(prop) {
-  _$jscoverage['utility.js'][241]++;
+  _$jscoverage['utility.js'][315]++;
   var val = this[prop];
-  _$jscoverage['utility.js'][242]++;
+  _$jscoverage['utility.js'][316]++;
   var description = Object.getOwnPropertyDescriptor(this, prop);
-  _$jscoverage['utility.js'][245]++;
+  _$jscoverage['utility.js'][319]++;
   if (description.configurable === false || ! (delete this[prop])) {
-    _$jscoverage['utility.js'][246]++;
+    _$jscoverage['utility.js'][320]++;
     return this;
   }
-  _$jscoverage['utility.js'][249]++;
+  _$jscoverage['utility.js'][323]++;
   this[prop] = val;
-  _$jscoverage['utility.js'][251]++;
+  _$jscoverage['utility.js'][325]++;
   return this;
 }), configurable: true, enumerable: true, writable: true}, query: {value: (function query(obj, str) {
-  _$jscoverage['utility.js'][268]++;
+  _$jscoverage['utility.js'][342]++;
   if (! str) {
-    _$jscoverage['utility.js'][269]++;
+    _$jscoverage['utility.js'][343]++;
     return obj;
   }
-  _$jscoverage['utility.js'][272]++;
+  _$jscoverage['utility.js'][346]++;
   if ("object" === typeof str) {
   }
-  _$jscoverage['utility.js'][276]++;
+  _$jscoverage['utility.js'][350]++;
   try {
-    _$jscoverage['utility.js'][277]++;
+    _$jscoverage['utility.js'][351]++;
     return str.split(".").reduce((function (o, x) {
-  _$jscoverage['utility.js'][278]++;
+  _$jscoverage['utility.js'][352]++;
   return o[x];
 }), obj);
   }
   catch (error) {
-    _$jscoverage['utility.js'][282]++;
+    _$jscoverage['utility.js'][356]++;
     return null;
   }
 }), configurable: true, enumerable: true, writable: true}, unwrap: {value: (function unwrap(string, value, hash, seperator) {
-  _$jscoverage['utility.js'][312]++;
+  _$jscoverage['utility.js'][386]++;
   if (hash == null) {
-    _$jscoverage['utility.js'][312]++;
+    _$jscoverage['utility.js'][386]++;
     hash = {};
   }
-  _$jscoverage['utility.js'][313]++;
+  _$jscoverage['utility.js'][387]++;
   if (seperator == null) {
-    _$jscoverage['utility.js'][313]++;
+    _$jscoverage['utility.js'][387]++;
     seperator = ".";
   }
-  _$jscoverage['utility.js'][314]++;
+  _$jscoverage['utility.js'][388]++;
   var parts = string.split(seperator);
-  _$jscoverage['utility.js'][315]++;
+  _$jscoverage['utility.js'][389]++;
   var refHash = hash;
-  _$jscoverage['utility.js'][316]++;
+  _$jscoverage['utility.js'][390]++;
   var depth = 0;
-  _$jscoverage['utility.js'][318]++;
+  _$jscoverage['utility.js'][392]++;
   parts.forEach((function (part) {
-  _$jscoverage['utility.js'][319]++;
+  _$jscoverage['utility.js'][393]++;
   if (depth == parts.length - 1) {
-    _$jscoverage['utility.js'][320]++;
+    _$jscoverage['utility.js'][394]++;
     refHash[part] = value;
   }
   else {
-    _$jscoverage['utility.js'][322]++;
+    _$jscoverage['utility.js'][396]++;
     if (refHash[part] == null) {
-      _$jscoverage['utility.js'][322]++;
+      _$jscoverage['utility.js'][396]++;
       refHash[part] = {};
     }
-    _$jscoverage['utility.js'][323]++;
+    _$jscoverage['utility.js'][397]++;
     refHash = refHash[part];
   }
-  _$jscoverage['utility.js'][326]++;
+  _$jscoverage['utility.js'][400]++;
   depth++;
 }));
-  _$jscoverage['utility.js'][330]++;
+  _$jscoverage['utility.js'][404]++;
   return hash;
 }), configurable: true, enumerable: true, writable: true}, mixin: {value: (function mixin(source, target) {
-  _$jscoverage['utility.js'][347]++;
+  _$jscoverage['utility.js'][421]++;
   source = this.prototype || arguments[0] || {};
-  _$jscoverage['utility.js'][348]++;
+  _$jscoverage['utility.js'][422]++;
   target = arguments.length == 2? arguments[1]: arguments[1] || {};
-  _$jscoverage['utility.js'][350]++;
+  _$jscoverage['utility.js'][424]++;
   for (var key in source) {
-    _$jscoverage['utility.js'][352]++;
+    _$jscoverage['utility.js'][426]++;
     try {
-      _$jscoverage['utility.js'][353]++;
+      _$jscoverage['utility.js'][427]++;
       Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key) || {value: source[key], enumerable: false, writable: true, configurable: true});
     }
     catch (error) {
-      _$jscoverage['utility.js'][359]++;
+      _$jscoverage['utility.js'][433]++;
       console.error(error);
     }
 }
-  _$jscoverage['utility.js'][363]++;
+  _$jscoverage['utility.js'][437]++;
   return target;
 }), configurable: true, writable: true, enumerable: false}, inherit: {value: (function inherit(target, source) {
-  _$jscoverage['utility.js'][379]++;
+  _$jscoverage['utility.js'][453]++;
   target = target || {};
-  _$jscoverage['utility.js'][380]++;
+  _$jscoverage['utility.js'][454]++;
   source = source || {};
-  _$jscoverage['utility.js'][384]++;
+  _$jscoverage['utility.js'][458]++;
   Object.getOwnPropertyNames(source).forEach((function (key) {
-  _$jscoverage['utility.js'][385]++;
+  _$jscoverage['utility.js'][459]++;
   if (! target.hasOwnProperty(key)) {
-    _$jscoverage['utility.js'][385]++;
+    _$jscoverage['utility.js'][459]++;
     Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
   }
 }));
-  _$jscoverage['utility.js'][388]++;
+  _$jscoverage['utility.js'][462]++;
   return target;
 }), enumerable: true}, flatten: {value: (function flatten(data, options) {
-  _$jscoverage['utility.js'][401]++;
+  _$jscoverage['utility.js'][475]++;
   options = Utility.defaults(options, {delimiter: 1});
-  _$jscoverage['utility.js'][405]++;
+  _$jscoverage['utility.js'][479]++;
   return Array.prototype.concat(data).join(options.delimiter).toLowerCase();
 }), enumerable: true}, flatten_obj: {value: (function flatten_obj(obj) {
-  _$jscoverage['utility.js'][414]++;
+  _$jscoverage['utility.js'][488]++;
   var list = {};
-  _$jscoverage['utility.js'][416]++;
+  _$jscoverage['utility.js'][490]++;
   (function callee(o, r) {
-  _$jscoverage['utility.js'][418]++;
+  _$jscoverage['utility.js'][492]++;
   r = r || "";
-  _$jscoverage['utility.js'][420]++;
+  _$jscoverage['utility.js'][494]++;
   if (typeof o != "object") {
-    _$jscoverage['utility.js'][421]++;
+    _$jscoverage['utility.js'][495]++;
     return true;
   }
-  _$jscoverage['utility.js'][424]++;
+  _$jscoverage['utility.js'][498]++;
   for (var c in o) {
-    _$jscoverage['utility.js'][426]++;
+    _$jscoverage['utility.js'][500]++;
     if (callee(o[c], r + "." + c)) {
-      _$jscoverage['utility.js'][428]++;
+      _$jscoverage['utility.js'][502]++;
       list[r.substring(1) + "." + c] = o[c];
     }
 }
-  _$jscoverage['utility.js'][432]++;
+  _$jscoverage['utility.js'][506]++;
   return false;
 })(obj);
-  _$jscoverage['utility.js'][436]++;
+  _$jscoverage['utility.js'][510]++;
   return list;
 }), enumerable: true}, inherit_full: {value: (function inherit_prototype(target, constructor) {
-  _$jscoverage['utility.js'][451]++;
+  _$jscoverage['utility.js'][525]++;
   target.super_ = constructor;
-  _$jscoverage['utility.js'][453]++;
+  _$jscoverage['utility.js'][527]++;
   target.prototype = Object.create(constructor.prototype, {constructor: {value: constructor, enumerable: false, writable: true, configurable: true}});
 }), configurable: true, enumerable: true, writable: true}, constructors: {value: (function constructors(context, options) {
-  _$jscoverage['utility.js'][475]++;
+  _$jscoverage['utility.js'][549]++;
   context = context || {};
-  _$jscoverage['utility.js'][476]++;
+  _$jscoverage['utility.js'][550]++;
   options = options || {};
-  _$jscoverage['utility.js'][478]++;
+  _$jscoverage['utility.js'][552]++;
   var matches = {};
-  _$jscoverage['utility.js'][479]++;
+  _$jscoverage['utility.js'][553]++;
   var path = [];
-  _$jscoverage['utility.js'][481]++;
+  _$jscoverage['utility.js'][555]++;
   do {
-    _$jscoverage['utility.js'][483]++;
+    _$jscoverage['utility.js'][557]++;
     if (context.constructor) {
-      _$jscoverage['utility.js'][484]++;
+      _$jscoverage['utility.js'][558]++;
       path.push(context.constructor.name);
-      _$jscoverage['utility.js'][486]++;
+      _$jscoverage['utility.js'][560]++;
       Object.defineProperty(matches, context.constructor.name, {enumerable: true, writable: true, value: {name: context.constructor.name, properties: {constructor: {type: typeof context.constructor, properties: Object.getOwnPropertyNames(context.constructor)}, prototype: {type: typeof context.constructor.prototype, properties: Object.keys(context.constructor.prototype)}}}});
     }
 }
   while (context = Object.getPrototypeOf(context));
-  _$jscoverage['utility.js'][508]++;
+  _$jscoverage['utility.js'][582]++;
   if (options.format === "schema") {
-    _$jscoverage['utility.js'][509]++;
+    _$jscoverage['utility.js'][583]++;
     return matches || {};
   }
-  _$jscoverage['utility.js'][512]++;
+  _$jscoverage['utility.js'][586]++;
   if (options.delimiter) {
-    _$jscoverage['utility.js'][513]++;
+    _$jscoverage['utility.js'][587]++;
     return path.join(options.delimiter);
   }
-  _$jscoverage['utility.js'][516]++;
+  _$jscoverage['utility.js'][590]++;
   return path;
 }), configurable: true, enumerable: true, writable: true}, unique: {value: (function unique(array) {
-  _$jscoverage['utility.js'][531]++;
+  _$jscoverage['utility.js'][605]++;
   var b = [];
-  _$jscoverage['utility.js'][532]++;
+  _$jscoverage['utility.js'][606]++;
   for (var i = 0; i < array.length; i++) {
-    _$jscoverage['utility.js'][533]++;
+    _$jscoverage['utility.js'][607]++;
     if (b.indexOf(array[i]) == -1) {
-      _$jscoverage['utility.js'][533]++;
+      _$jscoverage['utility.js'][607]++;
       b.push(array[i]);
     }
 }
-  _$jscoverage['utility.js'][535]++;
+  _$jscoverage['utility.js'][609]++;
   return b;
 }), configurable: true, enumerable: true, writable: true}, hash: {value: (function hash(obj) {
-  _$jscoverage['utility.js'][559]++;
+  _$jscoverage['utility.js'][633]++;
   var result;
-  _$jscoverage['utility.js'][560]++;
+  _$jscoverage['utility.js'][634]++;
   var string = JSON.stringify(arguments[0] || {});
-  _$jscoverage['utility.js'][561]++;
+  _$jscoverage['utility.js'][635]++;
   var options = Utility.defaults(arguments[1], {type: "md5", silent_fail: true, random: false});
-  _$jscoverage['utility.js'][567]++;
+  _$jscoverage['utility.js'][641]++;
   try {
-    _$jscoverage['utility.js'][569]++;
+    _$jscoverage['utility.js'][643]++;
     if (options.random) {
-      _$jscoverage['utility.js'][570]++;
+      _$jscoverage['utility.js'][644]++;
       string = Math.random().toString();
     }
-    _$jscoverage['utility.js'][573]++;
+    _$jscoverage['utility.js'][647]++;
     result = require("crypto").createHash(options.type.toLowerCase()).update(string).digest("hex");
   }
   catch (error) {
-    _$jscoverage['utility.js'][575]++;
+    _$jscoverage['utility.js'][649]++;
     result = options.silent_fail? "": error;
   }
-  _$jscoverage['utility.js'][578]++;
+  _$jscoverage['utility.js'][652]++;
   return result;
-}), configurable: true, enumerable: true, writable: true}, auto: {value: require("async").auto}, queue: {value: require("async").queue}, times: {value: require("async").times}, extend: {value: require("lodash").extend}, values: {value: require("lodash").values}, each: {value: require("lodash").each}, toArray: {value: require("lodash").toArray}, where: {value: require("lodash").where}, if: {value: {"PlainObject": require("lodash").isPlainObject, "Function": require("lodash").isFunction, "Object": require("lodash").isObject, "String": require("lodash").isString}, enumerable: true}, log: {value: Object.defineProperties((function () {
-  _$jscoverage['utility.js'][620]++;
+}), configurable: true, enumerable: true, writable: true}, auto: {value: require("async").auto}, queue: {value: require("async").queue}, times: {value: require("async").times}, extend: {value: require("lodash").extend}, values: {value: require("lodash").values}, map: {value: require("lodash").map}, each: {value: require("lodash").each}, toArray: {value: require("lodash").toArray}, where: {value: require("lodash").where}, if: {value: {"PlainObject": require("lodash").isPlainObject, "Function": require("lodash").isFunction, "Object": require("lodash").isObject, "String": require("lodash").isString}, enumerable: true}, log: {value: Object.defineProperties((function () {
+  _$jscoverage['utility.js'][695]++;
   var output = {};
-  _$jscoverage['utility.js'][623]++;
+  _$jscoverage['utility.js'][698]++;
   if (this.event) {
-    _$jscoverage['utility.js'][624]++;
+    _$jscoverage['utility.js'][699]++;
     output.event = this.event;
   }
-  _$jscoverage['utility.js'][627]++;
+  _$jscoverage['utility.js'][702]++;
   Utility.each(arguments, (function (item, key) {
-  _$jscoverage['utility.js'][629]++;
+  _$jscoverage['utility.js'][704]++;
   if (Utility["if"].PlainObject(item)) {
   }
-  _$jscoverage['utility.js'][631]++;
+  _$jscoverage['utility.js'][706]++;
   output.format = typeof item;
-  _$jscoverage['utility.js'][633]++;
+  _$jscoverage['utility.js'][708]++;
   if (key === 0) {
-    _$jscoverage['utility.js'][634]++;
+    _$jscoverage['utility.js'][709]++;
     output.data = item;
   }
   else {
-    _$jscoverage['utility.js'][636]++;
+    _$jscoverage['utility.js'][711]++;
     output[key] = item;
   }
 }));
-  _$jscoverage['utility.js'][641]++;
+  _$jscoverage['utility.js'][716]++;
   console.log(require("util").inspect(output, Utility.log.config));
-  _$jscoverage['utility.js'][643]++;
+  _$jscoverage['utility.js'][718]++;
   return this;
 }), {"config": {value: {"showHidden": true, "depth": 2, "colors": true}, "writable": true}}), enumerable: true}});
-_$jscoverage['utility.js'].source = ["/**"," * Helper Utility for Abstract"," *"," * @example"," *"," *    // Select specific methods to load"," *    var my_tools = Abstract.utility( 'if', 'extend', 'flatten', 'unwatch', 'watch' );"," *"," * @for abstract"," * @submodule abstract-utility"," * @author potanin@UD"," * @date 6/17/13"," */","function Utility() {","  return Object.keys( arguments ) ? require( 'lodash' ).pick.apply( null, [ Utility, Array.prototype.slice.call( arguments ) ] ) : Utility;","}","","Object.defineProperties( module.exports = Utility, {","  json: {","    value: {","      /**","       * Safely parse JSON","       *","       * @method parse","       * @for Json","       *","       * @param json","       * @return {parsed|json}","       */","      parse: function( json ) {","","        if( Buffer &amp;&amp; json instanceof Buffer ) {","          json = json.toString()","        }","","        var parsed = false;","        try { parsed = JSON.parse( json ); } catch (e) { parsed = false; }","        return parsed ? parsed : json;","      }","    },","    configurable: false,","    enumerable: true,","    writable: true","  },","  console: {","    value: {","      /**","       * Prety Print complex objects","       *","       * @param data","       * @param depth","       *","       * @requires lodash","       * @method console_json","       * @return {Object} The first argument.","       */","      json: function json( data, depth ) {","","        try {","","          if( 'string' === typeof data &amp;&amp; ( 'object' === typeof depth || 'function' === typeof depth ) ) {","            console.log( \"\\n\" + '===============' + data + ' Properties===============' );","            data = depth;","            depth = arguments[2] || 1","          }","","          var output = require( 'util' ).inspect( data, false, 'number' === typeof depth ? ( depth - 1 ) : 1, true );","","          console.log( output );","","        } catch( error ) { console.error( 'Error with console.json()', error ); }","","        return arguments[0];","","      },","      /**","       * Pretty Print and Object's Methods","       *","       * @param data","       * @param object","       *","       * @requires lodash","       * @method console_methods","       * @return {Object} The first argument.","       */","      method: function method( data, object ) {","","        try {","","          if( 'string' === typeof data &amp;&amp; ( 'object' === typeof object || 'function' === typeof object ) ) {","            console.log( \"\\n\" + '===============' + data + ' Methods===============' );","            data = object;","          }","","          module.exports.json( _.methods( data ) );","","        } catch( error ) { console.error( 'Error with console.methods()', error ); }","","        return arguments[0];","","      },","      /**","       * Get all Object Keys","       *","       * @param data","       *","       * @method console_keys","       * @return {Object} The first argument.","       */","      keys: function keys( data ) {","","        function Iterate( target ) {","          var result = [];","          for( var key in target ) {","            result.push( key );","          }","          return result;","        }","","        console.log([ Object.keys( data ) + Object.getOwnPropertyNames( data ) + Iterate( data ) ]);","        return data;","      }","    },","    configurable: false,","    enumerable: true,","    writable: true","  },","  noop: {","    /**","     * Not a function, that's for sure.","     * This method does not accept any arguments.","     */","    value: function noop() {","      // console.log( arguments )","    },","    configurable: false,","    enumerable: true,","    writable: true","  },","  apply: {","    /**","     * Creates a continuation function with some arguments already applied.","     *","     * @uses async","     */","    value: require( 'async' ).apply,","    configurable: true,","    enumerable: true,","    writable: true","  },","  defaults: {","    /**","     * Configure Defaults for an Object","     *","     * @returns {Object}","     */","    value: function defaults( target, defaults ) {","","      // If no arguments, return empty object","      if( !target &amp;&amp; !defaults ) {","        return {};","      }","","      // Ensure target is an object","      target = Object.keys( target || {} ).length ? target : {};","","      // Lodash-it","      return require( 'lodash' ).defaults.apply( {}, arguments );","","    },","    configurable: true,","    enumerable: true,","    writable: true","  },","  watch: {","    /**","     * Watch a Single Property","     *","     * @param {Object} prop","     * @param {callback} handler","     *","     * @method watch","     * @for abstract-utility","     *","     * @chainable","     *","     * @return {Object} newval","     */","    value: function watch( target, prop, handler ) {","      var oldval = target[prop];","      var newval = oldval;","      var description = Object.getOwnPropertyDescriptor( target, prop ) || {};","","      switch( typeof target[prop] ) {","        case 'function':break;","        case 'object':break;","        case 'string':break;","        case 'number':break;","      }","","      // Delete original property and replace with getter/setter if possible","      if( description.configurable === false || !( delete target[ prop ] ) ) {","        return target;","      }","","      return Object.defineProperty( target, prop, {","        get: function get() {","          return newval;","        },","        set: function set( val ) {","          oldval = newval;","","          // Set value","          newval = val;","","          // Execute hander and potentially mody value","          return newval = handler.call( target, prop, oldval, val );","","        },","        enumerable: description.enumerable,","        configurable: true","      });","","    },","    configurable: true,","    enumerable: true,","    writable: true","  },","  unwatch: {","    /**","     * Unwatch a Single Property","     *","     * @param {Object} prop","     *","     * @method unwatch","     * @for abstract-utility","     *","     * @return null","     */","    value: function unwatch( prop ) {","      var val = this[prop];","      var description = Object.getOwnPropertyDescriptor( this, prop );","","      // Shouldn't happen, but just in case.","      if( description.configurable === false || !( delete this[ prop ] ) ) {","        return this;","      }","","      this[prop] = val;","","      return this;","","    },","    configurable: true,","    enumerable: true,","    writable: true","  },","  query: {","    /**","     * Get property value using a dot notation path.","     *","     * @param obj","     * @param str","     * @returns {*}","     */","    value: function query( obj, str ) {","","      if( !str ) {","        return obj;","      }","","      if( 'object' === typeof str ) {","        // @todo Convert Object to dot notation, using the first full dot notation path.","      }","","      try {","        return str.split( '.' ).reduce( function( o, x ) {","          return o[x]","        }, obj);","","      } catch( error ) {","        return null;","      }","","    },","    configurable: true,","    enumerable: true,","    writable: true","  },","  unwrap: {","    /**","     * Unwrap dot notation string to nested Object","     *","     * @example","     *","     *    Utility.unwrap( 'first_name', 'john' );  // -&gt; { first_name: 'John' }","     *    Utility.unwrap( 'name.first', 'john' );  // -&gt; { name: { first: 'John' } }","     *    Utility.unwrap( 'first_name' );          // -&gt; null","     *    Utility.unwrap( 'name.first' );          // -&gt; null","     *","     *    // Will not modify object if already exists","     *    Utility.unwrap( 'name.first.fail', 'Anything' );","     *","     * @param string","     * @param value","     * @param hash","     * @param seperator","     * @,etjpd unwrap","     * @return {*}","     */","    value: function unwrap( string, value, hash, seperator ) {","      if( hash == null ) { hash = {}; }","      if( seperator == null ) { seperator = '.'; }","      var parts = string.split( seperator );","      var refHash = hash;","      var depth = 0;","","      parts.forEach( function( part ) {","        if( depth == parts.length - 1 ) {","          refHash[part] = value;","        } else {","          if( refHash[part] == null ) { refHash[part] = {}; }","          refHash = refHash[part];","        }","","        depth++;","","      });","","      return hash;","","    },","    configurable: true,","    enumerable: true,","    writable: true","  },","  mixin: {","    /**","     * Mixin current prototype into target object","     *","     * Honors property descriptor settings, if available.","     *","     * @param source","     * @param target","     */","    value: function mixin( source, target ) {","      source = this.prototype || arguments[0] || {};","      target = arguments.length == 2 ? arguments[1] : arguments[1] || {};","","      for( var key in source ) {","","        try {","          Object.defineProperty( target, key, Object.getOwnPropertyDescriptor( source, key ) || {","            value: source[key],","            enumerable: false,","            writable: true,","            configurable: true","          });","        } catch( error ) { console.error( error ); }","","      }","","      return target;","","    },","    configurable: true,","    writable: true,","    enumerable: false","  },","  inherit: {","    /**","     * Carefully Inherit Properties","     *","     * @param target {Object} Object to add properties to.","     * @param target {Object} Source object.","     * @returns {Object} Extended target.","     */","    value: function inherit( target, source ) {","      target = target || {};","      source = source || {};","","      //if( target instanceof source ) {}","","      Object.getOwnPropertyNames( source ).forEach( function( key ) {","        if( !target.hasOwnProperty( key ) ) { Object.defineProperty( target, key, Object.getOwnPropertyDescriptor( source, key ) ); }","      });","","      return target;","","    },","    enumerable: true","  },","  flatten: {","    /**","     * Flatten Array","     *","     * @todo Notice - nested arrays will not honor delimiter.","     */","    value: function flatten( data, options ) {","","      options = Utility.defaults( options, {","        delimiter: 1","      });","","      return Array.prototype.concat( data ).join( options.delimiter ).toLowerCase();","","","    },","    enumerable: true","  },","  flatten_obj: {","    value: function flatten_obj( obj ) {","","      var list = {};","","      (function callee(o, r) {","","        r = r || '';","","        if (typeof o != 'object') {","          return true;","        }","","        for (var c in o) {","","          if ( callee( o[c], r + \".\" + c ) ) {","","            list[r.substring(1) + \".\" + c] = o[c]","          }","        }","","        return false;","","      })(obj);","","      return list;","    },","    enumerable: true","  },","  inherit_full: {","    /**","     * Inherit the prototype methods from one constructor into another.","     *","     * Copy of the Node.js util.inherits method.","     *","     * @param {function} target Constructor function which needs to inherit the prototype.","     * @param {function} constructor Constructor function to inherit prototype from.","     */","    value: function inherit_prototype( target, constructor ) {","","      target.super_ = constructor;","","      target.prototype = Object.create( constructor.prototype, {","        constructor: {","          value: constructor,","          enumerable: false,","          writable: true,","          configurable: true","        }","      });","","    },","    configurable: true,","    enumerable: true,","    writable: true","  },","  constructors: {","    /**","     * Walk up the prototype chain, creating a JSON-Schema-esque structure","     *","     * @param context {Object} The object to walk through.","     * @return {Object} JSON Schema-esque constructor chain.","     */","    value: function constructors( context, options ) {","      context = context || {};","      options = options || {};","","      var matches = {};","      var path = [];","","      do {","","        if( context.constructor ) {","          path.push( context.constructor.name );","","          Object.defineProperty( matches, context.constructor.name, {","            enumerable: true,","            writable: true,","            value: {","              name: context.constructor.name,","              properties: {","                constructor: {","                  type: typeof context.constructor,","                  properties: Object.getOwnPropertyNames( context.constructor )","                },","                prototype: {","                  type: typeof context.constructor.prototype,","                  properties: Object.keys( context.constructor.prototype )","                }","              }","            }","          });","","        }","","      } while ( context = Object.getPrototypeOf( context ) );","","      if( options.format === 'schema' ) {","        return matches || {};","      }","","      if( options.delimiter ) {","        return path.join( options.delimiter );","      }","","      return path;","","    },","    configurable: true,","    enumerable: true,","    writable: true","  },","  unique: {","    /**","     * Return unique values of an array","     *","     * @param array","     * @returns {Array}","     */","    value: function unique( array ){","      var b = [];","      for(var i=0; i&lt;array.length; i++){","        if(b.indexOf(array[i]) == -1) b.push(array[i]);","      }","      return b;","    },","    configurable: true,","    enumerable: true,","    writable: true","  },","  hash: {","    /**","     * Generate a unique hash for an Object, using md5 on default.","     *","     * @example","     *","     *    var _hash = Utility.hash({ type: 'some_object', name: 'Bob'});","     *","     *    console.log( _hash ); // -&gt; 147ce3e2ccb7db6b928b303ce42bdafa","     *","     * @param obj {Object} Object to generate a hash for.","     * @param options {Object} options for hash generation.","     * @param options {String} options.type Type of hash to generate, defaulting to md5.","     * @param options {String} options.silent_fail Do not throw errors, return empty string if there was an error when true.","     *","     */","    value: function hash( obj ) {","","      var result;","      var string = JSON.stringify( arguments[0] || {} );","      var options = Utility.defaults( arguments[1], {","        type: 'md5',","        silent_fail: true,","        random: false","      });","","      try {","","        if( options.random ) {","          string = Math.random().toString();","        }","","        result = require( 'crypto' ).createHash( options.type.toLowerCase() ).update( string ).digest( 'hex' );","      } catch ( error ) {","        result = options.silent_fail ? '' : error;","      }","","      return result;","","    },","    configurable: true,","    enumerable: true,","    writable: true","  },","  auto: { value: require( 'async' ).auto },","  queue: { value: require( 'async' ).queue },","  times: { value: require( 'async' ).times },","  extend: { value: require( 'lodash' ).extend },","  values: { value: require( 'lodash' ).values },","  each: { value: require( 'lodash' ).each },","  toArray: { value: require( 'lodash' ).toArray },","  where: { value: require( 'lodash' ).where },","  if: {","    value: {","      \"PlainObject\": require( 'lodash' ).isPlainObject,","      \"Function\": require( 'lodash' ).isFunction,","      \"Object\": require( 'lodash' ).isObject,","      \"String\": require( 'lodash' ).isString,","    },","    enumerable: true","  },","  log: {","    /**","     * Output variables to console log.","     *","     * Settings can be configured like so:","     *    abstract.log.config.depth = 2;","     *    abstract.log.config.colors = true;","     *","     * @param {Object|String} data A config object","     * @example","     *      Abstract.log( data )","     *","     * method log","     * @return {Object} Abstract constructor.","     * @chainable","     */","    value: Object.defineProperties( function() {","","      var output = {};","","      // Capture Event Name","      if( this.event ) {","        output.event = this.event;","      }","","      Utility.each( arguments, function( item, key ) {","","        if( Utility.if.PlainObject( item ) ) {}","","        output[ 'format' ] = typeof item;","","        if( key === 0 ) {","          output[ 'data' ] = item;","        } else {","          output[ key ] = item;","        }","","      });","","      console.log( require( 'util' ).inspect( output, ( Utility ).log.config ) );","","      return this;","    }, { \"config\": { value: { \"showHidden\": true, \"depth\": 2, \"colors\": true }, \"writable\": true } }),","    enumerable: true","  }","});"];
+_$jscoverage['utility.js'].source = ["/**"," * Helper Utility for Abstract"," *"," * @example"," *"," *    // Select specific methods to load"," *    var my_tools = Abstract.utility( 'if', 'extend', 'flatten', 'unwatch', 'watch' );"," *"," * @for abstract"," * @submodule abstract-utility"," * @author potanin@UD"," * @date 6/17/13"," */","function Utility() {","  return Object.keys( arguments ) ? require( 'lodash' ).pick.apply( null, [ Utility, Array.prototype.slice.call( arguments ) ] ) : Utility;","}","","Object.defineProperties( module.exports = Utility, {","  json: {","    value: {","      /**","       * Safely parse JSON","       *","       * @method parse","       * @for Json","       *","       * @param json","       * @return {parsed|json}","       */","      parse: function( json ) {","","        if( Buffer &amp;&amp; json instanceof Buffer ) {","          json = json.toString()","        }","","        var parsed = false;","        try { parsed = JSON.parse( json ); } catch (e) { parsed = false; }","","        // Perhaps try to strip some line braks or special characters..","        if( !parsed &amp;&amp; 'string' === typeof json ) {}","","        return parsed ? parsed : json;","      }","    },","    configurable: false,","    enumerable: true,","    writable: true","  },","  console: {","    value: {","      /**","       * Prety Print complex objects","       *","       * @param data","       * @param depth","       *","       * @requires lodash","       * @method console_json","       * @return {Object} The first argument.","       */","      json: function json( data, depth ) {","","        try {","","          if( 'string' === typeof data &amp;&amp; ( 'object' === typeof depth || 'function' === typeof depth ) ) {","            console.log( \"\\n\" + '===============' + data + ' Properties===============' );","            data = depth;","            depth = arguments[2] || 1","          }","","          var output = require( 'util' ).inspect( data, false, 'number' === typeof depth ? ( depth - 1 ) : 1, true );","","          console.log( output );","","        } catch( error ) { console.error( 'Error with console.json()', error ); }","","        return arguments[0];","","      },","      /**","       * Pretty Print and Object's Methods","       *","       * @param data","       * @param object","       *","       * @requires lodash","       * @method console_methods","       * @return {Object} The first argument.","       */","      method: function method( data, object ) {","","        try {","","          if( 'string' === typeof data &amp;&amp; ( 'object' === typeof object || 'function' === typeof object ) ) {","            console.log( \"\\n\" + '===============' + data + ' Methods===============' );","            data = object;","          }","","          module.exports.json( _.methods( data ) );","","        } catch( error ) { console.error( 'Error with console.methods()', error ); }","","        return arguments[0];","","      },","      /**","       * Get all Object Keys","       *","       * @param data","       *","       * @method console_keys","       * @return {Object} The first argument.","       */","      keys: function keys( data ) {","","        function Iterate( target ) {","          var result = [];","          for( var key in target ) {","            result.push( key );","          }","          return result;","        }","","        console.log([ Object.keys( data ) + Object.getOwnPropertyNames( data ) + Iterate( data ) ]);","        return data;","      },","      /**","       * Draw data in table style","       *","       * @example","       *","       *    //console.table","       *    console.table([","       *      { .. row .. }","       *    ]);","       *","       *    //console.table","       *    console.table({","       *      'head': [ 'I/O ID', 'Endpoint', 'Description' ],","       *      'colWidths': [ 30, 50, 50 ],","       *      'rows': [","       *        [ 'one', 'two', 'three' ],","       *        [ 'one', 'two', 'three' ]","       *      ]","       *    });","       *","       * @param {object} data","       * @method table","       * @for Utility","       */","      table: function table( data ) {","","          try {","            var table = require( 'cli-table' );","          } catch (error) {","            return console.log( data );","          }","","          var rows = [];","","          if( _.isObject( data ) &amp;&amp; data.rows ) {","","            table = new table({","              'head': data.head || [],","              'colWidths': data.colWidths || []","            });","","            rows = data.rows;","","          } else {","            table = new table;","            rows = data;","          }","","          _.each( rows, function( row ) {","            if( !_.isEmpty( row ) ) { table.push( row ); }","          });","","          try {","            console.log( table.toString() );","          } catch( error ) {","            //console.trace( error.message, error );","          }","","        },","      /**","       * Console a variable report","       *","       * @method report","       * @for Utility","       * @param {object} arguments*","       */","      report: function report() {","          module.exports.console.json.apply( module.exports, arguments );","          module.exports.console.methods.apply( module.exports, arguments );","        }","    },","    configurable: false,","    enumerable: true,","    writable: true","  },","  noop: {","    /**","     * Not a function, that's for sure.","     * This method does not accept any arguments.","     */","    value: function noop() {","      // console.log( arguments )","    },","    configurable: false,","    enumerable: true,","    writable: true","  },","  apply: {","    /**","     * Creates a continuation function with some arguments already applied.","     *","     * @uses async","     */","    value: require( 'async' ).apply,","    configurable: true,","    enumerable: true,","    writable: true","  },","  defaults: {","    /**","     * Configure Defaults for an Object","     *","     * @returns {Object}","     */","    value: function defaults( target, defaults ) {","","      // If no arguments, return empty object","      if( !target &amp;&amp; !defaults ) {","        return {};","      }","","      // Ensure target is an object","      target = Object.keys( target || {} ).length ? target : {};","","      // Lodash-it","      return require( 'lodash' ).defaults.apply( {}, arguments );","","    },","    configurable: true,","    enumerable: true,","    writable: true","  },","  watch: {","    /**","     * Watch a Single Property","     *","     * @param {Object} prop","     * @param {callback} handler","     *","     * @method watch","     * @for abstract-utility","     *","     * @chainable","     *","     * @return {Object} newval","     */","    value: function watch( target, prop, handler ) {","      var oldval = target[prop];","      var newval = oldval;","      var description = Object.getOwnPropertyDescriptor( target, prop ) || {};","","      switch( typeof target[prop] ) {","        case 'function':break;","        case 'object':break;","        case 'string':break;","        case 'number':break;","      }","","      // Delete original property and replace with getter/setter if possible","      if( description.configurable === false || !( delete target[ prop ] ) ) {","        return target;","      }","","      return Object.defineProperty( target, prop, {","        get: function get() {","          return newval;","        },","        set: function set( val ) {","          oldval = newval;","","          // Set value","          newval = val;","","          // Execute hander and potentially mody value","          return newval = handler.call( target, prop, oldval, val );","","        },","        enumerable: description.enumerable,","        configurable: true","      });","","    },","    configurable: true,","    enumerable: true,","    writable: true","  },","  unwatch: {","    /**","     * Unwatch a Single Property","     *","     * @param {Object} prop","     *","     * @method unwatch","     * @for abstract-utility","     *","     * @return null","     */","    value: function unwatch( prop ) {","      var val = this[prop];","      var description = Object.getOwnPropertyDescriptor( this, prop );","","      // Shouldn't happen, but just in case.","      if( description.configurable === false || !( delete this[ prop ] ) ) {","        return this;","      }","","      this[prop] = val;","","      return this;","","    },","    configurable: true,","    enumerable: true,","    writable: true","  },","  query: {","    /**","     * Get property value using a dot notation path.","     *","     * @param obj","     * @param str","     * @returns {*}","     */","    value: function query( obj, str ) {","","      if( !str ) {","        return obj;","      }","","      if( 'object' === typeof str ) {","        // @todo Convert Object to dot notation, using the first full dot notation path.","      }","","      try {","        return str.split( '.' ).reduce( function( o, x ) {","          return o[x]","        }, obj);","","      } catch( error ) {","        return null;","      }","","    },","    configurable: true,","    enumerable: true,","    writable: true","  },","  unwrap: {","    /**","     * Unwrap dot notation string to nested Object","     *","     * @example","     *","     *    Utility.unwrap( 'first_name', 'john' );  // -&gt; { first_name: 'John' }","     *    Utility.unwrap( 'name.first', 'john' );  // -&gt; { name: { first: 'John' } }","     *    Utility.unwrap( 'first_name' );          // -&gt; null","     *    Utility.unwrap( 'name.first' );          // -&gt; null","     *","     *    // Will not modify object if already exists","     *    Utility.unwrap( 'name.first.fail', 'Anything' );","     *","     * @param string","     * @param value","     * @param hash","     * @param seperator","     * @,etjpd unwrap","     * @return {*}","     */","    value: function unwrap( string, value, hash, seperator ) {","      if( hash == null ) { hash = {}; }","      if( seperator == null ) { seperator = '.'; }","      var parts = string.split( seperator );","      var refHash = hash;","      var depth = 0;","","      parts.forEach( function( part ) {","        if( depth == parts.length - 1 ) {","          refHash[part] = value;","        } else {","          if( refHash[part] == null ) { refHash[part] = {}; }","          refHash = refHash[part];","        }","","        depth++;","","      });","","      return hash;","","    },","    configurable: true,","    enumerable: true,","    writable: true","  },","  mixin: {","    /**","     * Mixin current prototype into target object","     *","     * Honors property descriptor settings, if available.","     *","     * @param source","     * @param target","     */","    value: function mixin( source, target ) {","      source = this.prototype || arguments[0] || {};","      target = arguments.length == 2 ? arguments[1] : arguments[1] || {};","","      for( var key in source ) {","","        try {","          Object.defineProperty( target, key, Object.getOwnPropertyDescriptor( source, key ) || {","            value: source[key],","            enumerable: false,","            writable: true,","            configurable: true","          });","        } catch( error ) { console.error( error ); }","","      }","","      return target;","","    },","    configurable: true,","    writable: true,","    enumerable: false","  },","  inherit: {","    /**","     * Carefully Inherit Properties","     *","     * @param target {Object} Object to add properties to.","     * @param target {Object} Source object.","     * @returns {Object} Extended target.","     */","    value: function inherit( target, source ) {","      target = target || {};","      source = source || {};","","      //if( target instanceof source ) {}","","      Object.getOwnPropertyNames( source ).forEach( function( key ) {","        if( !target.hasOwnProperty( key ) ) { Object.defineProperty( target, key, Object.getOwnPropertyDescriptor( source, key ) ); }","      });","","      return target;","","    },","    enumerable: true","  },","  flatten: {","    /**","     * Flatten Array","     *","     * @todo Notice - nested arrays will not honor delimiter.","     */","    value: function flatten( data, options ) {","","      options = Utility.defaults( options, {","        delimiter: 1","      });","","      return Array.prototype.concat( data ).join( options.delimiter ).toLowerCase();","","","    },","    enumerable: true","  },","  flatten_obj: {","    value: function flatten_obj( obj ) {","","      var list = {};","","      (function callee(o, r) {","","        r = r || '';","","        if (typeof o != 'object') {","          return true;","        }","","        for (var c in o) {","","          if ( callee( o[c], r + \".\" + c ) ) {","","            list[r.substring(1) + \".\" + c] = o[c]","          }","        }","","        return false;","","      })(obj);","","      return list;","    },","    enumerable: true","  },","  inherit_full: {","    /**","     * Inherit the prototype methods from one constructor into another.","     *","     * Copy of the Node.js util.inherits method.","     *","     * @param {function} target Constructor function which needs to inherit the prototype.","     * @param {function} constructor Constructor function to inherit prototype from.","     */","    value: function inherit_prototype( target, constructor ) {","","      target.super_ = constructor;","","      target.prototype = Object.create( constructor.prototype, {","        constructor: {","          value: constructor,","          enumerable: false,","          writable: true,","          configurable: true","        }","      });","","    },","    configurable: true,","    enumerable: true,","    writable: true","  },","  constructors: {","    /**","     * Walk up the prototype chain, creating a JSON-Schema-esque structure","     *","     * @param context {Object} The object to walk through.","     * @return {Object} JSON Schema-esque constructor chain.","     */","    value: function constructors( context, options ) {","      context = context || {};","      options = options || {};","","      var matches = {};","      var path = [];","","      do {","","        if( context.constructor ) {","          path.push( context.constructor.name );","","          Object.defineProperty( matches, context.constructor.name, {","            enumerable: true,","            writable: true,","            value: {","              name: context.constructor.name,","              properties: {","                constructor: {","                  type: typeof context.constructor,","                  properties: Object.getOwnPropertyNames( context.constructor )","                },","                prototype: {","                  type: typeof context.constructor.prototype,","                  properties: Object.keys( context.constructor.prototype )","                }","              }","            }","          });","","        }","","      } while ( context = Object.getPrototypeOf( context ) );","","      if( options.format === 'schema' ) {","        return matches || {};","      }","","      if( options.delimiter ) {","        return path.join( options.delimiter );","      }","","      return path;","","    },","    configurable: true,","    enumerable: true,","    writable: true","  },","  unique: {","    /**","     * Return unique values of an array","     *","     * @param array","     * @returns {Array}","     */","    value: function unique( array ){","      var b = [];","      for(var i=0; i&lt;array.length; i++){","        if(b.indexOf(array[i]) == -1) b.push(array[i]);","      }","      return b;","    },","    configurable: true,","    enumerable: true,","    writable: true","  },","  hash: {","    /**","     * Generate a unique hash for an Object, using md5 on default.","     *","     * @example","     *","     *    var _hash = Utility.hash({ type: 'some_object', name: 'Bob'});","     *","     *    console.log( _hash ); // -&gt; 147ce3e2ccb7db6b928b303ce42bdafa","     *","     * @param obj {Object} Object to generate a hash for.","     * @param options {Object} options for hash generation.","     * @param options {String} options.type Type of hash to generate, defaulting to md5.","     * @param options {String} options.silent_fail Do not throw errors, return empty string if there was an error when true.","     *","     */","    value: function hash( obj ) {","","      var result;","      var string = JSON.stringify( arguments[0] || {} );","      var options = Utility.defaults( arguments[1], {","        type: 'md5',","        silent_fail: true,","        random: false","      });","","      try {","","        if( options.random ) {","          string = Math.random().toString();","        }","","        result = require( 'crypto' ).createHash( options.type.toLowerCase() ).update( string ).digest( 'hex' );","      } catch ( error ) {","        result = options.silent_fail ? '' : error;","      }","","      return result;","","    },","    configurable: true,","    enumerable: true,","    writable: true","  },","  auto: { value: require( 'async' ).auto },","  queue: { value: require( 'async' ).queue },","  times: { value: require( 'async' ).times },","  extend: { value: require( 'lodash' ).extend },","  values: { value: require( 'lodash' ).values },","  map: { value: require( 'lodash' ).map },","  each: { value: require( 'lodash' ).each },","  toArray: { value: require( 'lodash' ).toArray },","  where: { value: require( 'lodash' ).where },","  if: {","    value: {","      \"PlainObject\": require( 'lodash' ).isPlainObject,","      \"Function\": require( 'lodash' ).isFunction,","      \"Object\": require( 'lodash' ).isObject,","      \"String\": require( 'lodash' ).isString,","    },","    enumerable: true","  },","  log: {","    /**","     * Output variables to console log.","     *","     * Settings can be configured like so:","     *    abstract.log.config.depth = 2;","     *    abstract.log.config.colors = true;","     *","     * @param {Object|String} data A config object","     * @example","     *      Abstract.log( data )","     *","     * method log","     * @return {Object} Abstract constructor.","     * @chainable","     */","    value: Object.defineProperties( function() {","","      var output = {};","","      // Capture Event Name","      if( this.event ) {","        output.event = this.event;","      }","","      Utility.each( arguments, function( item, key ) {","","        if( Utility.if.PlainObject( item ) ) {}","","        output[ 'format' ] = typeof item;","","        if( key === 0 ) {","          output[ 'data' ] = item;","        } else {","          output[ key ] = item;","        }","","      });","","      console.log( require( 'util' ).inspect( output, ( Utility ).log.config ) );","","      return this;","    }, { \"config\": { value: { \"showHidden\": true, \"depth\": 2, \"colors\": true }, \"writable\": true } }),","    enumerable: true","  }","});"];

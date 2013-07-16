@@ -47,6 +47,8 @@
             
                 <li><a href="../classes/Json.html">Json</a></li>
             
+                <li><a href="../classes/Utility.html">Utility</a></li>
+            
             </ul>
 
             <ul id="api-modules" class="apis modules">
@@ -131,6 +133,10 @@ Object.defineProperties( module.exports = Utility, {
 
         var parsed = false;
         try { parsed = JSON.parse( json ); } catch (e) { parsed = false; }
+
+        // Perhaps try to strip some line braks or special characters..
+        if( !parsed &amp;&amp; &#x27;string&#x27; === typeof json ) {}
+
         return parsed ? parsed : json;
       }
     },
@@ -215,7 +221,77 @@ Object.defineProperties( module.exports = Utility, {
 
         console.log([ Object.keys( data ) + Object.getOwnPropertyNames( data ) + Iterate( data ) ]);
         return data;
-      }
+      },
+      /**
+       * Draw data in table style
+       *
+       * @example
+       *
+       *    //console.table
+       *    console.table([
+       *      { .. row .. }
+       *    ]);
+       *
+       *    //console.table
+       *    console.table({
+       *      &#x27;head&#x27;: [ &#x27;I/O ID&#x27;, &#x27;Endpoint&#x27;, &#x27;Description&#x27; ],
+       *      &#x27;colWidths&#x27;: [ 30, 50, 50 ],
+       *      &#x27;rows&#x27;: [
+       *        [ &#x27;one&#x27;, &#x27;two&#x27;, &#x27;three&#x27; ],
+       *        [ &#x27;one&#x27;, &#x27;two&#x27;, &#x27;three&#x27; ]
+       *      ]
+       *    });
+       *
+       * @param {object} data
+       * @method table
+       * @for Utility
+       */
+      table: function table( data ) {
+
+          try {
+            var table = require( &#x27;cli-table&#x27; );
+          } catch (error) {
+            return console.log( data );
+          }
+
+          var rows = [];
+
+          if( _.isObject( data ) &amp;&amp; data.rows ) {
+
+            table = new table({
+              &#x27;head&#x27;: data.head || [],
+              &#x27;colWidths&#x27;: data.colWidths || []
+            });
+
+            rows = data.rows;
+
+          } else {
+            table = new table;
+            rows = data;
+          }
+
+          _.each( rows, function( row ) {
+            if( !_.isEmpty( row ) ) { table.push( row ); }
+          });
+
+          try {
+            console.log( table.toString() );
+          } catch( error ) {
+            //console.trace( error.message, error );
+          }
+
+        },
+      /**
+       * Console a variable report
+       *
+       * @method report
+       * @for Utility
+       * @param {object} arguments*
+       */
+      report: function report() {
+          module.exports.console.json.apply( module.exports, arguments );
+          module.exports.console.methods.apply( module.exports, arguments );
+        }
     },
     configurable: false,
     enumerable: true,
@@ -683,6 +759,7 @@ Object.defineProperties( module.exports = Utility, {
   times: { value: require( &#x27;async&#x27; ).times },
   extend: { value: require( &#x27;lodash&#x27; ).extend },
   values: { value: require( &#x27;lodash&#x27; ).values },
+  map: { value: require( &#x27;lodash&#x27; ).map },
   each: { value: require( &#x27;lodash&#x27; ).each },
   toArray: { value: require( &#x27;lodash&#x27; ).toArray },
   where: { value: require( &#x27;lodash&#x27; ).where },

@@ -43,9 +43,12 @@
     "express": "*",
     "request": "*",
     "Faker": "*",
-    "colors": "*",
     "mocha": "*",
     "should": "*"
+  },
+  "optionalDependencies": {
+    "cli-table": "*",
+    "colors": "*"
   },
   "scripts": {
     "test": "make test"

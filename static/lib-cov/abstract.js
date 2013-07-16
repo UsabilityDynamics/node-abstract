@@ -27,111 +27,123 @@ if (! _$jscoverage['abstract.js']) {
   _$jscoverage['abstract.js'][144] = 0;
   _$jscoverage['abstract.js'][145] = 0;
   _$jscoverage['abstract.js'][149] = 0;
-  _$jscoverage['abstract.js'][160] = 0;
-  _$jscoverage['abstract.js'][163] = 0;
-  _$jscoverage['abstract.js'][165] = 0;
+  _$jscoverage['abstract.js'][161] = 0;
+  _$jscoverage['abstract.js'][164] = 0;
   _$jscoverage['abstract.js'][166] = 0;
-  _$jscoverage['abstract.js'][173] = 0;
-  _$jscoverage['abstract.js'][175] = 0;
+  _$jscoverage['abstract.js'][167] = 0;
+  _$jscoverage['abstract.js'][174] = 0;
   _$jscoverage['abstract.js'][176] = 0;
-  _$jscoverage['abstract.js'][180] = 0;
-  _$jscoverage['abstract.js'][182] = 0;
-  _$jscoverage['abstract.js'][190] = 0;
-  _$jscoverage['abstract.js'][197] = 0;
-  _$jscoverage['abstract.js'][214] = 0;
+  _$jscoverage['abstract.js'][177] = 0;
+  _$jscoverage['abstract.js'][181] = 0;
+  _$jscoverage['abstract.js'][183] = 0;
+  _$jscoverage['abstract.js'][191] = 0;
+  _$jscoverage['abstract.js'][198] = 0;
   _$jscoverage['abstract.js'][215] = 0;
-  _$jscoverage['abstract.js'][217] = 0;
+  _$jscoverage['abstract.js'][216] = 0;
   _$jscoverage['abstract.js'][218] = 0;
-  _$jscoverage['abstract.js'][228] = 0;
-  _$jscoverage['abstract.js'][246] = 0;
-  _$jscoverage['abstract.js'][249] = 0;
-  _$jscoverage['abstract.js'][252] = 0;
-  _$jscoverage['abstract.js'][255] = 0;
-  _$jscoverage['abstract.js'][257] = 0;
-  _$jscoverage['abstract.js'][266] = 0;
-  _$jscoverage['abstract.js'][277] = 0;
+  _$jscoverage['abstract.js'][219] = 0;
+  _$jscoverage['abstract.js'][229] = 0;
+  _$jscoverage['abstract.js'][247] = 0;
+  _$jscoverage['abstract.js'][250] = 0;
+  _$jscoverage['abstract.js'][253] = 0;
+  _$jscoverage['abstract.js'][256] = 0;
+  _$jscoverage['abstract.js'][258] = 0;
+  _$jscoverage['abstract.js'][267] = 0;
   _$jscoverage['abstract.js'][278] = 0;
-  _$jscoverage['abstract.js'][281] = 0;
-  _$jscoverage['abstract.js'][297] = 0;
+  _$jscoverage['abstract.js'][279] = 0;
+  _$jscoverage['abstract.js'][282] = 0;
   _$jscoverage['abstract.js'][298] = 0;
   _$jscoverage['abstract.js'][299] = 0;
-  _$jscoverage['abstract.js'][302] = 0;
-  _$jscoverage['abstract.js'][310] = 0;
+  _$jscoverage['abstract.js'][300] = 0;
+  _$jscoverage['abstract.js'][303] = 0;
   _$jscoverage['abstract.js'][311] = 0;
-  _$jscoverage['abstract.js'][329] = 0;
+  _$jscoverage['abstract.js'][312] = 0;
   _$jscoverage['abstract.js'][330] = 0;
   _$jscoverage['abstract.js'][331] = 0;
-  _$jscoverage['abstract.js'][334] = 0;
+  _$jscoverage['abstract.js'][332] = 0;
   _$jscoverage['abstract.js'][335] = 0;
-  _$jscoverage['abstract.js'][338] = 0;
+  _$jscoverage['abstract.js'][336] = 0;
   _$jscoverage['abstract.js'][339] = 0;
-  _$jscoverage['abstract.js'][342] = 0;
-  _$jscoverage['abstract.js'][359] = 0;
-  _$jscoverage['abstract.js'][362] = 0;
+  _$jscoverage['abstract.js'][340] = 0;
+  _$jscoverage['abstract.js'][343] = 0;
+  _$jscoverage['abstract.js'][360] = 0;
   _$jscoverage['abstract.js'][363] = 0;
   _$jscoverage['abstract.js'][364] = 0;
   _$jscoverage['abstract.js'][365] = 0;
-  _$jscoverage['abstract.js'][367] = 0;
-  _$jscoverage['abstract.js'][371] = 0;
+  _$jscoverage['abstract.js'][366] = 0;
+  _$jscoverage['abstract.js'][368] = 0;
   _$jscoverage['abstract.js'][372] = 0;
-  _$jscoverage['abstract.js'][376] = 0;
-  _$jscoverage['abstract.js'][378] = 0;
-  _$jscoverage['abstract.js'][380] = 0;
-  _$jscoverage['abstract.js'][391] = 0;
+  _$jscoverage['abstract.js'][373] = 0;
+  _$jscoverage['abstract.js'][377] = 0;
+  _$jscoverage['abstract.js'][379] = 0;
+  _$jscoverage['abstract.js'][390] = 0;
+  _$jscoverage['abstract.js'][392] = 0;
   _$jscoverage['abstract.js'][394] = 0;
-  _$jscoverage['abstract.js'][396] = 0;
-  _$jscoverage['abstract.js'][397] = 0;
-  _$jscoverage['abstract.js'][401] = 0;
-  _$jscoverage['abstract.js'][404] = 0;
-  _$jscoverage['abstract.js'][407] = 0;
-  _$jscoverage['abstract.js'][410] = 0;
-  _$jscoverage['abstract.js'][415] = 0;
-  _$jscoverage['abstract.js'][420] = 0;
+  _$jscoverage['abstract.js'][408] = 0;
+  _$jscoverage['abstract.js'][411] = 0;
+  _$jscoverage['abstract.js'][413] = 0;
+  _$jscoverage['abstract.js'][414] = 0;
+  _$jscoverage['abstract.js'][418] = 0;
   _$jscoverage['abstract.js'][421] = 0;
-  _$jscoverage['abstract.js'][422] = 0;
-  _$jscoverage['abstract.js'][423] = 0;
-  _$jscoverage['abstract.js'][433] = 0;
-  _$jscoverage['abstract.js'][446] = 0;
-  _$jscoverage['abstract.js'][447] = 0;
-  _$jscoverage['abstract.js'][460] = 0;
-  _$jscoverage['abstract.js'][461] = 0;
+  _$jscoverage['abstract.js'][424] = 0;
+  _$jscoverage['abstract.js'][427] = 0;
+  _$jscoverage['abstract.js'][432] = 0;
+  _$jscoverage['abstract.js'][437] = 0;
+  _$jscoverage['abstract.js'][438] = 0;
+  _$jscoverage['abstract.js'][439] = 0;
+  _$jscoverage['abstract.js'][440] = 0;
+  _$jscoverage['abstract.js'][450] = 0;
   _$jscoverage['abstract.js'][463] = 0;
-  _$jscoverage['abstract.js'][467] = 0;
-  _$jscoverage['abstract.js'][468] = 0;
-  _$jscoverage['abstract.js'][470] = 0;
-  _$jscoverage['abstract.js'][472] = 0;
-  _$jscoverage['abstract.js'][473] = 0;
-  _$jscoverage['abstract.js'][476] = 0;
-  _$jscoverage['abstract.js'][483] = 0;
-  _$jscoverage['abstract.js'][497] = 0;
-  _$jscoverage['abstract.js'][498] = 0;
-  _$jscoverage['abstract.js'][499] = 0;
+  _$jscoverage['abstract.js'][464] = 0;
+  _$jscoverage['abstract.js'][477] = 0;
+  _$jscoverage['abstract.js'][478] = 0;
+  _$jscoverage['abstract.js'][480] = 0;
+  _$jscoverage['abstract.js'][484] = 0;
+  _$jscoverage['abstract.js'][485] = 0;
+  _$jscoverage['abstract.js'][487] = 0;
+  _$jscoverage['abstract.js'][489] = 0;
+  _$jscoverage['abstract.js'][490] = 0;
+  _$jscoverage['abstract.js'][493] = 0;
   _$jscoverage['abstract.js'][500] = 0;
-  _$jscoverage['abstract.js'][501] = 0;
-  _$jscoverage['abstract.js'][502] = 0;
-  _$jscoverage['abstract.js'][504] = 0;
+  _$jscoverage['abstract.js'][514] = 0;
+  _$jscoverage['abstract.js'][515] = 0;
+  _$jscoverage['abstract.js'][516] = 0;
+  _$jscoverage['abstract.js'][517] = 0;
+  _$jscoverage['abstract.js'][518] = 0;
   _$jscoverage['abstract.js'][519] = 0;
-  _$jscoverage['abstract.js'][520] = 0;
   _$jscoverage['abstract.js'][521] = 0;
-  _$jscoverage['abstract.js'][522] = 0;
-  _$jscoverage['abstract.js'][524] = 0;
-  _$jscoverage['abstract.js'][552] = 0;
-  _$jscoverage['abstract.js'][577] = 0;
-  _$jscoverage['abstract.js'][578] = 0;
+  _$jscoverage['abstract.js'][536] = 0;
+  _$jscoverage['abstract.js'][537] = 0;
+  _$jscoverage['abstract.js'][538] = 0;
+  _$jscoverage['abstract.js'][539] = 0;
+  _$jscoverage['abstract.js'][541] = 0;
+  _$jscoverage['abstract.js'][569] = 0;
+  _$jscoverage['abstract.js'][594] = 0;
   _$jscoverage['abstract.js'][595] = 0;
-  _$jscoverage['abstract.js'][596] = 0;
   _$jscoverage['abstract.js'][612] = 0;
   _$jscoverage['abstract.js'][613] = 0;
-  _$jscoverage['abstract.js'][616] = 0;
-  _$jscoverage['abstract.js'][619] = 0;
-  _$jscoverage['abstract.js'][622] = 0;
-  _$jscoverage['abstract.js'][624] = 0;
-  _$jscoverage['abstract.js'][626] = 0;
+  _$jscoverage['abstract.js'][632] = 0;
+  _$jscoverage['abstract.js'][635] = 0;
+  _$jscoverage['abstract.js'][638] = 0;
   _$jscoverage['abstract.js'][640] = 0;
-  _$jscoverage['abstract.js'][641] = 0;
   _$jscoverage['abstract.js'][642] = 0;
-  _$jscoverage['abstract.js'][644] = 0;
-  _$jscoverage['abstract.js'][645] = 0;
+  _$jscoverage['abstract.js'][672] = 0;
+  _$jscoverage['abstract.js'][673] = 0;
+  _$jscoverage['abstract.js'][674] = 0;
+  _$jscoverage['abstract.js'][675] = 0;
+  _$jscoverage['abstract.js'][676] = 0;
+  _$jscoverage['abstract.js'][679] = 0;
+  _$jscoverage['abstract.js'][680] = 0;
+  _$jscoverage['abstract.js'][683] = 0;
+  _$jscoverage['abstract.js'][686] = 0;
+  _$jscoverage['abstract.js'][689] = 0;
+  _$jscoverage['abstract.js'][691] = 0;
+  _$jscoverage['abstract.js'][693] = 0;
+  _$jscoverage['abstract.js'][707] = 0;
+  _$jscoverage['abstract.js'][708] = 0;
+  _$jscoverage['abstract.js'][709] = 0;
+  _$jscoverage['abstract.js'][711] = 0;
+  _$jscoverage['abstract.js'][712] = 0;
 }
 _$jscoverage['abstract.js'][8]++;
 function Abstract() {
@@ -197,296 +209,329 @@ Object.defineProperties(module.exports = Abstract, {get: {get: (function () {
     return Model.create;
   }
   _$jscoverage['abstract.js'][149]++;
-  Abstract.defineProperties(Model, {use: {value: Abstract.prototype.use.bind(Model), enumerable: false}, get: {value: Abstract.prototype.get.bind(Model), enumerable: false}, set: {value: Abstract.prototype.set.bind(Model), enumerable: false}, properties: {value: Abstract.prototype.properties.bind(Model), enumerable: false}, defineInstance: {value: Abstract.defineInstance.bind(Model, Model), enumerable: false}, defineProperties: {value: Abstract.defineProperties.bind(Model), enumerable: false}, defineProperty: {value: Abstract.defineProperty.bind(Model), enumerable: false}});
-  _$jscoverage['abstract.js'][160]++;
+  Abstract.defineProperties(Model, {use: {value: Abstract.prototype.use.bind(Model), enumerable: false}, require: {value: Abstract.prototype.require.bind(Model), enumerable: false}, get: {value: Abstract.prototype.get.bind(Model), enumerable: false}, set: {value: Abstract.prototype.set.bind(Model), enumerable: false}, properties: {value: Abstract.prototype.properties.bind(Model), enumerable: false}, defineInstance: {value: Abstract.defineInstance.bind(Model, Model), enumerable: false}, defineProperties: {value: Abstract.defineProperties.bind(Model), enumerable: false}, defineProperty: {value: Abstract.defineProperty.bind(Model), enumerable: false}});
+  _$jscoverage['abstract.js'][161]++;
   Model.prototype = Object.create(Abstract.prototype);
-  _$jscoverage['abstract.js'][163]++;
+  _$jscoverage['abstract.js'][164]++;
   Model.call(Model, Model, Model.prototype);
-  _$jscoverage['abstract.js'][165]++;
-  Object.defineProperty(Model, "create", {value: (function createInstance() {
   _$jscoverage['abstract.js'][166]++;
+  Object.defineProperty(Model, "create", {value: (function createInstance() {
+  _$jscoverage['abstract.js'][167]++;
   return Abstract.createInstance.apply(Model, arguments);
 }), enumerable: true, configurable: true, writable: true});
-  _$jscoverage['abstract.js'][173]++;
+  _$jscoverage['abstract.js'][174]++;
   var _custom_name = undefined;
-  _$jscoverage['abstract.js'][175]++;
-  if (Model.instantiator && Object.keys(Model.instantiator).length) {
-    _$jscoverage['abstract.js'][176]++;
-    Model.instantiator.forEach((function (fn) {
   _$jscoverage['abstract.js'][176]++;
+  if (Model.instantiator && Object.keys(Model.instantiator).length) {
+    _$jscoverage['abstract.js'][177]++;
+    Model.instantiator.forEach((function (fn) {
+  _$jscoverage['abstract.js'][177]++;
   _custom_name = fn.name || _custom_name;
 }));
   }
-  _$jscoverage['abstract.js'][180]++;
+  _$jscoverage['abstract.js'][181]++;
   if (_custom_name && "string" === typeof _custom_name) {
-    _$jscoverage['abstract.js'][182]++;
+    _$jscoverage['abstract.js'][183]++;
     Object.defineProperty(Model, _custom_name, {value: Model.create, enumerable: true, configurable: true, writable: true});
-    _$jscoverage['abstract.js'][190]++;
+    _$jscoverage['abstract.js'][191]++;
     Object.defineProperty(Model, "create", {enumerable: false});
   }
-  _$jscoverage['abstract.js'][197]++;
+  _$jscoverage['abstract.js'][198]++;
   return Model;
 }), configurable: true, enumerable: true, writable: true}, copyProperties: {value: (function referenceProperties(target, source) {
-  _$jscoverage['abstract.js'][214]++;
-  Object.getOwnPropertyNames(source).forEach((function (key) {
   _$jscoverage['abstract.js'][215]++;
+  Object.getOwnPropertyNames(source).forEach((function (key) {
+  _$jscoverage['abstract.js'][216]++;
   var descriptor = Object.getOwnPropertyDescriptor(source, key);
-  _$jscoverage['abstract.js'][217]++;
+  _$jscoverage['abstract.js'][218]++;
   if (descriptor.enumerable) {
-    _$jscoverage['abstract.js'][218]++;
+    _$jscoverage['abstract.js'][219]++;
     Object.defineProperty(target, key, {enumerable: true, value: source[key], writable: descriptor.writable, configurable: descriptor.configurable});
   }
 }));
-  _$jscoverage['abstract.js'][228]++;
+  _$jscoverage['abstract.js'][229]++;
   return target;
 }), configurable: true, enumerable: false, writable: true}, createInstance: {value: (function createInstance() {
-  _$jscoverage['abstract.js'][246]++;
+  _$jscoverage['abstract.js'][247]++;
   var args = arguments;
-  _$jscoverage['abstract.js'][249]++;
+  _$jscoverage['abstract.js'][250]++;
   var Instance = Object.create(this.prototype);
-  _$jscoverage['abstract.js'][252]++;
+  _$jscoverage['abstract.js'][253]++;
   for (var key in this.__proto__) {
-    _$jscoverage['abstract.js'][255]++;
+    _$jscoverage['abstract.js'][256]++;
     var is_enumerable = this.propertyIsEnumerable(key);
-    _$jscoverage['abstract.js'][257]++;
+    _$jscoverage['abstract.js'][258]++;
     Object.defineProperty(Instance, key, {value: this.__proto__[key], enumerable: is_enumerable, writable: true, configurable: true});
 }
-  _$jscoverage['abstract.js'][266]++;
+  _$jscoverage['abstract.js'][267]++;
   Instance.set({id: Abstract.utility.hash(null, {random: true}), model: this.name || "Model", schema: {id: ["#", Instance.get("id") || this.name || "Model"].join(""), type: "object", properties: {}}});
-  _$jscoverage['abstract.js'][277]++;
-  if (this.instantiator && Object.keys(this.instantiator).length) {
-    _$jscoverage['abstract.js'][278]++;
-    this.instantiator.forEach((function (fn) {
   _$jscoverage['abstract.js'][278]++;
+  if (this.instantiator && Object.keys(this.instantiator).length) {
+    _$jscoverage['abstract.js'][279]++;
+    this.instantiator.forEach((function (fn) {
+  _$jscoverage['abstract.js'][279]++;
   fn.apply(Instance, args);
 }));
   }
-  _$jscoverage['abstract.js'][281]++;
+  _$jscoverage['abstract.js'][282]++;
   return Instance;
 }), configurable: true, enumerable: false, writable: true}, defineInstance: {value: (function defineInstance(target, fn) {
-  _$jscoverage['abstract.js'][297]++;
+  _$jscoverage['abstract.js'][298]++;
   if (target.instantiator && Object.keys(target.instantiator).length) {
-    _$jscoverage['abstract.js'][298]++;
-    target.instantiator.push("function" === typeof fn? fn: Abstract.utility.noop);
     _$jscoverage['abstract.js'][299]++;
+    target.instantiator.push("function" === typeof fn? fn: Abstract.utility.noop);
+    _$jscoverage['abstract.js'][300]++;
     return target;
   }
-  _$jscoverage['abstract.js'][302]++;
+  _$jscoverage['abstract.js'][303]++;
   Object.defineProperty(target, "instantiator", {value: ["function" === typeof fn? fn: Abstract.utility.noop], configurable: true, enumerable: false, writable: true});
-  _$jscoverage['abstract.js'][310]++;
+  _$jscoverage['abstract.js'][311]++;
   return (function createInstance() {
-  _$jscoverage['abstract.js'][311]++;
+  _$jscoverage['abstract.js'][312]++;
   return Abstract.createInstance.apply(target, arguments);
-  _$jscoverage['abstract.js'][311]++;
+  _$jscoverage['abstract.js'][312]++;
   ;
 });
 }), configurable: true, enumerable: false, writable: true}, defineProperties: {value: (function defineProperties(target, props) {
-  _$jscoverage['abstract.js'][329]++;
+  _$jscoverage['abstract.js'][330]++;
   if (! props && "object" === typeof props && this.hasOwnProperty("defineInstance")) {
-    _$jscoverage['abstract.js'][330]++;
-    props = target;
     _$jscoverage['abstract.js'][331]++;
+    props = target;
+    _$jscoverage['abstract.js'][332]++;
     target = this;
   }
-  _$jscoverage['abstract.js'][334]++;
+  _$jscoverage['abstract.js'][335]++;
   if (! props || "object" !== typeof props) {
-    _$jscoverage['abstract.js'][335]++;
+    _$jscoverage['abstract.js'][336]++;
     return target || {};
   }
-  _$jscoverage['abstract.js'][338]++;
-  Object.keys(props).forEach((function (key) {
   _$jscoverage['abstract.js'][339]++;
+  Object.keys(props).forEach((function (key) {
+  _$jscoverage['abstract.js'][340]++;
   Abstract.defineProperty(target, key, props[key]);
 }));
-  _$jscoverage['abstract.js'][342]++;
+  _$jscoverage['abstract.js'][343]++;
   return target;
 }), configurable: true, enumerable: true, writable: true}, defineProperty: {value: (function defineProperty(obj, key, prop) {
-  _$jscoverage['abstract.js'][359]++;
+  _$jscoverage['abstract.js'][360]++;
   if (! prop) {
-    _$jscoverage['abstract.js'][362]++;
+    _$jscoverage['abstract.js'][363]++;
     if ("string" === typeof obj && "object" === typeof key && this.hasOwnProperty("defineInstance")) {
-      _$jscoverage['abstract.js'][363]++;
-      obj = this;
       _$jscoverage['abstract.js'][364]++;
-      key = obj;
+      obj = this;
       _$jscoverage['abstract.js'][365]++;
+      key = obj;
+      _$jscoverage['abstract.js'][366]++;
       prop = key;
     }
     else {
-      _$jscoverage['abstract.js'][367]++;
+      _$jscoverage['abstract.js'][368]++;
       prop = {};
     }
   }
-  _$jscoverage['abstract.js'][371]++;
+  _$jscoverage['abstract.js'][372]++;
   if (! obj) {
-    _$jscoverage['abstract.js'][372]++;
+    _$jscoverage['abstract.js'][373]++;
     obj = {};
   }
-  _$jscoverage['abstract.js'][376]++;
-  if ("object" !== typeof prop || (! prop.get && ! prop.set && ! prop.value)) {
-    _$jscoverage['abstract.js'][378]++;
-    if (prop.value) {
-      _$jscoverage['abstract.js'][378]++;
-      prop = prop.value;
-    }
-    _$jscoverage['abstract.js'][380]++;
+  _$jscoverage['abstract.js'][377]++;
+  if (prop instanceof Abstract && prop.get && prop.set && prop._meta) {
+    _$jscoverage['abstract.js'][379]++;
     prop = {value: prop, configurable: true, writable: true, type: typeof prop, enumerable: true};
   }
-  _$jscoverage['abstract.js'][391]++;
+  _$jscoverage['abstract.js'][390]++;
+  if ("object" !== typeof prop || (! prop.get && ! prop.set && ! prop.value)) {
+    _$jscoverage['abstract.js'][392]++;
+    if (prop.value) {
+      _$jscoverage['abstract.js'][392]++;
+      prop = prop.value;
+    }
+    _$jscoverage['abstract.js'][394]++;
+    prop = {value: prop, configurable: true, writable: true, type: typeof prop, enumerable: true};
+  }
+  _$jscoverage['abstract.js'][408]++;
   Abstract.utility.extend(prop, this.meta? this.meta.get("defaults"): {});
-  _$jscoverage['abstract.js'][394]++;
+  _$jscoverage['abstract.js'][411]++;
   Object.defineProperty(obj, key, prop);
-  _$jscoverage['abstract.js'][396]++;
+  _$jscoverage['abstract.js'][413]++;
   if (obj._meta && obj._meta.schema) {
-    _$jscoverage['abstract.js'][397]++;
+    _$jscoverage['abstract.js'][414]++;
     obj._meta.schema[key] = prop;
   }
-  _$jscoverage['abstract.js'][401]++;
+  _$jscoverage['abstract.js'][418]++;
   if (key === "constructor") {
   }
-  _$jscoverage['abstract.js'][404]++;
+  _$jscoverage['abstract.js'][421]++;
   if (key === "prototype") {
   }
-  _$jscoverage['abstract.js'][407]++;
+  _$jscoverage['abstract.js'][424]++;
   if (key === "__proto__") {
   }
-  _$jscoverage['abstract.js'][410]++;
+  _$jscoverage['abstract.js'][427]++;
   if (prop.hasOwnProperty("watch")) {
   }
-  _$jscoverage['abstract.js'][415]++;
+  _$jscoverage['abstract.js'][432]++;
   if (prop.hasOwnProperty("wrap")) {
   }
-  _$jscoverage['abstract.js'][420]++;
+  _$jscoverage['abstract.js'][437]++;
   if (prop.hasOwnProperty("properties")) {
-    _$jscoverage['abstract.js'][421]++;
+    _$jscoverage['abstract.js'][438]++;
     Abstract.utility.each(prop.properties, (function (fn, key, array) {
-  _$jscoverage['abstract.js'][422]++;
+  _$jscoverage['abstract.js'][439]++;
   if ("function" === typeof prop.value) {
-    _$jscoverage['abstract.js'][423]++;
+    _$jscoverage['abstract.js'][440]++;
     Object.defineProperty(prop.value, key, {value: fn, configurable: true, enumerable: true});
   }
 }));
   }
-  _$jscoverage['abstract.js'][433]++;
+  _$jscoverage['abstract.js'][450]++;
   return obj;
 }), configurable: true, enumerable: true}, addPrototype: {get: (function () {
-  _$jscoverage['abstract.js'][446]++;
+  _$jscoverage['abstract.js'][463]++;
   return (function (context, proto) {
-  _$jscoverage['abstract.js'][447]++;
+  _$jscoverage['abstract.js'][464]++;
   return Abstract.prototype.use.call(context, proto);
 });
 }), configurable: false, enumerable: false}, extendPrototype: {value: (function extendPrototype() {
-  _$jscoverage['abstract.js'][460]++;
+  _$jscoverage['abstract.js'][477]++;
   var result = {};
-  _$jscoverage['abstract.js'][461]++;
+  _$jscoverage['abstract.js'][478]++;
   var list = arguments;
-  _$jscoverage['abstract.js'][463]++;
+  _$jscoverage['abstract.js'][480]++;
   Object.keys(arguments).forEach((function (index) {
-  _$jscoverage['abstract.js'][467]++;
+  _$jscoverage['abstract.js'][484]++;
   if (index == 0) {
-    _$jscoverage['abstract.js'][468]++;
+    _$jscoverage['abstract.js'][485]++;
     result.__proto__ = list[index];
   }
   else {
-    _$jscoverage['abstract.js'][470]++;
+    _$jscoverage['abstract.js'][487]++;
     var depth = result;
-    _$jscoverage['abstract.js'][472]++;
+    _$jscoverage['abstract.js'][489]++;
     for (i = 1; i <= index; i++) {
-      _$jscoverage['abstract.js'][473]++;
+      _$jscoverage['abstract.js'][490]++;
       depth = depth.__proto__;
 }
-    _$jscoverage['abstract.js'][476]++;
+    _$jscoverage['abstract.js'][493]++;
     depth.__proto__ = list[index];
   }
 }));
-  _$jscoverage['abstract.js'][483]++;
+  _$jscoverage['abstract.js'][500]++;
   return Abstract.getPrototypeOf(result);
 }), configurable: false, enumerable: false, writable: true}, getPrototypeOf: {value: (function getPrototypeOf(obj) {
-  _$jscoverage['abstract.js'][497]++;
+  _$jscoverage['abstract.js'][514]++;
   if (Object.getPrototypeOf) {
-    _$jscoverage['abstract.js'][498]++;
+    _$jscoverage['abstract.js'][515]++;
     return Object.getPrototypeOf(obj) || undefined;
   }
   else {
-    _$jscoverage['abstract.js'][499]++;
+    _$jscoverage['abstract.js'][516]++;
     if (obj.__proto__) {
-      _$jscoverage['abstract.js'][500]++;
+      _$jscoverage['abstract.js'][517]++;
       return obj.__proto__ || undefined;
     }
     else {
-      _$jscoverage['abstract.js'][501]++;
+      _$jscoverage['abstract.js'][518]++;
       if (obj.constructor.prototype) {
-        _$jscoverage['abstract.js'][502]++;
+        _$jscoverage['abstract.js'][519]++;
         return constructor.prototype || undefined;
       }
       else {
-        _$jscoverage['abstract.js'][504]++;
+        _$jscoverage['abstract.js'][521]++;
         return undefined;
       }
     }
   }
 }), configurable: true, enumerable: false, writable: true}, setPrototypeOf: {value: (function setPrototypeOf(obj, proto) {
-  _$jscoverage['abstract.js'][519]++;
+  _$jscoverage['abstract.js'][536]++;
   if (Object.setPrototypeOf) {
-    _$jscoverage['abstract.js'][520]++;
+    _$jscoverage['abstract.js'][537]++;
     Object.setPrototypeOf(obj, proto);
   }
   else {
-    _$jscoverage['abstract.js'][521]++;
+    _$jscoverage['abstract.js'][538]++;
     if (obj.__proto__) {
-      _$jscoverage['abstract.js'][522]++;
+      _$jscoverage['abstract.js'][539]++;
       obj.__proto__ = obj;
     }
   }
-  _$jscoverage['abstract.js'][524]++;
+  _$jscoverage['abstract.js'][541]++;
   return obj;
 }), configurable: true, enumerable: false, writable: true}, utility: {value: require("./utility"), configurable: true, enumerable: false, writable: true}, version: {value: require("../package").version, enumerable: false, writable: false, configurable: false}});
-_$jscoverage['abstract.js'][552]++;
+_$jscoverage['abstract.js'][569]++;
 Object.defineProperties(Abstract.prototype, {mixin: {value: require("./utility").mixin, configurable: true, writable: true, enumerable: false}, get: {get: (function () {
-  _$jscoverage['abstract.js'][577]++;
+  _$jscoverage['abstract.js'][594]++;
   return (function get() {
-  _$jscoverage['abstract.js'][578]++;
+  _$jscoverage['abstract.js'][595]++;
   return require("object-settings").prototype? require("object-settings").prototype.get.apply(this, arguments): Abstract.utility.noop();
 });
 }), configurable: true, enumerable: true}, set: {get: (function () {
-  _$jscoverage['abstract.js'][595]++;
+  _$jscoverage['abstract.js'][612]++;
   return (function set() {
-  _$jscoverage['abstract.js'][596]++;
+  _$jscoverage['abstract.js'][613]++;
   return require("object-settings").prototype? require("object-settings").prototype.set.apply(this, arguments): Abstract.utility.noop();
 });
 }), configurable: true, enumerable: true}, use: {value: (function use(source) {
-  _$jscoverage['abstract.js'][612]++;
-  if (! source) {
-    _$jscoverage['abstract.js'][613]++;
-    return this;
-  }
-  _$jscoverage['abstract.js'][616]++;
+  _$jscoverage['abstract.js'][632]++;
   try {
-    _$jscoverage['abstract.js'][619]++;
+    _$jscoverage['abstract.js'][635]++;
     source.__proto__ = this.__proto__;
-    _$jscoverage['abstract.js'][622]++;
+    _$jscoverage['abstract.js'][638]++;
     this.__proto__ = source;
   }
   catch (error) {
-    _$jscoverage['abstract.js'][624]++;
+    _$jscoverage['abstract.js'][640]++;
     console.error(error.message);
   }
-  _$jscoverage['abstract.js'][626]++;
+  _$jscoverage['abstract.js'][642]++;
+  return this;
+}), configurable: true, enumerable: true, writable: true}, require: {value: (function use(source) {
+  _$jscoverage['abstract.js'][672]++;
+  if ("string" === typeof source) {
+    _$jscoverage['abstract.js'][673]++;
+    try {
+      _$jscoverage['abstract.js'][674]++;
+      require.resolve(source);
+      _$jscoverage['abstract.js'][675]++;
+      source = require(source);
+    }
+    catch (error) {
+      _$jscoverage['abstract.js'][676]++;
+      source = source || null;
+    }
+  }
+  _$jscoverage['abstract.js'][679]++;
+  if (! source) {
+    _$jscoverage['abstract.js'][680]++;
+    return this;
+  }
+  _$jscoverage['abstract.js'][683]++;
+  try {
+    _$jscoverage['abstract.js'][686]++;
+    source.__proto__ = this.__proto__;
+    _$jscoverage['abstract.js'][689]++;
+    this.__proto__ = source;
+  }
+  catch (error) {
+    _$jscoverage['abstract.js'][691]++;
+    console.error(error.message);
+  }
+  _$jscoverage['abstract.js'][693]++;
   return this;
 }), configurable: true, enumerable: true, writable: true}, properties: {get: (function () {
-  _$jscoverage['abstract.js'][640]++;
+  _$jscoverage['abstract.js'][707]++;
   return (function properties(properties) {
-  _$jscoverage['abstract.js'][641]++;
+  _$jscoverage['abstract.js'][708]++;
   if (arguments.length === 1) {
-    _$jscoverage['abstract.js'][642]++;
+    _$jscoverage['abstract.js'][709]++;
     return Abstract.defineProperties(this, arguments[0]);
   }
   else {
-    _$jscoverage['abstract.js'][644]++;
+    _$jscoverage['abstract.js'][711]++;
     arguments[0] = arguments[0] || {};
-    _$jscoverage['abstract.js'][645]++;
+    _$jscoverage['abstract.js'][712]++;
     return Abstract.defineProperties(arguments[0], arguments[1]);
   }
 });
 }), configurable: true, enumerable: false}});
-_$jscoverage['abstract.js'].source = ["/**"," * Create custom objects and methods by aggregating and abstracting esources."," *"," * @version 0.0.1"," * @module abstract"," * @constractor"," */","function Abstract() {","","  // Create Model Builder context","  if( 'function' === typeof arguments[0] ) {","    return Abstract.createModel( arguments[0] );","  }","","  // Create Plain object","  if( 'object' === typeof arguments[0] ) {","    return Abstract.create( arguments[0], arguments[1] );","  }","","  // Return for context","  return this;","","}","","/**"," * Constructor Properties"," *"," * The following properties are available within the constructor factory or by"," * referencing the constructor."," *"," */","Object.defineProperties( module.exports = Abstract, {","  get: {","    /**","     * Get a key from current context's _meta","     *","     * @todo Migrate to use object-settings once Abstract core is ready.","     * @temp","     * @param key","     * @returns {string}","     */","    get: function() {","      return function get() {","        return require( 'object-settings' ).prototype ? require( 'object-settings' ).prototype.get.apply( Abstract, arguments ) : Abstract.utility.noop();","      }","    },","    configurable: true,","    enumerable: false","  },","  set: {","    /**","     * Set a key and value to current's context's _meta","     *","     * @todo Migrate to use object-settings once Abstract core is ready.","     * @temp","     * @param key","     * @param value","     * @returns {string}","     */","    get: function() {","      return function set() {","        return require( 'object-settings' ).prototype ? require( 'object-settings' ).prototype.set.apply( Abstract, arguments ) : Abstract.utility.noop();","      }","    },","    configurable: true,","    enumerable: false","  },","  mixin: {","    /**","     *","     * @returns {Function}","     */","    get: function() {","      return function mixin( target ) {","        return Abstract.prototype.mixin( Abstract, target );","      }","    },","    configurable: true,","    enumerable: false","  },","  apply: {","    /**","     * Instantiate within a custom context.","     *","     * @params target {Object} Target object to use as the context.","     * @params arguments {Object} Arguments to instantiate with.","     * @returns {Function}","     */","    get: function() {","      return function apply( target, arguments ) {","        return Abstract.prototype.mixin( target, target );","      }","    },","    configurable: true,","    enumerable: false","  },","  create: {","    /**","     * Creates a new object with the specified prototype object and properties.","     * Copy the functions from the superclass prototype to the subclass prototype.","     *","     * @param proto {Object|null} Superclass to use as prototype for new object.","     */","    value: function create( proto, properties ) {","","      // If first argument is a method, assume we are making a model","      if( 'function' === typeof proto ) {","        return Abstract.createModel( proto, properties );","      }","","      var Instance = Object.create( proto );","","      Abstract.defineProperties( Instance, properties );","","      // Return for context","      return Instance;","","    },","    configurable: true,","    writable: false,","    enumerable: true","  },","  createModel: {","    /**","     * Create Model Environment","     *","     * This method expects a function to be passed to be used as the Model Builder.","     * Within the context of the Model Builder new methods become available.","     *","     * Removed for now:","     * Abstract.copyProperties( Model.create, Model );","     * Abstract.addPrototype( Model.create, Model );","     *","     */","    value: function createModel( Model ) {","      // console.log( 'createModel' );","","      // Call Constructor, pass in some arguments maybe","      if( 'function' !== typeof Model ) {","        return new Error( 'Abstract.createModel() requires a callable method as the first argument.' );","      }","","      // If Instantiator already bound","      if( 'function' === typeof Model.create &amp;&amp; model.create.name === 'createInstance' ) {","        return Model.create;","      }","","      // Create dynamically-created Model Constructor context","      Abstract.defineProperties( Model, {","        use: { value: Abstract.prototype.use.bind( Model ), enumerable: false },","        get: { value: Abstract.prototype.get.bind( Model ), enumerable: false },","        set: { value: Abstract.prototype.set.bind( Model ), enumerable: false },","        properties: { value: Abstract.prototype.properties.bind( Model ), enumerable: false },","        defineInstance: { value: Abstract.defineInstance.bind( Model, Model ), enumerable: false },","        defineProperties: { value: Abstract.defineProperties.bind( Model ), enumerable: false },","        defineProperty: { value: Abstract.defineProperty.bind( Model ), enumerable: false }","      });","","      // Create Instance Prototype from Abstract Prototype","      Model.prototype = Object.create( Abstract.prototype );","","      // Run Builder in Model context","      Model.call( Model, Model, Model.prototype );","","      Object.defineProperty( Model, 'create', {","        value: function createInstance() { return Abstract.createInstance.apply( Model, arguments ); },","        enumerable: true,","        configurable: true,","        writable: true","      })","","      // Set custom name for creating method if available","      var _custom_name = undefined;","","      if( Model.instantiator &amp;&amp; Object.keys( Model.instantiator ).length ) {","        Model.instantiator.forEach( function( fn ) { _custom_name = fn.name || _custom_name; });","      }","","      // Context wrapper for instantiation","      if( _custom_name &amp;&amp; 'string' === typeof _custom_name ) {","","        Object.defineProperty( Model, _custom_name, {","          value: Model.create,","          enumerable: true,","          configurable: true,","          writable: true","        });","","        // Hide \"create()\" since we have a cool custom name","        Object.defineProperty( Model, 'create', {","          enumerable: false","        })","","      }","","      // Return constructor function","      return Model;","","    },","    configurable: true,","    enumerable: true,","    writable: true","  },","  copyProperties: {","    /**","     * Iterate through target's properties and reference them into the source object","     *","     * @param target {Object}","     * @param source {Object}","     * @returns {Object} Target object.","     */","    value: function referenceProperties( target, source ) {","","      Object.getOwnPropertyNames( source ).forEach( function( key ) {","        var descriptor = Object.getOwnPropertyDescriptor( source, key );","","        if( descriptor.enumerable ) {","          Object.defineProperty( target, key, {","            enumerable: true,","            value: source[ key ],","            writable: descriptor.writable,","            configurable: descriptor.configurable","          });","        }","","      });","","      return target;","","    },","    configurable: true,","    enumerable: false,","    writable: true","  },","  createInstance: {","    /**","     * Create Instance","     *","     * It's rather imperative that this method be run in context.","     *","     * @returns {*}","     */","    value: function createInstance() {","      // console.log( 'createInstance' );","","      var args = arguments;","","      // Create the instance","      var Instance = Object.create( this.prototype );","","      // Not very elegant... @todo Revise prototype chain logic if this causes issues.","      for( var key in this.__proto__ ) {","","        // Only check own properties of model for inheritence; all \"use()'d\" properties will be non-enumerable","        var is_enumerable = this.propertyIsEnumerable( key );","","        Object.defineProperty( Instance, key, {","          value: this.__proto__[key],","          enumerable: is_enumerable,","          writable: true,","          configurable: true","        });","      }","","      // Set instance ID and Schema scaffolding","      Instance.set({","        id: Abstract.utility.hash( null, { random: true }),","        model: this.name || 'Model',","        schema: {","          id: [ '#', Instance.get( 'id' ) || this.name || 'Model' ].join( '' ),","          type: 'object',","          properties: {}","        }","      });","","      // Call createInstance","      if( this.instantiator &amp;&amp; Object.keys( this.instantiator ).length ) {","        this.instantiator.forEach( function( fn ) { fn.apply( Instance, args ); });","      }","","      return Instance;","","    },","    configurable: true,","    enumerable: false,","    writable: true","  },","  defineInstance: {","    /**","     * Bind createInstance to Context","     *","     * @param fn","     */","    value: function defineInstance( target, fn ) {","      // console.log( 'defineInstance' );","","      if( target.instantiator &amp;&amp; Object.keys( target.instantiator ).length ) {","        target.instantiator.push( 'function' === typeof fn ? fn : Abstract.utility.noop );","        return target;","      }","","      Object.defineProperty( target, 'instantiator', {","        value: [ 'function' === typeof fn ? fn : Abstract.utility.noop ],","        configurable: true,","        enumerable: false,","        writable: true","      });","","      // Context wrapper for instantiation","      return function createInstance() {","        return Abstract.createInstance.apply( target, arguments );;","      }","","    },","    configurable: true,","    enumerable: false,","    writable: true","  },","  defineProperties: {","    /**","     * Configure multiple object properties.","     *","     * @param obj","     * @param props","     * @returns {*}","     */","    value: function defineProperties( target, props ) {","","      if( !props &amp;&amp; 'object' === typeof props &amp;&amp; this.hasOwnProperty( 'defineInstance' ) ) {","        props = target;","        target = this;","      }","","      if( !props || 'object' !== typeof props ) {","        return target || {};","      }","","      Object.keys( props ).forEach( function( key ) {","        Abstract.defineProperty( target, key, props[ key ] );","      });","","      return target;","    },","    configurable: true,","    enumerable: true,","    writable: true","  },","  defineProperty: {","    /**","     * Configure single object property.","     *","     * @param obj","     * @param key","     * @param prop","     * @returns {*}","     */","    value: function defineProperty( obj, key, prop ) {","","      if( !prop ) {","","        // If \"obj\" was omitted we assue we are binding to context","        if( 'string' === typeof obj &amp;&amp; 'object' === typeof key &amp;&amp; this.hasOwnProperty( 'defineInstance' ) ) {","          obj = this;","          key = obj;","          prop = key;","        } else {","          prop = {};","        }","      }","","      if( !obj ) {","        obj = {};","      }","","      // General Descriptors for basic data","      if( 'object' !== typeof prop || ( !prop.get &amp;&amp; !prop.set &amp;&amp; !prop.value ) ) {","","        if( prop.value ) { prop = prop.value; }","","        prop = {","          value: prop,","          configurable: true,","          writable: true,","          type: typeof prop,","          enumerable: true","        }","","      }","","      // Apply Defaults","      Abstract.utility.extend( prop, this.meta ? this.meta.get( 'defaults' ) : {} );","","      // Store in Schema and add to Object actual","      Object.defineProperty( obj, key, prop );","","      if( obj._meta &amp;&amp; obj._meta.schema ) {","        obj._meta.schema[ key ] = prop;","      }","","      // Handle constructor property","      if( key === 'constructor' ) {}","","      // Handle prototypal properties","      if( key === 'prototype' ) {}","","      // Handle __proto__ property","      if( key === '__proto__' ) {}","","      // Monitor a Property.","      if( prop.hasOwnProperty( 'watch' ) ) {","        // Abstract.utility.watch( prop, this.watcher ); // @todo Not sure which function to pipeline to.","      }","","      // Wrap the property into a getter and setter","      if( prop.hasOwnProperty( 'wrap' ) ) {","        // @todo","      }","","        // Add Properties to (presumably) constructor.","      if( prop.hasOwnProperty( 'properties' ) ) {","        Abstract.utility.each( prop.properties, function( fn, key, array ) {","          if( 'function' === typeof prop.value ) {","            Object.defineProperty( prop.value, key, {","              value: fn,","              configurable: true,","              enumerable: true","            });","            //Abstract.use( fn, obj );","          }","        });","      }","","      return obj;","","    },","    configurable: true,","    enumerable: true","  },","  addPrototype: {","    /**","     * Allow Prototype useage method to be ran in custom context for static calls","     *","     * @returns {Function}","     */","    get: function() {","      return function( context, proto ) {","        return Abstract.prototype.use.call( context, proto );","      }","    },","    configurable: false,","    enumerable: false","  },","  extendPrototype: {","    /**","     * Allow Prototype useage method to be ran in custom context for static calls","     *","     * @returns {Function}","     */","    value: function extendPrototype() {","      var result = {};","      var list = arguments;","","      Object.keys( arguments ).forEach( function( index ) {","        //Abstract.utility.extend( result, list[index] );","        //Abstract.utility.extend( result, Object.create( list[index] ) );","","        if( index == 0 ) {","          result.__proto__ = list[index];","        } else {","          var depth = result;","","          for( i=1; i&lt;=index; i++ ) {","            depth = depth.__proto__;","          }","","          depth.__proto__ = list[index];","","        }","","      });","","      // Get immediate prototype","      return Abstract.getPrototypeOf( result );","","    },","    configurable: false,","    enumerable: false,","    writable: true","  },","  getPrototypeOf: {","    /**","     * Cross Browser Compatible prototype getter.","     *","     * @param obj","     */","    value: function getPrototypeOf( obj ) {","      if( Object.getPrototypeOf ) {","        return Object.getPrototypeOf( obj ) || undefined;","      } else if( obj.__proto__ ) {","        return obj.__proto__ || undefined;","      } else if( obj.constructor.prototype ) {","        return constructor.prototype || undefined;","      } else {","        return undefined;","      }","    },","    configurable: true,","    enumerable: false,","    writable: true","  },","  setPrototypeOf: {","    /**","     * Basic Wrapper - will be more fault-tolerant in future.","     *","     * @param obj","     * @param proto","     */","    value: function setPrototypeOf( obj, proto ) {","      if( Object.setPrototypeOf ) {","        Object.setPrototypeOf( obj, proto );","      } else if( obj.__proto__ ) {","        obj.__proto__ = obj;","      }","      return obj;","    },","    configurable: true,","    enumerable: false,","    writable: true","  },","  utility: {","    value: require( './utility' ),","    configurable: true,","    enumerable: false,","    writable: true","  },","  version: {","    value: require( '../package' ).version,","    enumerable: false,","    writable: false,","    configurable: false","  }","});","","/**"," * Instance Properties"," *"," * The follow properties are available to each instance created from a constructor."," * Some of the Abstract Static methods reference the prototypal methods."," * Prototyal methods all work with the existing context."," *"," */","Object.defineProperties( Abstract.prototype, {","  mixin: {","    /**","     * Mixin current prototype into target object","     *","     * Honors property descriptor settings, if available.","     *","     * @param target","     * @param source","     */","    value: require( './utility' ).mixin,","    configurable: true,","    writable: true,","    enumerable: false","  },","  get: {","    /**","     * Get a key from current context's _meta","     *","     * @todo Migrate to use object-settings once Abstract core is ready.","     * @temp","     * @param key","     * @returns {string}","     */","    get: function() {","      return function get() {","        return require( 'object-settings' ).prototype ? require( 'object-settings' ).prototype.get.apply( this, arguments ) : Abstract.utility.noop();","      }","    },","    configurable: true,","    enumerable: true","  },","  set: {","    /**","     * Set a key and value to current's context's _meta","     *","     * @todo Migrate to use object-settings once Abstract core is ready.","     * @temp","     * @param key","     * @param value","     * @returns {string}","     */","    get: function() {","      return function set( ) {","        return require( 'object-settings' ).prototype ? require( 'object-settings' ).prototype.set.apply( this, arguments ) : Abstract.utility.noop();","      }","    },","    configurable: true,","    enumerable: true","  },","  use: {","    /**","     * Inserts an object/prototype into a target object.","     *","     * @param target","     * @param proto","     * @returns {*}","     */","    value: function use( source ) {","","      if( !source ) {","        return this;","      }","","      try {","","        // Move current immediate prototype object into new protototype object","        source.__proto__ = this.__proto__;","","        // Insert new prototype into chain.","        this.__proto__ = source;","","      } catch( error ) { console.error( error.message ); }","","      return this;","","    },","    configurable: true,","    enumerable: true,","    writable: true","  },","  properties: {","    /**","     * Get / Set Properties","     *","     * @returns {Function}","     */","    get: function() {","      return function properties( properties ) {","        if( arguments.length === 1 ) {","          return Abstract.defineProperties( this, arguments[0] );","        } else {","          arguments[0] = arguments[0] || {};","          return Abstract.defineProperties( arguments[0], arguments[1] );","        }","      }","    },","    configurable: true,","    enumerable: false","  }","});","","",""];
+_$jscoverage['abstract.js'].source = ["/**"," * Create custom objects and methods by aggregating and abstracting esources."," *"," * @version 0.0.1"," * @module abstract"," * @constractor"," */","function Abstract() {","","  // Create Model Builder context","  if( 'function' === typeof arguments[0] ) {","    return Abstract.createModel( arguments[0] );","  }","","  // Create Plain object","  if( 'object' === typeof arguments[0] ) {","    return Abstract.create( arguments[0], arguments[1] );","  }","","  // Return for context","  return this;","","}","","/**"," * Constructor Properties"," *"," * The following properties are available within the constructor factory or by"," * referencing the constructor."," *"," */","Object.defineProperties( module.exports = Abstract, {","  get: {","    /**","     * Get a key from current context's _meta","     *","     * @todo Migrate to use object-settings once Abstract core is ready.","     * @temp","     * @param key","     * @returns {string}","     */","    get: function() {","      return function get() {","        return require( 'object-settings' ).prototype ? require( 'object-settings' ).prototype.get.apply( Abstract, arguments ) : Abstract.utility.noop();","      }","    },","    configurable: true,","    enumerable: false","  },","  set: {","    /**","     * Set a key and value to current's context's _meta","     *","     * @todo Migrate to use object-settings once Abstract core is ready.","     * @temp","     * @param key","     * @param value","     * @returns {string}","     */","    get: function() {","      return function set() {","        return require( 'object-settings' ).prototype ? require( 'object-settings' ).prototype.set.apply( Abstract, arguments ) : Abstract.utility.noop();","      }","    },","    configurable: true,","    enumerable: false","  },","  mixin: {","    /**","     *","     * @returns {Function}","     */","    get: function() {","      return function mixin( target ) {","        return Abstract.prototype.mixin( Abstract, target );","      }","    },","    configurable: true,","    enumerable: false","  },","  apply: {","    /**","     * Instantiate within a custom context.","     *","     * @params target {Object} Target object to use as the context.","     * @params arguments {Object} Arguments to instantiate with.","     * @returns {Function}","     */","    get: function() {","      return function apply( target, arguments ) {","        return Abstract.prototype.mixin( target, target );","      }","    },","    configurable: true,","    enumerable: false","  },","  create: {","    /**","     * Creates a new object with the specified prototype object and properties.","     * Copy the functions from the superclass prototype to the subclass prototype.","     *","     * @param proto {Object|null} Superclass to use as prototype for new object.","     */","    value: function create( proto, properties ) {","","      // If first argument is a method, assume we are making a model","      if( 'function' === typeof proto ) {","        return Abstract.createModel( proto, properties );","      }","","      var Instance = Object.create( proto );","","      Abstract.defineProperties( Instance, properties );","","      // Return for context","      return Instance;","","    },","    configurable: true,","    writable: false,","    enumerable: true","  },","  createModel: {","    /**","     * Create Model Environment","     *","     * This method expects a function to be passed to be used as the Model Builder.","     * Within the context of the Model Builder new methods become available.","     *","     * Removed for now:","     * Abstract.copyProperties( Model.create, Model );","     * Abstract.addPrototype( Model.create, Model );","     *","     */","    value: function createModel( Model ) {","      // console.log( 'createModel' );","","      // Call Constructor, pass in some arguments maybe","      if( 'function' !== typeof Model ) {","        return new Error( 'Abstract.createModel() requires a callable method as the first argument.' );","      }","","      // If Instantiator already bound","      if( 'function' === typeof Model.create &amp;&amp; model.create.name === 'createInstance' ) {","        return Model.create;","      }","","      // Create dynamically-created Model Constructor context","      Abstract.defineProperties( Model, {","        use: { value: Abstract.prototype.use.bind( Model ), enumerable: false },","        require: { value: Abstract.prototype.require.bind( Model ), enumerable: false },","        get: { value: Abstract.prototype.get.bind( Model ), enumerable: false },","        set: { value: Abstract.prototype.set.bind( Model ), enumerable: false },","        properties: { value: Abstract.prototype.properties.bind( Model ), enumerable: false },","        defineInstance: { value: Abstract.defineInstance.bind( Model, Model ), enumerable: false },","        defineProperties: { value: Abstract.defineProperties.bind( Model ), enumerable: false },","        defineProperty: { value: Abstract.defineProperty.bind( Model ), enumerable: false }","      });","","      // Create Instance Prototype from Abstract Prototype","      Model.prototype = Object.create( Abstract.prototype );","","      // Run Builder in Model context","      Model.call( Model, Model, Model.prototype );","","      Object.defineProperty( Model, 'create', {","        value: function createInstance() { return Abstract.createInstance.apply( Model, arguments ); },","        enumerable: true,","        configurable: true,","        writable: true","      })","","      // Set custom name for creating method if available","      var _custom_name = undefined;","","      if( Model.instantiator &amp;&amp; Object.keys( Model.instantiator ).length ) {","        Model.instantiator.forEach( function( fn ) { _custom_name = fn.name || _custom_name; });","      }","","      // Context wrapper for instantiation","      if( _custom_name &amp;&amp; 'string' === typeof _custom_name ) {","","        Object.defineProperty( Model, _custom_name, {","          value: Model.create,","          enumerable: true,","          configurable: true,","          writable: true","        });","","        // Hide \"create()\" since we have a cool custom name","        Object.defineProperty( Model, 'create', {","          enumerable: false","        })","","      }","","      // Return constructor function","      return Model;","","    },","    configurable: true,","    enumerable: true,","    writable: true","  },","  copyProperties: {","    /**","     * Iterate through target's properties and reference them into the source object","     *","     * @param target {Object}","     * @param source {Object}","     * @returns {Object} Target object.","     */","    value: function referenceProperties( target, source ) {","","      Object.getOwnPropertyNames( source ).forEach( function( key ) {","        var descriptor = Object.getOwnPropertyDescriptor( source, key );","","        if( descriptor.enumerable ) {","          Object.defineProperty( target, key, {","            enumerable: true,","            value: source[ key ],","            writable: descriptor.writable,","            configurable: descriptor.configurable","          });","        }","","      });","","      return target;","","    },","    configurable: true,","    enumerable: false,","    writable: true","  },","  createInstance: {","    /**","     * Create Instance","     *","     * It's rather imperative that this method be run in context.","     *","     * @returns {*}","     */","    value: function createInstance() {","      // console.log( 'createInstance' );","","      var args = arguments;","","      // Create the instance","      var Instance = Object.create( this.prototype );","","      // Not very elegant... @todo Revise prototype chain logic if this causes issues.","      for( var key in this.__proto__ ) {","","        // Only check own properties of model for inheritence; all \"use()'d\" properties will be non-enumerable","        var is_enumerable = this.propertyIsEnumerable( key );","","        Object.defineProperty( Instance, key, {","          value: this.__proto__[key],","          enumerable: is_enumerable,","          writable: true,","          configurable: true","        });","      }","","      // Set instance ID and Schema scaffolding","      Instance.set({","        id: Abstract.utility.hash( null, { random: true }),","        model: this.name || 'Model',","        schema: {","          id: [ '#', Instance.get( 'id' ) || this.name || 'Model' ].join( '' ),","          type: 'object',","          properties: {}","        }","      });","","      // Call createInstance","      if( this.instantiator &amp;&amp; Object.keys( this.instantiator ).length ) {","        this.instantiator.forEach( function( fn ) { fn.apply( Instance, args ); });","      }","","      return Instance;","","    },","    configurable: true,","    enumerable: false,","    writable: true","  },","  defineInstance: {","    /**","     * Bind createInstance to Context","     *","     * @param fn","     */","    value: function defineInstance( target, fn ) {","      // console.log( 'defineInstance' );","","      if( target.instantiator &amp;&amp; Object.keys( target.instantiator ).length ) {","        target.instantiator.push( 'function' === typeof fn ? fn : Abstract.utility.noop );","        return target;","      }","","      Object.defineProperty( target, 'instantiator', {","        value: [ 'function' === typeof fn ? fn : Abstract.utility.noop ],","        configurable: true,","        enumerable: false,","        writable: true","      });","","      // Context wrapper for instantiation","      return function createInstance() {","        return Abstract.createInstance.apply( target, arguments );;","      }","","    },","    configurable: true,","    enumerable: false,","    writable: true","  },","  defineProperties: {","    /**","     * Configure multiple object properties.","     *","     * @param obj","     * @param props","     * @returns {*}","     */","    value: function defineProperties( target, props ) {","","      if( !props &amp;&amp; 'object' === typeof props &amp;&amp; this.hasOwnProperty( 'defineInstance' ) ) {","        props = target;","        target = this;","      }","","      if( !props || 'object' !== typeof props ) {","        return target || {};","      }","","      Object.keys( props ).forEach( function( key ) {","        Abstract.defineProperty( target, key, props[ key ] );","      });","","      return target;","    },","    configurable: true,","    enumerable: true,","    writable: true","  },","  defineProperty: {","    /**","     * Configure single object property.","     *","     * @param obj","     * @param key","     * @param prop","     * @returns {*}","     */","    value: function defineProperty( obj, key, prop ) {","","      if( !prop ) {","","        // If \"obj\" was omitted we assue we are binding to context","        if( 'string' === typeof obj &amp;&amp; 'object' === typeof key &amp;&amp; this.hasOwnProperty( 'defineInstance' ) ) {","          obj = this;","          key = obj;","          prop = key;","        } else {","          prop = {};","        }","      }","","      if( !obj ) {","        obj = {};","      }","","      // Handle Abstract instances because they have a get and set method inherited form Object Settings","      if( prop instanceof Abstract &amp;&amp; prop.get &amp;&amp; prop.set &amp;&amp; prop._meta ) {","","        prop = {","          value: prop,","          configurable: true,","          writable: true,","          type: typeof prop,","          enumerable: true","        }","","      }","","      // General Descriptors for basic data","      if( 'object' !== typeof prop || ( !prop.get &amp;&amp; !prop.set &amp;&amp; !prop.value ) ) {","","        if( prop.value ) { prop = prop.value; }","","        prop = {","          value: prop,","          configurable: true,","          writable: true,","          type: typeof prop,","          enumerable: true","        }","","      }","","","      //console.log( key, !!prop.value );","","      // Apply Defaults","      Abstract.utility.extend( prop, this.meta ? this.meta.get( 'defaults' ) : {} );","","      // Store in Schema and add to Object actual","      Object.defineProperty( obj, key, prop );","","      if( obj._meta &amp;&amp; obj._meta.schema ) {","        obj._meta.schema[ key ] = prop;","      }","","      // Handle constructor property","      if( key === 'constructor' ) {}","","      // Handle prototypal properties","      if( key === 'prototype' ) {}","","      // Handle __proto__ property","      if( key === '__proto__' ) {}","","      // Monitor a Property.","      if( prop.hasOwnProperty( 'watch' ) ) {","        // Abstract.utility.watch( prop, this.watcher ); // @todo Not sure which function to pipeline to.","      }","","      // Wrap the property into a getter and setter","      if( prop.hasOwnProperty( 'wrap' ) ) {","        // @todo","      }","","        // Add Properties to (presumably) constructor.","      if( prop.hasOwnProperty( 'properties' ) ) {","        Abstract.utility.each( prop.properties, function( fn, key, array ) {","          if( 'function' === typeof prop.value ) {","            Object.defineProperty( prop.value, key, {","              value: fn,","              configurable: true,","              enumerable: true","            });","            //Abstract.use( fn, obj );","          }","        });","      }","","      return obj;","","    },","    configurable: true,","    enumerable: true","  },","  addPrototype: {","    /**","     * Allow Prototype useage method to be ran in custom context for static calls","     *","     * @returns {Function}","     */","    get: function() {","      return function( context, proto ) {","        return Abstract.prototype.use.call( context, proto );","      }","    },","    configurable: false,","    enumerable: false","  },","  extendPrototype: {","    /**","     * Allow Prototype useage method to be ran in custom context for static calls","     *","     * @returns {Function}","     */","    value: function extendPrototype() {","      var result = {};","      var list = arguments;","","      Object.keys( arguments ).forEach( function( index ) {","        //Abstract.utility.extend( result, list[index] );","        //Abstract.utility.extend( result, Object.create( list[index] ) );","","        if( index == 0 ) {","          result.__proto__ = list[index];","        } else {","          var depth = result;","","          for( i=1; i&lt;=index; i++ ) {","            depth = depth.__proto__;","          }","","          depth.__proto__ = list[index];","","        }","","      });","","      // Get immediate prototype","      return Abstract.getPrototypeOf( result );","","    },","    configurable: false,","    enumerable: false,","    writable: true","  },","  getPrototypeOf: {","    /**","     * Cross Browser Compatible prototype getter.","     *","     * @param obj","     */","    value: function getPrototypeOf( obj ) {","      if( Object.getPrototypeOf ) {","        return Object.getPrototypeOf( obj ) || undefined;","      } else if( obj.__proto__ ) {","        return obj.__proto__ || undefined;","      } else if( obj.constructor.prototype ) {","        return constructor.prototype || undefined;","      } else {","        return undefined;","      }","    },","    configurable: true,","    enumerable: false,","    writable: true","  },","  setPrototypeOf: {","    /**","     * Basic Wrapper - will be more fault-tolerant in future.","     *","     * @param obj","     * @param proto","     */","    value: function setPrototypeOf( obj, proto ) {","      if( Object.setPrototypeOf ) {","        Object.setPrototypeOf( obj, proto );","      } else if( obj.__proto__ ) {","        obj.__proto__ = obj;","      }","      return obj;","    },","    configurable: true,","    enumerable: false,","    writable: true","  },","  utility: {","    value: require( './utility' ),","    configurable: true,","    enumerable: false,","    writable: true","  },","  version: {","    value: require( '../package' ).version,","    enumerable: false,","    writable: false,","    configurable: false","  }","});","","/**"," * Instance Properties"," *"," * The follow properties are available to each instance created from a constructor."," * Some of the Abstract Static methods reference the prototypal methods."," * Prototyal methods all work with the existing context."," *"," */","Object.defineProperties( Abstract.prototype, {","  mixin: {","    /**","     * Mixin current prototype into target object","     *","     * Honors property descriptor settings, if available.","     *","     * @param target","     * @param source","     */","    value: require( './utility' ).mixin,","    configurable: true,","    writable: true,","    enumerable: false","  },","  get: {","    /**","     * Get a key from current context's _meta","     *","     * @todo Migrate to use object-settings once Abstract core is ready.","     * @temp","     * @param key","     * @returns {string}","     */","    get: function() {","      return function get() {","        return require( 'object-settings' ).prototype ? require( 'object-settings' ).prototype.get.apply( this, arguments ) : Abstract.utility.noop();","      }","    },","    configurable: true,","    enumerable: true","  },","  set: {","    /**","     * Set a key and value to current's context's _meta","     *","     * @todo Migrate to use object-settings once Abstract core is ready.","     * @temp","     * @param key","     * @param value","     * @returns {string}","     */","    get: function() {","      return function set( ) {","        return require( 'object-settings' ).prototype ? require( 'object-settings' ).prototype.set.apply( this, arguments ) : Abstract.utility.noop();","      }","    },","    configurable: true,","    enumerable: true","  },","  use: {","    /**","     * Inserts an object/prototype into a target object.","     *","     * @todo Try using in some instances.","     * require( 'util' ).inherits( this, source );","     *","     * @param target","     * @param proto","     * @returns {*}","     */","    value: function use( source ) {","","      try {","","        // Move current immediate prototype object into new protototype object","        source.__proto__ = this.__proto__;","","        // Insert new prototype into chain.","        this.__proto__ = source;","","      } catch( error ) { console.error( error.message ); }","","      return this;","","    },","    configurable: true,","    enumerable: true,","    writable: true","  },","  require: {","    /**","     * Requires and inserts an object/prototype into this context object.","     *","     * @example","     *","     *    require( 'abstract' ).createModel( function MyAbstraction( model ) {","     *","     *      this.require( 'util' );","     *      this.require( 'async' );","     *","     *      this.auto({}); // -&gt; [Function]","     *","     *    });","     *","     * @todo Try using in some instances.","     *    require( 'util' ).inherits( this, source );","     *","     * @param name {String} Module name or file path to require.","     * @returns {*}","     */","    value: function use( source ) {","","      if( 'string' === typeof source ) {","        try {","          require.resolve( source );","          source = require( source );","        } catch( error ) { source = source || null }","      }","","      if( !source ) {","        return this;","      }","","      try {","","        // Move current immediate prototype object into new protototype object","        source.__proto__ = this.__proto__;","","        // Insert new prototype into chain.","        this.__proto__ = source;","","      } catch( error ) { console.error( error.message ); }","","      return this;","","    },","    configurable: true,","    enumerable: true,","    writable: true","  },","  properties: {","    /**","     * Get / Set Properties","     *","     * @returns {Function}","     */","    get: function() {","      return function properties( properties ) {","        if( arguments.length === 1 ) {","          return Abstract.defineProperties( this, arguments[0] );","        } else {","          arguments[0] = arguments[0] || {};","          return Abstract.defineProperties( arguments[0], arguments[1] );","        }","      }","    },","    configurable: true,","    enumerable: false","  }","});","","",""];

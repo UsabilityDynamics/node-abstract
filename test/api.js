@@ -219,7 +219,7 @@ module.exports = {
         Instance1.should.have.property( 'use' );
       },
 
-      "can inherit functionality via use().": function( done ) {
+      "can inherit functionality via this.use().": function( done ) {
 
         var TestModel = require( '../' ).createModel( function TestModel() {
           this.use( require( 'net' ) );
@@ -237,6 +237,31 @@ module.exports = {
         TestModel.should.have.property( 'emit' );
 
         TestModel.emit( 'done', null );
+
+      },
+
+      "can inherit module functionality via this.require().": function() {
+
+        var TestModel = require( '../' ).createModel( function TestModel() {
+
+          // Require and include into chain
+          this.require( 'net' ) ;
+          this.require( 'async' );
+
+          // Include into chain
+          this.use( require( 'events' ).EventEmitter.prototype );
+
+          // In-context tests
+          this.should.have.property( 'auto' );
+          this.should.have.property( 'on' );
+          this.should.have.property( 'createServer' );
+
+        });
+
+        // Out of context tests
+        TestModel.should.have.property( 'auto' );
+        TestModel.should.have.property( 'on' );
+        TestModel.should.have.property( 'createServer' );
 
       },
 
