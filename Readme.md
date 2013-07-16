@@ -4,61 +4,6 @@ The Abstract library is used for rapidly developing JavaScript prototypal "Model
 Each new Model can be defined by you as needed within a special context which allows you to rapidly 
 define complex constructors.
 
-    - Model Factory: Method in which you configure the Prototype Constructor and Instance Factory
-    - Instance Factory: Method within the Model Factory that is called on every Instance creation.
-    - Property Descriptors: Extended property descriptors.
-    
-Basic Usage
-===========
-Thie is a basic example of creating a Model and then instantiating it.
-
-    // Require Module
-    var TCP_Proxy = require( 'abstract' ).createModel( function TCP_Proxy() {
-    
-      // Define a method for handling some task
-      function TaskWorker( task, fn ) {
-        
-        if( task.type === 'start_server' ) {
-          setTimeout( function() { fn(); }, 1000 );
-        }
-        
-      }
-      
-      // Create task queue shared by all instances
-      this.queue = require( 'async' ).queue( TaskWorker, 2 );
-      
-      // Run when all enqueued tasks are complete
-      this.queue.drain = function() {
-        console.log( 'All TCP Proxy queued tasks are processed.' );
-      }
-    
-      // Define Instance constructor, called on every initialization
-      this.defineConstructor( function( from, to ) {
-      
-        var self = this;
-        
-        // Set instance settings
-        this.set( 'from', from );
-        this.set( 'to', to );
-        
-        // Add to shared queue
-        this.queue.push({ type: 'start_server', from: from, to: to }, function( error ) {
-          console.log( "TCP Server id %s forward from %s to %s started.",  self.id, from, to );
-        });
-        
-      });
-      
-    });
-
-    // Instantiate 3 proxies
-    new TCP_Proxy( 7000, 7100 );
-    new TCP_Proxy( 8000, 8100 );
-    new TCP_Proxy( 9000, 9100 );
-    
-    // Monitor all events on all instances
-    TCP_Proxy.on( '*::error', console.error );
-    
-
 Module Methods
 ==============
 In addition to the Model method, used for creating Prototype models, the module exposes a variety of useful
@@ -77,8 +22,11 @@ Module Factory Methods
 ======================
 The below methods are available within the context of an Abstract.createModel( [fn] ) function.
 
+    - this.use( prototype ): Insert target object into current context's context prototype chain.
+    - this.require( module ): Require a module and insert it's exports into current context's prototype chain.
     - this.set( key, value ): Set meta key and value, will be used as defaults by instaces.
     - this.get( key ): Get a value.
+    - this.defineConstructor( function MyInstanceConstructor() {} ): Creates an Instance Factory environment.
     - this.defineInstance( function MyInstanceConstructor() {} ): Creates an Instance Factory environment.
     - this.defineProperty( property, descriptor ): Add single property t othe instance prototype.
     - this.defineProperties( properties ): Add multiple properties to the Instance prototype.
@@ -128,6 +76,63 @@ The additional configuration is accessible via {YourObject}.meta.schema object. 
 
 Each Module and Instance must have a unique name which will be used to establish namespace and path.
 Name will be generated from constructor's name if not specified.
+
+Basic Usage
+===========
+Thie is a basic example of creating a Model and then instantiating it.
+
+    // Require Module
+    var TCP_Proxy = require( 'abstract' ).createModel( function TCP_Proxy() {
+
+      // Define a method for handling some task
+      function TaskWorker( task, fn ) {
+
+        if( task.type === 'start_server' ) {
+          setTimeout( function() { fn(); }, 1000 );
+        }
+
+      }
+
+      // Create task queue shared by all instances
+      this.queue = require( 'async' ).queue( TaskWorker, 2 );
+
+      // Run when all enqueued tasks are complete
+      this.queue.drain = function() {
+        console.log( 'All TCP Proxy queued tasks are processed.' );
+      }
+
+      // Define Instance constructor, called on every initialization
+      this.defineConstructor( function( from, to ) {
+
+        var self = this;
+
+        // Set instance settings
+        this.set( 'from', from );
+        this.set( 'to', to );
+
+        // Add to shared queue
+        this.queue.push({ type: 'start_server', from: from, to: to }, function( error ) {
+          console.log( "TCP Server id %s forward from %s to %s started.",  self.id, from, to );
+        });
+
+      });
+
+    });
+
+    // Instantiate 3 proxies
+    new TCP_Proxy( 7000, 7100 );
+    new TCP_Proxy( 8000, 8100 );
+    new TCP_Proxy( 9000, 9100 );
+
+    // Monitor all events on all instances
+    TCP_Proxy.on( '*::error', console.error );
+
+Terminology
+===========
+
+  - Model Factory: Method in which you configure the Prototype Constructor and Instance Factory
+  - Instance Factory: Method within the Model Factory that is called on every Instance creation.
+  - Property Descriptors: Extended property descriptors.
 
 License
 =======

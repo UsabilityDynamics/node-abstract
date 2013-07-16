@@ -248,6 +248,9 @@ module.exports = {
           this.require( 'net' ) ;
           this.require( 'async' );
 
+          // Will not throw an error
+          this.require( 'i-do-not-exist-abracadabra' );
+
           // Include into chain
           this.use( require( 'events' ).EventEmitter.prototype );
 
@@ -293,6 +296,34 @@ module.exports = {
         var Instance0 = TestModel.create();
 
         //console.log( Instance0 );
+
+      },
+
+      "property setting": {
+
+        "[todo] this.properties()": function() {
+
+          // Test seting properties with different values
+
+          // Lazy
+          // true
+          // false
+          // null
+          // undefined
+          // {}
+
+          // ECMA5
+          // { value: true; }
+          // { value: false; }
+          // { value: null; }
+          // { value: undefined; }
+          // { value: {}; }
+
+        },
+
+        "[todo] this.defineProperty()": function() {},
+
+        "[todo] this.defineProperties()": function() {},
 
       }
 
