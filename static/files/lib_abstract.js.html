@@ -251,6 +251,7 @@ Object.defineProperties( module.exports = Abstract, {
         set: { value: Abstract.prototype.set.bind( Model ), enumerable: false },
         properties: { value: Abstract.prototype.properties.bind( Model ), enumerable: false },
         defineInstance: { value: Abstract.defineInstance.bind( Model, Model ), enumerable: false },
+        defineConstructor: { value: Abstract.defineConstructor.bind( Model, Model ), enumerable: false },
         defineProperties: { value: Abstract.defineProperties.bind( Model ), enumerable: false },
         defineProperty: { value: Abstract.defineProperty.bind( Model ), enumerable: false }
       });
@@ -384,10 +385,45 @@ Object.defineProperties( module.exports = Abstract, {
     enumerable: false,
     writable: true
   },
+  defineConstructor: {
+    /**
+     * Bind createInstance to Context
+     *
+     * @method defineConstructor
+     * @param target
+     * @param fn
+     */
+    value: function defineConstructor( target, fn ) {
+      // console.log( &#x27;defineInstance&#x27; );
+
+      if( target.instantiator &amp;&amp; Object.keys( target.instantiator ).length ) {
+        target.instantiator.push( &#x27;function&#x27; === typeof fn ? fn : Abstract.utility.noop );
+        return target;
+      }
+
+      Object.defineProperty( target, &#x27;instantiator&#x27;, {
+        value: [ &#x27;function&#x27; === typeof fn ? fn : Abstract.utility.noop ],
+        configurable: true,
+        enumerable: false,
+        writable: true
+      });
+
+      // Context wrapper for instantiation
+      return function createInstance() {
+        return Abstract.createInstance.apply( target, arguments );;
+      }
+
+    },
+    configurable: true,
+    enumerable: false,
+    writable: true
+  },
   defineInstance: {
     /**
      * Bind createInstance to Context
      *
+     * @method defineInstance
+     * @param target
      * @param fn
      */
     value: function defineInstance( target, fn ) {
@@ -455,6 +491,7 @@ Object.defineProperties( module.exports = Abstract, {
      */
     value: function defineProperty( obj, key, prop ) {
 
+      // @issue https://github.com/UsabilityDynamics/abstract/issues/2
       if( !prop ) {
 
         // If &quot;obj&quot; was omitted we assue we are binding to context
@@ -465,6 +502,7 @@ Object.defineProperties( module.exports = Abstract, {
         } else {
           prop = {};
         }
+
       }
 
       if( !obj ) {
@@ -498,9 +536,6 @@ Object.defineProperties( module.exports = Abstract, {
         }
 
       }
-
-
-      //console.log( key, !!prop.value );
 
       // Apply Defaults
       Abstract.utility.extend( prop, this.meta ? this.meta.get( &#x27;defaults&#x27; ) : {} );
@@ -665,20 +700,6 @@ Object.defineProperties( module.exports = Abstract, {
  *
  */
 Object.defineProperties( Abstract.prototype, {
-  mixin: {
-    /**
-     * Mixin current prototype into target object
-     *
-     * Honors property descriptor settings, if available.
-     *
-     * @param target
-     * @param source
-     */
-    value: require( &#x27;./utility&#x27; ).mixin,
-    configurable: true,
-    writable: true,
-    enumerable: false
-  },
   get: {
     /**
      * Get a key from current context&#x27;s _meta
@@ -727,6 +748,11 @@ Object.defineProperties( Abstract.prototype, {
      */
     value: function use( source ) {
 
+      // Check if already required to prevent Cyclic __proto__ error.
+      if( &#x27;function&#x27; === typeof source &amp;&amp; source.name  &amp;&amp; this.get( &#x27;required.&#x27; + source.name ) ) {
+        return this;
+      }
+
       try {
 
         // Move current immediate prototype object into new protototype object
@@ -735,7 +761,15 @@ Object.defineProperties( Abstract.prototype, {
         // Insert new prototype into chain.
         this.__proto__ = source;
 
-      } catch( error ) { console.error( error.message ); }
+        // Note required
+        if( &#x27;function&#x27; === typeof source &amp;&amp; source.name ) {
+          this.set( &#x27;required.&#x27; + source.name, true );
+        }
+
+      } catch( error ) {
+        //console.error( error.message );
+        if( error.message === &#x27;Cyclic __proto__ value&#x27; ) {}
+      }
 
       return this;
 
@@ -743,6 +777,20 @@ Object.defineProperties( Abstract.prototype, {
     configurable: true,
     enumerable: true,
     writable: true
+  },
+  mixin: {
+    /**
+     * Mixin current prototype into target object
+     *
+     * Honors property descriptor settings, if available.
+     *
+     * @param target
+     * @param source
+     */
+    value: require( &#x27;./utility&#x27; ).mixin,
+    configurable: true,
+    writable: true,
+    enumerable: false
   },
   require: {
     /**
@@ -765,13 +813,24 @@ Object.defineProperties( Abstract.prototype, {
      * @param name {String} Module name or file path to require.
      * @returns {*}
      */
-    value: function use( source ) {
+    value: function use( name ) {
 
-      if( &#x27;string&#x27; === typeof source ) {
+      if( &#x27;string&#x27; === typeof name ) {
+
         try {
-          require.resolve( source );
-          source = require( source );
-        } catch( error ) { source = source || null }
+
+          // Resolve module
+          require.resolve( name );
+
+          // Check if already required to prevent Cyclic __proto__ error.
+          if( this.get( &#x27;required.&#x27; + name ) ) {
+            return this;
+          }
+
+          var source = require( name );
+
+        } catch( error ) { var source = null }
+
       }
 
       if( !source ) {
@@ -785,6 +844,9 @@ Object.defineProperties( Abstract.prototype, {
 
         // Insert new prototype into chain.
         this.__proto__ = source;
+
+        // Add meta note about required source
+        this.set( &#x27;required.&#x27; + name, true );
 
       } catch( error ) { console.error( error.message ); }
 

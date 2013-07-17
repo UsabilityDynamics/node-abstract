@@ -223,6 +223,7 @@ module.exports = {
 
         var TestModel = require( '../' ).createModel( function TestModel() {
           this.use( require( 'net' ) );
+          this.use( require( 'net' ) );
           this.use( require( 'async' ) );
           this.use( require( 'events' ).EventEmitter.prototype );
           this.should.have.property( 'auto' );
@@ -246,6 +247,9 @@ module.exports = {
 
           // Require and include into chain
           this.require( 'net' ) ;
+          this.require( 'async' );
+
+          // Should not throw error
           this.require( 'async' );
 
           // Will not throw an error
