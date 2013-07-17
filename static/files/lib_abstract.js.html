@@ -168,10 +168,14 @@ Object.defineProperties( module.exports = Abstract, {
      *
      * @returns {Function}
      */
-    get: function() {
-      return function mixin( target ) {
-        return Abstract.prototype.mixin( Abstract, target );
-      }
+    value: function( target ) {
+
+      Object.keys( Abstract ).forEach( function( key ) {
+        target[ key ] = Abstract[ key ];
+      });
+
+      return target;
+
     },
     configurable: true,
     enumerable: false
@@ -299,9 +303,6 @@ Object.defineProperties( module.exports = Abstract, {
       // Create Instance Prototype from Abstract Prototype
       Model.prototype = Object.create( Abstract.prototype );
 
-      // Run Builder in Model context
-      Model.call( Model, Model, Model.prototype );
-
       // Instantiation Method
       Object.defineProperty( Model, &#x27;create&#x27;, {
         value: function createInstance() { return Abstract.createInstance.apply( Model, arguments ); },
@@ -310,11 +311,14 @@ Object.defineProperties( module.exports = Abstract, {
         writable: true
       })
 
+      // Run Builder in Model context
+      Model.call( Model, Model, Model.prototype );
+
       // Set custom name for creating method if available
       var _custom_name = undefined;
 
-      if( Model.instantiator &amp;&amp; Object.keys( Model.instantiator ).length ) {
-        Model.instantiator.forEach( function( fn ) { _custom_name = fn.name || _custom_name; });
+      if( Model._instantiator &amp;&amp; Object.keys( Model._instantiator ).length ) {
+        Model._instantiator.forEach( function( fn ) { _custom_name = fn.name || _custom_name; });
       }
 
       // Context wrapper for instantiation
@@ -415,8 +419,8 @@ Object.defineProperties( module.exports = Abstract, {
       });
 
       // Call createInstance
-      if( this.instantiator &amp;&amp; Object.keys( this.instantiator ).length ) {
-        this.instantiator.forEach( function( fn ) { fn.apply( Instance, args ); });
+      if( this._instantiator &amp;&amp; Object.keys( this._instantiator ).length ) {
+        this._instantiator.forEach( function( fn ) { fn.apply( Instance, args ); });
       }
 
       return Instance;
@@ -437,17 +441,28 @@ Object.defineProperties( module.exports = Abstract, {
     value: function defineConstructor( target, fn ) {
       // console.log( &#x27;defineConstructor&#x27; );
 
-      if( target.instantiator &amp;&amp; Object.keys( target.instantiator ).length ) {
-        target.instantiator.push( &#x27;function&#x27; === typeof fn ? fn : Abstract.utility.noop );
+      if( target._instantiator &amp;&amp; Object.keys( target._instantiator ).length ) {
+        target._instantiator.push( &#x27;function&#x27; === typeof fn ? fn : Abstract.utility.noop );
         return target;
       }
 
-      Object.defineProperty( target, &#x27;instantiator&#x27;, {
+      Object.defineProperty( target, &#x27;_instantiator&#x27;, {
         value: [ &#x27;function&#x27; === typeof fn ? fn : Abstract.utility.noop ],
         configurable: true,
         enumerable: false,
         writable: true
       });
+
+      // Set instantiator using custom name
+      if( fn.name !== &#x27;create&#x27; ) {
+
+        Object.defineProperty( target, fn.name, {
+          get: function() { return target.create; },
+          enumerable: true,
+          configurable: true
+        });
+
+      }
 
       // Context wrapper for instantiation
       return function createInstance() {
@@ -604,6 +619,46 @@ Object.defineProperties( module.exports = Abstract, {
       return function( context, proto ) {
         return Abstract.prototype.use.call( context, proto );
       }
+    },
+    configurable: false,
+    enumerable: false
+  },
+  getPropertyDescriptors: {
+    /**
+     * Allow Prototype useage method to be ran in custom context for static calls
+     *
+     * @returns {Function}
+     */
+    value: function getPropertyDescriptors( target, options ) {
+
+      var _extend = require( &#x27;util&#x27; )._extend;
+
+      options = _extend({
+        include_inherited: false,
+        default_descriptor: {
+          writable: true,
+          enumerable: true,
+          configurable: true
+        }
+      }, options );
+
+      var response = {}
+
+      for( var key in target ) {
+
+        if( Object.getOwnPropertyDescriptor( target, key ) ) {
+          response[ key ] = Object.getOwnPropertyDescriptor( target, key );
+        } else {
+
+          if( options.include_inherited ) {
+            response[ key ] = _extend( options.default_descriptor, { value: target[key] });
+          }
+
+        }
+      }
+
+      return response;
+
     },
     configurable: false,
     enumerable: false
@@ -795,9 +850,10 @@ Object.defineProperties( Abstract.prototype, {
      * @param target
      * @param source
      */
-    value: require( &#x27;./utility&#x27; ).mixin,
+    get: function() {
+      return require( &#x27;./utility&#x27; ).mixin.bind( this, this );
+    },
     configurable: true,
-    writable: true,
     enumerable: false
   },
   require: {
