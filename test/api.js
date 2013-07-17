@@ -41,7 +41,7 @@ module.exports = {
           this.set( 'module.test', 'module.value' );
           this.get( 'module.test' ).should.equal( 'module.value' );
 
-          this.defineInstance( function() {
+          this.defineConstructor( function() {
             this.set( 'instance.test', 'instance.value' );
             this.get( 'instance.test' ).should.equal( 'instance.value' );
           });
@@ -183,7 +183,7 @@ module.exports = {
           this.should.have.property( 'use' );
           this.should.have.property( 'get' );
           this.should.have.property( 'set' );
-          this.should.have.property( 'defineInstance' );
+          this.should.have.property( 'defineConstructor' );
           this.should.have.property( 'defineProperties' );
           this.should.have.property( 'defineProperty' );
           this.custom_constructor_method = function MyMethod() {};
@@ -272,7 +272,7 @@ module.exports = {
 
       },
 
-      "can define instances with this.defineInstance()": function() {
+      "can define instances with this.defineConstructor()": function() {
 
         var TestModel = require( '../' ).createModel( function TestModel() {
           this.use( require( 'async' ) );
@@ -282,7 +282,7 @@ module.exports = {
           this.should.have.property( 'auto' );
           this.should.have.property( 'createServer' );
 
-          this.defineInstance( function create() {
+          this.defineConstructor( function create() {
             this.use( require( 'events' ).EventEmitter.prototype );
 
             // Test Async, Express and now Emitter methods in Instance Constructor
@@ -295,7 +295,7 @@ module.exports = {
 
         });
 
-        //console.log( TestModel.defineInstance );
+        //console.log( TestModel.defineConstructor );
 
         var Instance0 = TestModel.create();
 
@@ -340,7 +340,7 @@ module.exports = {
 
         var MyModel = Abstract.createModel( function MyModel( MyModel, prototype ) {
           MyModel.defineProperties( prototype, { make: 'Chevy', model: 'Tahoe' })
-          MyModel.defineInstance( function create( options ) { Abstract.utility.extend( this, options ); });
+          MyModel.defineConstructor( function create( options ) { Abstract.utility.extend( this, options ); });
         });
 
         var Instance = MyModel.create({ year: 2010, mileage: 40000 });
@@ -358,7 +358,7 @@ module.exports = {
 
         var MyModel = Abstract.createModel( function MyModel( MyModel, prototype ) {
           MyModel.defineProperties( prototype, { make: 'Chevy', model: 'Tahoe' })
-          MyModel.defineInstance( function ConstructorTwo( options ) { Abstract.utility.extend( this, options ); });
+          MyModel.defineConstructor( function ConstructorTwo( options ) { Abstract.utility.extend( this, options ); });
         });
 
         var Instance = new MyModel.ConstructorTwo({ year: 2010, mileage: 40000 });
@@ -376,7 +376,7 @@ module.exports = {
 
         var MyModel = Abstract.createModel( function MyModel( MyModel, prototype ) {
           MyModel.defineProperties( prototype, { make: 'Chevy', model: 'Tahoe' })
-          MyModel.custom = MyModel.defineInstance( function ConstructorThree( options ) { Abstract.utility.extend( this, options ); });
+          MyModel.custom = MyModel.defineConstructor( function ConstructorThree( options ) { Abstract.utility.extend( this, options ); });
         });
 
         var Instance = MyModel.custom({ year: 2010, mileage: 40000 });
@@ -394,7 +394,7 @@ module.exports = {
 
         var MyModel = Abstract.createModel( function MyModel( MyModel, prototype ) {
           MyModel.defineProperties( prototype, { make: 'Chevy', model: 'Tahoe' })
-          MyModel.custom = MyModel.defineInstance( function ConstructorFour( options ) { Abstract.utility.extend( this, options ); });
+          MyModel.custom = MyModel.defineConstructor( function ConstructorFour( options ) { Abstract.utility.extend( this, options ); });
         });
 
         var Instance = new MyModel.custom({ year: 2010, mileage: 40000 });

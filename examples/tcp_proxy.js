@@ -47,7 +47,7 @@ var TCP_Proxy = require( 'abstract' ).createModel( function TCP_Proxy( model ) {
   model.modelTasks = model.queue( TaskWorker, 2);
 
   // Define Instance Constructor
-  model.defineInstance( function( id, from, to ) {
+  model.defineConstructor( function( id, from, to ) {
 
     var instance = this;
 

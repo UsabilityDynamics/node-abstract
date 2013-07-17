@@ -16,7 +16,7 @@ var Express = require( 'abstract' ).createModel( function Express() {
   console.log( this.auto );
   console.log( this.application.post );
 
-  this.defineInstance( function() {
+  this.defineConstructor( function() {
 
   });
 

@@ -27,7 +27,6 @@ The below methods are available within the context of an Abstract.createModel( [
     - this.set( key, value ): Set meta key and value, will be used as defaults by instaces.
     - this.get( key ): Get a value.
     - this.defineConstructor( function MyInstanceConstructor() {} ): Creates an Instance Factory environment.
-    - this.defineInstance( function MyInstanceConstructor() {} ): Creates an Instance Factory environment.
     - this.defineProperty( property, descriptor ): Add single property t othe instance prototype.
     - this.defineProperties( properties ): Add multiple properties to the Instance prototype.
     - this.addPrototype( prototype ): Insert prototype into prototype chain of the Instance object.
@@ -79,53 +78,38 @@ Name will be generated from constructor's name if not specified.
 
 Basic Usage
 ===========
-Thie is a basic example of creating a Model and then instantiating it.
 
-    // Require Module
-    var TCP_Proxy = require( 'abstract' ).createModel( function TCP_Proxy() {
+#### Return Constructor.
+Notice location of modul.exports.
 
-      // Define a method for handling some task
-      function TaskWorker( task, fn ) {
+    require( 'abstract' ).createModel( function Service( model, prototype ) {
 
-        if( task.type === 'start_server' ) {
-          setTimeout( function() { fn(); }, 1000 );
-        }
+      // Model Logic
 
-      }
-
-      // Create task queue shared by all instances
-      this.queue = require( 'async' ).queue( TaskWorker, 2 );
-
-      // Run when all enqueued tasks are complete
-      this.queue.drain = function() {
-        console.log( 'All TCP Proxy queued tasks are processed.' );
-      }
-
-      // Define Instance constructor, called on every initialization
-      this.defineConstructor( function( from, to ) {
-
-        var self = this;
-
-        // Set instance settings
-        this.set( 'from', from );
-        this.set( 'to', to );
-
-        // Add to shared queue
-        this.queue.push({ type: 'start_server', from: from, to: to }, function( error ) {
-          console.log( "TCP Server id %s forward from %s to %s started.",  self.id, from, to );
-        });
-
+      module.exports = this.defineConstructor( function start( name ) {
+        console.log( 'Creating Instance', name );
       });
 
     });
 
-    // Instantiate 3 proxies
-    new TCP_Proxy( 7000, 7100 );
-    new TCP_Proxy( 8000, 8100 );
-    new TCP_Proxy( 9000, 9100 );
+    module.exports( 'Instance1' )
+    module.exports( 'Instance2' )
 
-    // Monitor all events on all instances
-    TCP_Proxy.on( '*::error', console.error );
+#### Return Model
+Notice location of modul.exports.
+
+    require( 'abstract' ).createModel( module.exports = function Service( model, prototype ) {
+
+      // Model Logic
+
+      this.defineConstructor( function create( name ) {
+        console.log( 'Creating Instance', name );
+      });
+
+    });
+
+    module.exports.create( 'Instance1' );
+    module.exports.create( 'Instance2' );
 
 Terminology
 ===========
