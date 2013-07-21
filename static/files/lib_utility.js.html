@@ -144,6 +144,30 @@ Object.defineProperties( module.exports = Utility, {
     enumerable: true,
     writable: true
   },
+  realpath: {
+    value: function realpath() {
+
+      var join_path = require( &#x27;path&#x27; ).join;
+      var fs = require( &#x27;fs&#x27; );
+
+      var _path = arguments.length &gt; 1 ? join_path.apply( {}, arguments ) : arguments[0];
+
+      try {
+        return fs.realpathSync( _path );
+      } catch ( error ) {
+
+        try {
+          return require.resolve( _path );
+        } catch( error ) {
+          return null;
+        }
+      }
+
+    },
+    configurable: false,
+    enumerable: true,
+    writable: true
+  },
   console: {
     value: {
       /**
@@ -292,6 +316,111 @@ Object.defineProperties( module.exports = Utility, {
           module.exports.console.json.apply( module.exports, arguments );
           module.exports.console.methods.apply( module.exports, arguments );
         }
+    },
+    configurable: false,
+    enumerable: true,
+    writable: true
+  },
+  merge: {
+    /**
+     * Merge object b with object a.
+     *
+     * @example
+     *     var a = { foo: &#x27;bar&#x27; }
+     *       , b = { bar: &#x27;baz&#x27; };
+     *
+     *     utils.merge(a, b);
+     *     // =&gt; { foo: &#x27;bar&#x27;, bar: &#x27;baz&#x27; }
+     *
+     * @param {Object} a
+     * @param {Object} b
+     * @return {Object}
+     *
+     * @source connect
+     */
+    value: function merge( a, b ){
+
+      if (a &amp;&amp; b) {
+        for (var key in b) { a[key] = b[key]; }
+      }
+
+      return a;
+
+    },
+    configurable: false,
+    enumerable: true,
+    writable: true
+  },
+  embed: {
+    /**
+     * Shallow Merge of Current Object with Another, and Function Mounting
+     *
+     * Functions in exact same manner as
+     * the Connect utilities &quot;merge&quot; method
+     *
+     * @param {Object} target
+     *
+     * @method embed
+     *
+     * @chainable
+     *
+     * @return {Object}
+     */
+    value: function embed( target ) {
+
+      if( &#x27;object&#x27; === typeof target || target.keys ) {
+        for( var key in target ) {
+          this[key] = target[ key ];
+        }
+      }
+
+      // If second argument is a function, we do some magic
+      if( &#x27;function&#x27; === typeof target ) {
+        return Utility.embed( this );
+      }
+
+      return this;
+
+    },
+    configurable: false,
+    enumerable: true,
+    writable: true
+  },
+  regroup: {
+    /**
+     * Re-group an object by a key, and optionally pick specific keys in the new object.
+     *
+     * If an object is passed, it is assumed to be grouped, thus flattening the values.
+     * Arrays are used as they are.
+     *
+     * @param target
+     */
+    value: function regroup( object, group_key, keys ) {
+
+      if( _.isObject( object ) ) {
+        object = _.flatten( _.values( object ) );
+      }
+
+      function Group( item ) {
+        return item[ group_key ];
+      }
+
+      if( group_key ) {
+        object = _.groupBy( object, Group );
+      }
+
+      if( !_.isEmpty( keys ) ) {
+
+        keys = _.isArray( keys ) ? keys : [ keys ];
+
+        _.each( object, function( items, key ) {
+          object[ key ] = _.map( items, function( item ) { return _.pick( item, keys ); })
+        })
+
+      }
+
+      return object;
+
     },
     configurable: false,
     enumerable: true,
@@ -761,6 +890,48 @@ Object.defineProperties( module.exports = Utility, {
   values: { value: require( &#x27;lodash&#x27; ).values },
   map: { value: require( &#x27;lodash&#x27; ).map },
   each: { value: require( &#x27;lodash&#x27; ).each },
+  reduce: {
+    value: function reduce(arr, iterator, memo) {
+
+      if (arr.reduce) {
+        return arr.reduce(iterator, memo);
+      }
+
+      _each(arr, function (x, i, a) {
+        memo = iterator(memo, x, i, a);
+      });
+
+      return memo;
+
+    },
+    configurable: false,
+    enumerable: true,
+    writable: true
+  },
+  keys: {
+    /**
+     *
+     * @source async
+     */
+    value: function keys(obj) {
+
+      if (Object.keys) {
+        return Object.keys(obj);
+      }
+
+      var keys = [];
+      for (var k in obj) {
+        if (obj.hasOwnProperty(k)) {
+          keys.push(k);
+        }
+      }
+      return keys;
+
+    },
+    configurable: false,
+    enumerable: true,
+    writable: true
+  },
   toArray: { value: require( &#x27;lodash&#x27; ).toArray },
   where: { value: require( &#x27;lodash&#x27; ).where },
   if: {
@@ -770,7 +941,9 @@ Object.defineProperties( module.exports = Utility, {
       &quot;Object&quot;: require( &#x27;lodash&#x27; ).isObject,
       &quot;String&quot;: require( &#x27;lodash&#x27; ).isString,
     },
-    enumerable: true
+    configurable: false,
+    enumerable: true,
+    writable: true
   },
   log: {
     /**

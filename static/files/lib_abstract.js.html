@@ -274,7 +274,7 @@ Object.defineProperties( module.exports = Abstract, {
           enumerable: false,
           writable: true
         },
-        defineInstance: {
+        defineConstructor: {
           value: Abstract.defineConstructor.bind( Model, Model ),
           configurable: true,
           enumerable: false,
@@ -337,6 +337,14 @@ Object.defineProperties( module.exports = Abstract, {
         })
 
       }
+
+      // Mark model as constructred
+      Object.defineProperty( Model, &#x27;is_constructed&#x27;, {
+        value: Model.name,
+        enumerable: false,
+        configurable: true,
+        writable: true
+      });
 
       // Return constructor function
       return Model;
