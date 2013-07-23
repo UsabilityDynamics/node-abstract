@@ -7,8 +7,6 @@
  */
 var BasicConstructor = require( 'abstract' ).model( function() {
 
-  // <-- This is the factory constructor
-
   // Use the Events module
   this.use( require( 'events' ).prototype );
 
@@ -24,7 +22,6 @@ var BasicConstructor = require( 'abstract' ).model( function() {
   this.instance( function() {
 
     // <-- This is the Instance constructor
-
 
   });
 

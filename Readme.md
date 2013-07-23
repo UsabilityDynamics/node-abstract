@@ -1,5 +1,8 @@
 Abstract.js
 -----------
+
+Notice: Under development.
+
 The Abstract library is used for rapidly developing JavaScript prototypal "Models" and "Instances".
 Each new Model can be defined by you as needed within a special context which allows you to rapidly 
 define complex constructors.
@@ -29,7 +32,6 @@ The below methods are available within the context of an Abstract.createModel( [
     - this.defineConstructor( function MyInstanceConstructor() {} ): Creates an Instance Factory environment.
     - this.defineProperty( property, descriptor ): Add single property t othe instance prototype.
     - this.defineProperties( properties ): Add multiple properties to the Instance prototype.
-    - this.addPrototype( prototype ): Insert prototype into prototype chain of the Instance object.
 
 Instance Factory Methods
 ========================

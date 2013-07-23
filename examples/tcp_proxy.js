@@ -31,7 +31,7 @@ function TaskWorker( task, fn ) {
 }
 
 // Define Model
-var TCP_Proxy = require( 'abstract' ).createModel( function TCP_Proxy( model ) {
+var TCP_Proxy = require( 'abstract' ).createModel( module.exports = function TCP_Proxy( model ) {
 
   // Inherit the Events and Async modules into the Model prototype
   model.use( require( 'eventemitter2' ).EventEmitter2.prototype );
@@ -48,7 +48,6 @@ var TCP_Proxy = require( 'abstract' ).createModel( function TCP_Proxy( model ) {
 
   // Define Instance Constructor
   model.defineConstructor( function( id, from, to ) {
-
     var instance = this;
 
     // Set Instance Meta
@@ -69,9 +68,4 @@ var TCP_Proxy = require( 'abstract' ).createModel( function TCP_Proxy( model ) {
 
   });
 
-  return this;
-
 });
-
-// Export Model
-module.exports = TCP_Proxy;

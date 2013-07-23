@@ -242,6 +242,10 @@ Object.defineProperties( module.exports = Abstract, {
         return new Error( &#x27;Abstract.createModel() requires a callable method as the first argument.&#x27; );
       }
 
+      if( Model.is_constructed ) {
+        //return Model.create();
+      }
+
       // If Instantiator already bound
       if( &#x27;function&#x27; === typeof Model.create &amp;&amp; model.create.name === &#x27;createInstance&#x27; ) {
         return Model.create;
@@ -572,7 +576,22 @@ Object.defineProperties( module.exports = Abstract, {
       Abstract.utility.extend( prop, this.meta ? this.meta.get( &#x27;defaults&#x27; ) : {} );
 
       // Store in Schema and add to Object actual
-      Object.defineProperty( obj, key, prop );
+      try {
+        Object.defineProperty( obj, key, prop );
+      } catch( error ) {
+
+        switch( error.type ) {
+
+          case &#x27;redefine_disallowed&#x27;:
+            console.error( &#x27;Cannot redefine [%s] property %s&#x27;, key, obj.name ? &#x27;for [&#x27; + obj.name + &#x27;] model&#x27; : &#x27;&#x27; );
+          break;
+
+          default:
+            console.error( error.message );
+          break;
+        }
+
+      }
 
       if( obj._meta &amp;&amp; obj._meta.schema ) {
         obj._meta.schema[ key ] = prop;
@@ -818,6 +837,16 @@ Object.defineProperties( Abstract.prototype, {
      * @returns {*}
      */
     value: function use( source ) {
+
+      // @todo Implement to mock util.inherts()
+      /*
+      Object.defineProperty( &#x27;super_&#x27;, {
+        value: source,
+        enumerable: false,
+        configurable: false,
+        writable: true
+      });
+      */
 
       // Check if already required to prevent Cyclic __proto__ error.
       if( &#x27;function&#x27; === typeof source &amp;&amp; source.name  &amp;&amp; this.get( &#x27;required.&#x27; + source.name ) ) {

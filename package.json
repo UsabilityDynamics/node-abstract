@@ -1,7 +1,7 @@
 {
   "name": "abstract",
   "description": "Abstraction of JavaScript Objects.",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "./lib/abstract",
   "author": {
     "name": "Usability Dynamics",
@@ -53,5 +53,5 @@
   "scripts": {
     "test": "make test"
   },
-  "readmeFilename": "Readme.md"
+  "readmeFilename": "readme.md"
 }
