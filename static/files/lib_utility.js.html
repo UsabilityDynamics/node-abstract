@@ -125,7 +125,7 @@ Object.defineProperties( module.exports = Utility, {
        * @param json
        * @return {parsed|json}
        */
-      parse: function( json ) {
+      parse: function parse( json ) {
 
         if( Buffer &amp;&amp; json instanceof Buffer ) {
           json = json.toString()
@@ -138,7 +138,17 @@ Object.defineProperties( module.exports = Utility, {
         if( !parsed &amp;&amp; &#x27;string&#x27; === typeof json ) {}
 
         return parsed ? parsed : json;
-      }
+      },
+      /**
+       *
+       * @param obj
+       * @returns {boolean}
+       */
+      stringify: function stringify( obj ) {
+        return JSON.stringify( obj );
+      },
+      pack: function pack() {},
+      unpack: function pack() {}
     },
     configurable: false,
     enumerable: true,
@@ -704,7 +714,6 @@ Object.defineProperties( module.exports = Utility, {
       });
 
       return Array.prototype.concat( data ).join( options.delimiter ).toLowerCase();
-
 
     },
     enumerable: true

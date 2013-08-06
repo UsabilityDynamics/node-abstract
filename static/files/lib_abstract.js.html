@@ -168,10 +168,12 @@ Object.defineProperties( module.exports = Abstract, {
      *
      * @returns {Function}
      */
-    value: function( target ) {
+    value: function( obj ) {
+
+      var target = obj || this;
 
       Object.keys( Abstract ).forEach( function( key ) {
-        target[ key ] = Abstract[ key ];
+        target[ key ] = target[ key ] || Abstract[ key ];
       });
 
       return target;
@@ -259,7 +261,12 @@ Object.defineProperties( module.exports = Abstract, {
           enumerable: false,
           writable: true
         },
-        require: { value: Abstract.prototype.require.bind( Model ), enumerable: false },
+        require: {
+          value: Abstract.prototype.require.bind( Model ),
+          configurable: true,
+          writable: true,
+          enumerable: false
+        },
         get: {
           value: Abstract.prototype.get.bind( Model ),
           configurable: true,
@@ -274,12 +281,6 @@ Object.defineProperties( module.exports = Abstract, {
         },
         properties: {
           value: Abstract.prototype.properties.bind( Model ),
-          configurable: true,
-          enumerable: false,
-          writable: true
-        },
-        defineConstructor: {
-          value: Abstract.defineConstructor.bind( Model, Model ),
           configurable: true,
           enumerable: false,
           writable: true
@@ -849,7 +850,7 @@ Object.defineProperties( Abstract.prototype, {
       */
 
       // Check if already required to prevent Cyclic __proto__ error.
-      if( &#x27;function&#x27; === typeof source &amp;&amp; source.name  &amp;&amp; this.get( &#x27;required.&#x27; + source.name ) ) {
+      if( &#x27;function&#x27; === typeof source &amp;&amp; source.name &amp;&amp; this.get( &#x27;required.&#x27; + source.name ) ) {
         return this;
       }
 
