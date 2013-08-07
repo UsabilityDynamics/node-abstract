@@ -35,7 +35,7 @@
     "url": "https://github.com/UsabilityDynamics/abstract/issues"
   },
   "dependencies": {
-    "async",
+    "async": "*",
     "object-settings": "*",
     "lodash": "*"
   },
