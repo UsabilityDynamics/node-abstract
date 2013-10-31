@@ -29,10 +29,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/UsabilityDynamics/abstract.git"
+    "url": "https://github.com/UsabilityDynamics/node-abstract.git"
   },
   "bugs": {
-    "url": "https://github.com/UsabilityDynamics/abstract/issues"
+    "url": "https://github.com/UsabilityDynamics/node-abstract/issues"
   },
   "dependencies": {
     "async": "*",
