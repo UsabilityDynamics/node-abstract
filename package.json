@@ -1,7 +1,7 @@
 {
   "name": "abstract",
   "description": "Abstraction of JavaScript Objects.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "./lib/abstract",
   "author": {
     "name": "Usability Dynamics",
